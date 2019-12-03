@@ -1,0 +1,999 @@
+<div class="row" style="position: relative;">
+    <div id="center_column" class="center_column col-xs-12 col-sm-12">
+        <div itemscope="">
+            <div class="primary_block row">
+                <div class="container"></div>
+                <div class="pb-left-column col-xs-12 col-sm-6 col-md-5" style="margin-bottom:20px;">
+                    <div id="image-block" class="clearfix">
+                        <span class="discount">Цена снижена!</span>
+                        <span id="view_full_size">
+                            <img id="bigpic" itemprop="image"
+                                 src="https://sweetness.com.ua/5131-large_default/holika-holika-jeju-aloe-face-and-body-care-set.jpg"
+                                 title="Holika Holika Jeju Aloe Face and Body Care Set"
+                                 alt="Holika Holika Jeju Aloe Face and Body Care Set" width="458" height="458"/>
+                            <span class="span_link no-print">Увеличить</span>
+                        </span>
+                    </div>
+                    <div id="views_block" class="clearfix hidden">
+                        <div id="thumbs_list">
+                            <ul id="thumbs_list_frame" style="width: 90px;">
+                                <li id="thumbnail_5131" class="last">
+                                    <a href="https://sweetness.com.ua/5131-thickbox_default/holika-holika-jeju-aloe-face-and-body-care-set.jpg"
+                                       data-fancybox-group="other-views" class="fancybox shown"
+                                       title="Holika Holika Jeju Aloe Face and Body Care Set">
+                                        <img class="img-responsive" id="thumb_5131"
+                                             src="https://sweetness.com.ua/5131-cart_default/holika-holika-jeju-aloe-face-and-body-care-set.jpg"
+                                             alt="Holika Holika Jeju Aloe Face and Body Care Set"
+                                             title="Holika Holika Jeju Aloe Face and Body Care Set" height="80"
+                                             width="80" itemprop="image"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-center-column col-xs-12 col-sm-6 col-md-4">
+                    <h1 itemprop="name"
+                        style="text-transform:uppercase; font: normal 16px/20px 'Helvica', 'Arial', sans-serif; color: #333333;">
+                        Holika Holika Jeju Aloe Face and Body Care Set
+                    </h1>
+                    <span>
+                        <p class="LC20lb">Набор универсальных средств для лица и тела, 55мл. х 3шт</p>
+                        <p></p>
+                    </span>
+                    <div class="top-hr"></div>
+                    <div class="content_prices clearfix">
+                        <div class="content_prices_row">
+                            <span class="content_prices_item our_price_display" itemprop="offers" itemscope="">
+                                <link itemprop="availability" href="http://schema.org/InStock"/>
+                                <span id="price_word">Цена:</span>
+                                <span id="our_price_display" class="price">217 грн</span>
+                                <meta itemprop="price" content="217"/>
+                                <meta itemprop="priceCurrency" content="UAH"/>
+                            </span>
+                            <span class="content_prices_item" id="old_price">
+                                <span id="old_price_display">
+                                    <span class="price">310 грн</span>
+                                </span>
+                            </span>
+                            <span class="content_prices_item" id="reduction_percent">
+                                <span id="reduction_percent_display">-30%</span>
+                            </span>
+                            <span class="content_prices_item" id="reduction_amount" style="display:none">
+                                <span id="reduction_amount_display"></span>
+                            </span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="top-hr"></div>
+                    <p id="product_reference">
+                        <label>Артикул</label>
+                        <span class="editable" itemprop="sku">20010297</span>
+                    </p>
+                    <p id="manufacturer">
+                        <label>Производитель:</label>
+                        <a href="https://sweetness.com.ua/29_holika-holika">
+                            <span itemprop="brand">Holika Holika</span>
+                        </a>
+                    </p>
+                    <p id="product-series">
+                        <label>Серия:</label>
+                        <a href="https://sweetness.com.ua/search?tag=Holika+Aloe">Holika Aloe,</a>
+                    </p>
+                    <p id="availability_statut" style="display: none;">
+                        <label>Наличие:</label>
+                        <span id="availability_value" class="label label-success"></span>
+                    </p>
+                    <div id="oosHook" style="display: none;">
+                        <p class="form-group">
+                            <input type="email" id="oos_customer_email" name="customer_email" size="20"
+                                   placeholder="укажите@ваш.адрес" class="mailalerts_oos_email form-control" title="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: UNKNOWN_TYPE
+label: укажите@ваш.адрес
+parseable name: customer_email
+section: customer_email_1-default
+field signature: 2184366486
+form signature: 14416424659953915001" autofill-information="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: UNKNOWN_TYPE
+label: укажите@ваш.адрес
+parseable name: customer_email
+section: customer_email_1-default
+field signature: 2184366486
+form signature: 14416424659953915001" autofill-prediction="EMAIL_ADDRESS"/>
+                        </p>
+                        <a href="#" title="Сообщите мне, когда товар появится в продаже" id="mailalert_link"
+                           rel="nofollow">Сообщите мне, когда товар появится в продаже
+                        </a>
+                        <span id="oos_customer_email_result" style="display:none; display: block;"></span>
+                    </div>
+                    <p class="warning_inline" id="last_quantities" style="display: none">Внимание: ограниченное
+                        количество товара в наличии!
+                    </p>
+                    <p id="availability_date" style="display: none;">
+                        <span id="availability_date_label">Будет доступен:</span>
+                        <span id="availability_date_value"></span>
+                    </p>
+                    <div id="short_description_block" style="display:none;">
+                        <div class="top-hr"></div>
+                        <div id="short_description_content" class="rte align_justify" itemprop="description"></div>
+                        <p class="buttons_bottom_block">
+                            <a href="javascript:{}" class="button">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="top-hr"></div>
+                    <form id="buy_block" action="https://sweetness.com.ua/cart" method="post">
+                        <p class="hidden">
+                            <input type="hidden" name="token" value="08424b53658b798f4b20916d8d6bec0e"/>
+                            <input type="hidden" name="id_product" value="4228" id="product_page_product_id"/>
+                            <input type="hidden" name="add" value="1"/>
+                            <input type="hidden" name="id_product_attribute" id="idCombination" value=""/>
+                        </p>
+                        <div class="box-info-product">
+                            <div class="product_attributes clearfix">
+                                <p id="quantity_wanted_p">
+                                    <label>Количество</label>
+                                    <input type="text" name="qty" id="quantity_wanted" class="text" value="1" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Количество
+parseable name: qty
+section: qty_1-default
+field signature: 3166992832
+form signature: 11711262986969540499" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Количество
+parseable name: qty
+section: qty_1-default
+field signature: 3166992832
+form signature: 11711262986969540499" autofill-prediction="UNKNOWN_TYPE"/>
+                                    <a href="#" data-field-qty="qty"
+                                       class="btn btn-default button-minus product_quantity_down">
+                                        <span>
+                                            <i class="icon-minus"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" data-field-qty="qty"
+                                       class="btn btn-default button-plus product_quantity_up">
+                                        <span>
+                                            <i class="icon-plus"></i>
+                                        </span>
+                                    </a>
+                                    <span class="clearfix"></span>
+                                </p>
+                                <p id="minimal_quantity_wanted_p" style="display: none;">Минимальный заказ для товара
+                                    <b id="minimal_quantity_label">1</b>
+                                </p>
+                            </div>
+                            <div class="box-cart-bottom">
+                                <div>
+                                    <div id="add_to_cart" class="buttons_bottom_block no-print">
+                                        <button type="submit" name="Submit" class="exclusive">
+                                            <em class="icon-shopping-cart" id="icon-heart"></em>
+                                            <span>В корзину</span>
+                                        </button>
+                                    </div>
+                                    <button type="button" href="#" class="exclusive"
+                                            onclick="WishlistCart('wishlist_block_list', 'add', '4228', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;"
+                                            rel="nofollow" title="В избранное">
+                                        <em class="icon-heart" id="icon-heart"></em>
+                                        <span>В ЖЕлание</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="cmsinfo_block" class="col-sm-12 col-md-3" style="border:0;">
+                    <div class="pb-right-column" style="width: 100%;">
+                        <ul class="advantages">
+                            <li>
+                                <em class="icon-thumbs-up-alt" id="icon-thumbs-up-alt"></em>
+                                <div class="type-text">
+                                    <h3>100% ОРИГИНАЛ</h3>
+                                    <p>
+                                        <a href="https://sweetness.com.ua/content/37_garantiya-podlinnosti">Гарантия
+                                            оригинальности и свежести продуктов
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-gift" id="icon-gift"></em>
+                                <div class="type-text">
+                                    <h3>ПОЛУЧИТЕ ПОДАРКИ!</h3>
+                                    <p>Бесплатные пробники в каждом заказе^^</p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-truck" id="icon-truck"></em>
+                                <div class="type-text">
+                                    <h3>Быстрая доставка!</h3>
+                                    <p>Отправка в 14.00 каждый день, кроме выходных.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-money" id="icon-money"></em>
+                                <div class="type-text">
+                                    <h3>НАЛОЖЕННЫЙ ПЛАТЕЖ</h3>
+                                    <p>Возможность оплаты при получении заказа на отделении Новой Почты</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="center_column" class="center_column col-xs-12 col-sm-9">
+                <section class="page-product-box">
+                    <h3 class="page-product-heading">Характеристики</h3>
+                    <table class="table-data-sheet">
+                        <tbody>
+                            <tr class="even">
+                                <td>Срок реализации:</td>
+                                <td>
+                                    <div>
+                                        <div>до 2020-04-20</div>
+                                    </div>
+                                    <p class="expire-info-link">
+                                        <a target="_blank"
+                                           href="https://sweetness.com.ua/content/10_kak-pravilno-opredelit-sroki-godnosti-korejskoj-kosmetiki">
+                                            Как определить срок годности корейской косметики?
+                                        </a>
+                                    </p>
+                                    <style>.expire-info-link {
+                                        margin:10px 0 0;
+                                        }
+                                        .expire-info-link a {
+                                        color:#F38098;
+                                        text-decoration: underline;
+                                        }
+                                        .expire-info-link a:hover {
+                                        color:#F38098;
+                                        text-decoration: none;
+                                        }
+                                        .table-expire-container {
+                                        -webkit-column-count: 2;
+                                        -moz-column-count: 2;
+                                        column-count: 2;
+                                        }
+                                        .table-expire-dates tr {
+                                        border:0;
+                                        }
+                                        .table-expire-dates th {
+                                        padding:0 10px 0 0 !important;
+                                        vertical-align: top !important;
+                                        }
+                                        .table-expire-dates td {
+                                        padding:0 !important;
+                                        }
+                                        @media (max-width: 440px) {
+                                        .table-expire-dates,
+                                        .table-expire-dates tbody,
+                                        .table-expire-dates tr,
+                                        .table-expire-dates td,
+                                        .table-expire-dates td {
+                                        display: block;
+                                        }
+                                        .table-expire-dates td {
+                                        padding: 0 0 2px 10px !important;
+                                        }
+                                        .table-expire-container {
+                                        -webkit-column-count: auto;
+                                        -moz-column-count: auto;
+                                        column-count: auto;
+                                        }
+                                        }
+                                    </style>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Возраст</td>
+                                <td>Без возрастных ограничений</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Я ХОЧУ!</td>
+                                <td>Увлажнить</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Активный ингредиент</td>
+                                <td>Алоэ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="page-product-box">
+                    <h3 class="page-product-heading">Описание</h3>
+                    <div class="rte">
+                        <p class="p1">Набор универсальных средств для лица и тела на основе алоэ.</p>
+                        <p>
+                            <span style="text-decoration:underline;">Набор состоит из трех средств:</span>
+                        </p>
+                        <ul>
+                            <li>Универсальный гель Aloe 99% Soothing Gel 55ml</li>
+                            <li>Гель для душа Aloe 92% Shower Gel 55ml</li>
+                            <li>Очищающая пенка Aloe Cleansing Foam 55 ml</li>
+                        </ul>
+                        <p>
+                            <strong>Aloe 99% Soothing Gel</strong>
+                            – многофункциональный гель с экстрактом алоэ вера создан для увлажнения лица и тела любых
+                            типов кожи. Помогает придать коже чистоту и свежесть, сохранит естественный уровень
+                            увлажнения, восстановит жизненный тонус, сохранит естественный липидный барьер. Гель
+                            успокаивает кожу после бритья и после загара, снимает раздражения и успокаивает, может
+                            использоваться в качестве маски и средства для кожи глаз. Гель не только увлажняет кожу, но
+                            и способствует заживлению мелких повреждений кожи. Гель быстро впитывается и освежает кожу,
+                            не оставляет ощущения липкости. Кроме того, натуральные компоненты в составе геля позволяют
+                            использовать его для всей семьи.
+                        </p>
+                        <p>
+                            <strong>Aloe 92% Shower Gel</strong>
+                            - с 92% содержанием экстракта сока алоэ вера очищает кожу от ежедневных загрязнений,
+                            интенсивно увлажняет, помогает сохранить влагу, снимает воспаления и раздражения, убирает
+                            шелушения, обладает бактерицидным свойством Сок алоэ придает коже свежий аромат в течение
+                            всего дня, помогает восстановить жизненный тонус и сохраняет естественный липидный барьер.
+                        </p>
+                        <p>
+                            <strong>Aloe Cleansing Foam</strong>
+                            - мягкая очищающая пенка для умывания. Средство базируется на соке алоэ вера. Имеет легкую
+                            приятную текстуру, универсальна в применении, подходит для любого типа кожи. Средство
+                            способствует ускорению процесса регенерации кожи, устраняет шелушения и воспаления, дарит
+                            ощущение свежести и чистоты кожи, подходит для удаления макияжа. Пенка имеет приятный
+                            аромат, после использования не оставляет ощущения стянутости и сухости кожи.
+                        </p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </section>
+                <section class="page-product-box">
+                    <div id="ajax">
+                        <h3 class="page-product-heading" id="mymodcomments-content-tab">Поделитесь своим мнением о
+                            товаре!^^
+                        </h3>
+                        <div class="rte"></div>
+                        <div class="rte">
+                            <ul class="pagination"></ul>
+                        </div>
+                    </div>
+                    <div class="rte"></div>
+                    <script>function addComment(ajax_grade, ajax_comment) {
+
+                        $.ajax({
+
+                        type: 'POST',
+
+                        data: {
+                        action: 'AddComment',
+                        ajax_grade: ajax_grade,
+                        ajax_comment: ajax_comment
+                        },
+                        success: function (output) {
+                        console.log(output);
+                        $('#ajax').empty();
+                        $('#ajax').html(output);
+
+
+                        },
+                        error: function(error){
+                        console.log(error);
+                        }
+                        });
+
+                        }
+
+
+                        $('.pagination').click(function (e) {
+                        e.preventDefault();
+
+                        $.ajax({
+
+                        type: 'POST',
+
+                        data: {
+                        action: 'Pagination',
+                        page: e.target.innerText
+                        },
+                        success: function (output) {
+                        $('#ajax').empty();
+                        $('#ajax').html(output);
+
+
+                        },
+                        error: function(error){
+                        console.log(error);
+                        }
+                        });
+                        });
+                    </script>
+                    <h3 class="page-product-heading">С этим товаром покупают:</h3>
+                    <ul class="product_list grid row">
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line last-item-of-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/syvorotka/4710-eyenlip-first-magic-ampoule-collagen.html"
+                                               title="Eyenlip First Magic Ampoule Collagen" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/5796-home_default/eyenlip-first-magic-ampoule-collagen.jpg"
+                                                     alt="Eyenlip First Magic Ampoule Collagen"
+                                                     title="Eyenlip First Magic Ampoule Collagen" itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/syvorotka/4710-eyenlip-first-magic-ampoule-collagen.html"
+                                                           rel="https://sweetness.com.ua/syvorotka/4710-eyenlip-first-magic-ampoule-collagen.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_4710" href="#" rel="4710"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '4710', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/syvorotka/4710-eyenlip-first-magic-ampoule-collagen.html"
+                                                           data-id-product="4710" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/syvorotka/4710-eyenlip-first-magic-ampoule-collagen.html"
+                                                       title="Eyenlip First Magic Ampoule Collagen" itemprop="url">
+                                                        Eyenlip First Magic Ampoule Collagen
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <div class="mycomments-comment">
+                                                            <div class="star-rating"></div>
+                                                            <div class="star-rating rating-xs rating-disabled">
+                                                                <div class="clear-rating " title="Clear">
+                                                                    <i class="glyphicon glyphicon-minus-sign"></i>
+                                                                </div>
+                                                                <div class="rating-container rating-gly"
+                                                                     data-content="">
+                                                                    <div class="rating-stars" data-content=""
+                                                                         style="width: 100%;"></div>
+                                                                    <input value="5" data-symbol="" type="number"
+                                                                           class="rating form-control" min="0" max="5"
+                                                                           step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <span class="label label-success">Five Stars</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="rating_list">1 Голос(ов)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Сыворотка&nbsp;с коллагеном, 13мл.
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">65 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=4710&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="4710"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-line last-item-of-tablet-line last-item-of-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/dlya-dusha/4942-the-saem-touch-on-body-body-wash.html"
+                                               title="The Saem TOUCH ON BODY Body Wash" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/6070-home_default/the-saem-touch-on-body-body-wash.jpg"
+                                                     alt="The Saem TOUCH ON BODY Body Wash"
+                                                     title="The Saem TOUCH ON BODY Body Wash" itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/dlya-dusha/4942-the-saem-touch-on-body-body-wash.html"
+                                                           rel="https://sweetness.com.ua/dlya-dusha/4942-the-saem-touch-on-body-body-wash.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_4942" href="#" rel="4942"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '4942', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/dlya-dusha/4942-the-saem-touch-on-body-body-wash.html"
+                                                           data-id-product="4942" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/dlya-dusha/4942-the-saem-touch-on-body-body-wash.html"
+                                                       title="The Saem TOUCH ON BODY Body Wash" itemprop="url">The Saem
+                                                        TOUCH ON BODY Body Wash
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <span class="no-comments">Я жду оценок ^_^</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Гель для душа парфюмированый, 300мл.
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">270 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=4942&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="4942"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-in-line last-line first-item-of-tablet-line last-item-of-mobile-line last-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/dlya-ruk/1122-tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.html"
+                                               title="Tony Moly Peach Hand Cream" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/3438-home_default/tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.jpg"
+                                                     alt="Tony Moly Peach Hand Cream" title="Tony Moly Peach Hand Cream"
+                                                     itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/dlya-ruk/1122-tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.html"
+                                                           rel="https://sweetness.com.ua/dlya-ruk/1122-tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_1122" href="#" rel="1122"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '1122', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/dlya-ruk/1122-tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.html"
+                                                           data-id-product="1122" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/dlya-ruk/1122-tony-moly-peach-anti-aging-hand-cream-omolazhivayushhij-krem-dlya-ruk-s-ekstraktom-persika.html"
+                                                       title="Tony Moly Peach Hand Cream" itemprop="url">Tony Moly Peach
+                                                        Hand Cream
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <div class="mycomments-comment">
+                                                            <div class="star-rating"></div>
+                                                            <div class="star-rating rating-xs rating-disabled">
+                                                                <div class="clear-rating " title="Clear">
+                                                                    <i class="glyphicon glyphicon-minus-sign"></i>
+                                                                </div>
+                                                                <div class="rating-container rating-gly"
+                                                                     data-content="">
+                                                                    <div class="rating-stars" data-content=""
+                                                                         style="width: 80%;"></div>
+                                                                    <input value="4" data-symbol="" type="number"
+                                                                           class="rating form-control" min="0" max="5"
+                                                                           step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Four Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Four Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <span class="label label-primary">Four Stars</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="rating_list">4 Голос(ов)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Персиковый омолаживающий крем для рук, 30г.
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">172 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=1122&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="1122"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <script type="text/javascript">jQuery(document).ready(function(){
+                        var MBG = GoogleAnalyticEnhancedECommerce;
+                        MBG.setCurrency('UAH');
+                        MBG.addProductDetailView({"id":4228,"name":"\"Holika Holika Jeju Aloe Face and Body Care
+                        Set\"","category":"\"krem-gel\"","brand":"\"Holika
+                        Holika\"","variant":"null","type":"typical","position":"0","quantity":1,"list":"product","url":"","price":"217.00"});
+                        });
+                    </script>
+                </section>
+            </div>
+        </div>
+        <div id="right_column" class="col-xs-12 col-sm-3 column">
+            <div id="right_block_comments">
+                <h3 class="page-product-heading">Последние</h3>
+                <div class="rte">
+                    <div class="mycomments-comment">
+                        <div>Аліса Малишева.
+                            <br/>
+                            <small>13:27:03, 16-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Нравится лёгкая текстура. Не стот наносить сразу на всё лицо и...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/bb-krem/1051-holika-holika-aqua-petit-jelly-bb-cream-spf20-pa.html"
+                               style="color: #F38098;">Holika Holika Aqua Petit Jelly BB cream SPF20 PA++
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Светлана Медведева.
+                            <br/>
+                            <small>16:24:51, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Отличные патчи, только получила и сразу испытала. Приятное...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/patchi-pod-glaza/1181-secret-key-gold-premium-first-eye-patch.html"
+                               style="color: #F38098;">Уценка!!! Secret Key Gold Premium First Eye Patch
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Илья Гавришин.
+                            <br/>
+                            <small>16:19:58, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Крем тянется (у меня такой в первый раз, т.ч. это немного смутило),...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/krem/4495-baroness-snail-cream.html"
+                               style="color: #F38098;">Baroness Snail Cream
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Маша Легкая.
+                            <br/>
+                            <small>14:34:21, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Состав просто бомба! Действие - ракета! Много витаминных сывороток...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/syvorotka/5491-purito-pure-vitamin-c-serum.html"
+                               style="color: #F38098;">PURITO Pure Vitamin C Serum
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Маша Легкая.
+                            <br/>
+                            <small>14:26:13, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name: 
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 14416424659953915001" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Марта, я пробовала эмульсию этой серии, у меня в прошлом очень...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/nabori-trevel-seti/5955-farmstay-grape-stem-cell-skin-care-5set.html"
+                               style="color: #F38098;">Farmstay Grape Stem Cell Skin Care 5 Set
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

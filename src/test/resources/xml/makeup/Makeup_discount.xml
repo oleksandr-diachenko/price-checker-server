@@ -1,0 +1,288 @@
+<div class="layout page-product_detailed">
+    <div class="bread-crumbs">
+        <ol>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/"><span itemprop="title">MAKEUP</span></a>
+            </li>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/categorys/3/">
+                    <span itemprop="title">Парфюмерия</span>
+                </a>
+            </li>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/categorys/1093917/">
+                    <span itemprop="title">MSPerfum</span>
+                </a>
+            </li>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/categorys/1236063/">
+                    <span itemprop="title">2 Rush</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <div class="product-item">
+            <span class="product-item__attention">
+                Summer Sale! Скидка 25% на акционные товары. Цены на сайте указаны с учетом скидки
+            </span>
+            <div class="product-item__content">
+                <div id="product-image" class="product-item__image">
+                    <div class="product-slider sl">
+                        <div class="product-slider-list sl__l">
+                            <input id="product-slider_id_1" type="radio" name="sl" checked="" autocomplete="off">
+                            <div class="product-slider__item sl__i">
+                                <img src="https://u.makeup.com.ua/o/op/opdwbynnsnso.png" itemprop="image" data-popup-src="https://u.makeup.com.ua/7/7t/7tnbogjkchdw.png" alt="MSPerfum Green Tea - Духи — фото N1" title="Купить MSPerfum Green Tea - Духи на makeup.com.ua — фото N1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item__description">
+                    <a href="/brand/1461239/" class="brand">MSPerfum</a>
+                    <a href="/brand/1461239/o2245-282391/" class="series">Green Tea</a>
+                    <div class="product-item__name" itemprop="name">MSPerfum Green Tea</div>
+                    <div class="product-item__category">Духи</div>
+                    <div class="product-item__social">
+                        <span class="star-list">
+                            ★★★★★
+                        </span>
+                        <span class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="5">
+                            <a href="/product/632463/otzivi/">
+                                <span>1 отзыв</span>
+                                <meta itemprop="reviewCount" content="1">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="product-item__buy" data-id="632463" data-price="209" data-price-old="279" data-variant-id="1558727">
+                    <div class="product-item__row">
+                        <div class="product-item__price-wrap">
+                            <span class="product-item__price">
+                                <span class="rus">209</span>
+                            </span>
+                            <span class="product-item__old-price">
+                                <span class="rus">279</span>
+                            </span>
+                        </div>
+                        <div class="product-item__volume-radio" data-image-id="product-slider_image-preview_image">
+                            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="variant checked" title="50ml" data-variant-id="1558727" data-price="209" data-price-old="279">
+                                50ml
+                                <meta itemprop="price" content="209">
+                                <meta itemprop="priceCurrency" content="UAH">
+                                <link itemprop="availability" itemtype="http://schema.org/ItemAvailability" href="https://schema.org/InStock">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item__code-wrap">
+                        <div class="product-item__code">код товара: 632463</div>
+                        <div class="product-item__status green" id="product_enabled">
+                            <span style="display:none;">Доставка из ЕС!</span>
+                            <span>Есть в наличии!</span>
+                        </div>
+                    </div>
+                    <div class="product-item__button">
+                        <div class="button buy">Купить</div>
+                    </div>
+                    <div class="product-item__info">
+                        <label class="delivery">
+                            <span>Бесплатная доставка!</span>
+                            <input type="checkbox" class="un-check-me">
+                            <span class="hidden">
+                                Доставка нашей службой — 0 грн.<br>
+                                Курьером других перевозчиков в регионы и до склада — 0 грн. при заказе от 499 грн.<br>
+                                При выборе товара с флажком ЕС — бесплатно со склада в ЕС при сумме заказа от 750 грн.<br>
+                                Доставка по Киеву - 1 день, в регионы – 1-3 дня, доставка из ЕС в Украину занимает в среднем 3-5 дней.
+                            </span>
+                        </label>
+                        <label class="guarantee">
+                            <span>Гарантия</span>
+                            <input type="checkbox" class="un-check-me">
+                            <span class="hidden">
+                                Только 100% оригинальная продукция.<br>
+                                Возможность проверить заказ при получении<br>
+                                Обмен/Возврат, если упаковка не вскрыта
+                                <br>
+                                Для товаров из ЕС - только полный возврат посылки.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="product-item__text">
+                    <div>
+                        <strong>Премьера аромата:</strong> 2000<br>
+                        <strong>Страна ТМ:</strong> Турция<br>
+                        <strong>Сделано в:</strong> Турция<br>
+                        <strong>Пол:</strong> для женщин<br>
+                        <strong>Классификация:</strong> миддл маркет<br>
+                        <strong>Тип аромата:</strong> фужерные, цитрусовые<br>
+                        <strong>Начальная нота:</strong> Апельсиновая цедра, Бергамот, Лимон, Мята, Ревень<br>
+                        <strong>Нота сердца:</strong> Белая амбра, Гвоздика, Дубовый мох, Жасмин, Мускус, Фенхель<br>
+                        <strong>Конечная нота:</strong> Амбра, Гвоздика, Дубовый мох, Жасмин, Зеленый чай, Мускус, Семена сельдерея, Тмин<br>
+                    </div>
+                </div>
+                <div data-scroll-handler=".product-info__description .page-header" class="link">Описание</div>
+            </div>
+        </div>
+        <div class="ajax-loadable-slider disabled loaded" data-src="/ajax/block/same-series/">
+            <div data-default-name="Товары этой же серии" class="page-header">Товары этой же серии</div>
+        </div>
+        <div class="ajax-loadable-slider disabled loaded" data-src="/ajax/block/product-block/top/"></div>
+        <div class="similar-product ajax-loadable-slider loaded" data-src="/ajax/block/similar/">
+            <div data-default-name="Похожие товары" class="page-header">
+                Похожие товары
+            </div>
+            <div data-css-slider="" class="simple-slider" id="slider-id-1560373570544"><input type="radio" name="slider-1560373570544" id="id-slider-1560373570544-0"><input type="radio" name="slider-1560373570544" id="id-slider-1560373570544-1"><input type="radio" name="slider-1560373570544" id="id-slider-1560373570544-2"><input type="radio" name="slider-1560373570544" id="id-slider-1560373570544-3"><div class="simple-slider-list-wrap"><ul class="simple-slider-list"><li data-id="632471" data-brand="MSPerfum" data-parent-category="Парфюмерия/Духи" data-price="209" data-price-old="279" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/632471/" class="simple-slider-list__image"><img id="option-preview-632471" src="/categorys/12/" data-src="https://u.makeup.com.ua/1/1e/1ehuklv6k8ep.png" data-src-x2="https://u.makeup.com.ua/j/jk/jkr40ooqu6xi.png" title="MSPerfum Natural Freshness - Духи" alt="Духи, Парфюмерия, косметика MSPerfum Natural Freshness - Духи"><noscript><img src="https://u.makeup.com.ua/1/1e/1ehuklv6k8ep.png" alt="Духи, Парфюмерия, косметика MSPerfum Natural Freshness - Духи"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/632471/" data-default-name="MSPerfum Natural Freshness - Духи" class="simple-slider-list__name">MSPerfum Natural Freshness</a><div class="simple-slider-list__description">Духи</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">279</span></span><span class="simple-slider-list__price"><span class="rus">209</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="273981" data-brand="La Rive" data-parent-category="Тело и ванна/Дезодорант" data-price="42" data-price-old="53" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/273981/" class="simple-slider-list__image"><img id="option-preview-273981" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/4/4g/4gsybh11s7v6.jpg" data-src-x2="https://u.makeup.com.ua/n/nz/nzhzlf4i8kdo.jpg" title="La Rive Spring Lady - Дезодорант" alt="Духи, Парфюмерия, косметика La Rive Spring Lady - Дезодорант"><noscript><img src="https://u.makeup.com.ua/4/4g/4gsybh11s7v6.jpg" alt="Духи, Парфюмерия, косметика La Rive Spring Lady - Дезодорант"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><div class="simple-slider-list__reviews"><span class="star-list">★</span><a href="/product/273981/otzivi/" rel="nofollow">2 отзыва</a></div><a href="/product/273981/" data-default-name="La Rive Spring Lady - Дезодорант" class="simple-slider-list__name">La Rive Spring Lady</a><div class="simple-slider-list__description">Дезодорант</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">53</span></span><span class="simple-slider-list__price"><span class="rus">42</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="1806" data-brand="Elizabeth Arden" data-parent-category="Парфюмерия/Лосьон для тела" data-price="284" data-require-options="xyz" class="simple-slider-list__item"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/1806/" class="simple-slider-list__image"><img id="option-preview-1806" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/2/2l/2lsvuanlilwi.jpg" data-src-x2="https://u.makeup.com.ua/g/g1/g1r9mmyvrwsh.jpg" title="Elizabeth Arden Green Tea - Лосьон для тела" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Лосьон для тела"><noscript><img src="https://u.makeup.com.ua/2/2l/2lsvuanlilwi.jpg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Лосьон для тела"></noscript></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/1806/otzivi/" rel="nofollow">11 отзывов</a></div><a href="/product/1806/" data-default-name="Elizabeth Arden Green Tea - Лосьон для тела" class="simple-slider-list__name">Elizabeth Arden Green Tea</a><div class="simple-slider-list__description">Лосьон для тела</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">284</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="31107" data-brand="Elizabeth Arden" data-parent-category="Тело и ванна/Гель для душа" data-price="279" data-require-options="xyz" class="simple-slider-list__item"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/31107/" class="simple-slider-list__image"><img id="option-preview-31107" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/i/ib/ibuabnd2kep9.jpeg" data-src-x2="https://u.makeup.com.ua/q/q3/q3yy7penf1yb.jpeg" title="Elizabeth Arden Green Tea - Гель для душа" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Гель для душа"><noscript><img src="https://u.makeup.com.ua/i/ib/ibuabnd2kep9.jpeg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Гель для душа"></noscript></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★★</span><a href="/product/31107/otzivi/" rel="nofollow">1 отзыв</a></div><a href="/product/31107/" data-default-name="Elizabeth Arden Green Tea - Гель для душа" class="simple-slider-list__name">Elizabeth Arden Green Tea</a><div class="simple-slider-list__description">Гель для душа</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">279</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="1809" data-brand="Elizabeth Arden" data-parent-category="Парфюмерия/Набор" data-price="488" class="simple-slider-list__item"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/1809/" class="simple-slider-list__image"><img id="option-preview-1809" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/k/k9/k9xog969zwph.jpg" data-src-x2="https://u.makeup.com.ua/6/6z/6zqw0cy5flp5.jpg" title="Elizabeth Arden Green Tea - Набор (edp/100ml + body/lotion/100ml)" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Набор (edp/100ml + body/lotion/100ml)"><noscript><img src="https://u.makeup.com.ua/k/k9/k9xog969zwph.jpg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Набор (edp/100ml + body/lotion/100ml)"></noscript></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/1809/otzivi/" rel="nofollow">3 отзыва</a></div><a href="/product/1809/" data-default-name="Elizabeth Arden Green Tea - Набор (edp/100ml + body/lotion/100ml)" class="simple-slider-list__name">Elizabeth Arden Green Tea</a><div class="simple-slider-list__description">Набор (edp/100ml + body/lotion/100ml)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">488</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="1801" data-brand="Elizabeth Arden" data-parent-category="Парфюмерия/Парфюмированная вода" data-price="218" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/1801/" class="simple-slider-list__image"><img id="option-preview-1801" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/r/r9/r9gtvwgyw9gx.jpg" data-src-x2="https://u.makeup.com.ua/l/lm/lmwwsrsqkcc9.jpg" title="Elizabeth Arden Green Tea - Парфюмированная вода " alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Парфюмированная вода "><noscript><img src="https://u.makeup.com.ua/r/r9/r9gtvwgyw9gx.jpg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Парфюмированная вода "></noscript><div class="simple-slider-list__label hit"><i>hit</i></div></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/1801/otzivi/" rel="nofollow">448 отзывов</a></div><a href="/product/1801/" data-default-name="Elizabeth Arden Green Tea - Парфюмированная вода " class="simple-slider-list__name">Elizabeth Arden Green Tea</a><div class="simple-slider-list__description">Парфюмированная вода</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">218</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="1805" data-brand="Elizabeth Arden" data-parent-category="Парфюмерия/Парфюмированная вода" data-price="303" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/1805/" class="simple-slider-list__image"><img id="option-preview-1805" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/g/gw/gwxmfsiyftqd.jpg" data-src-x2="https://u.makeup.com.ua/4/4y/4yiaw5cdalk4.jpg" title="Elizabeth Arden Green Tea - Парфюмированная вода (тестер без крышечки)" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Парфюмированная вода (тестер без крышечки)"><noscript><img src="https://u.makeup.com.ua/g/gw/gwxmfsiyftqd.jpg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea - Парфюмированная вода (тестер без крышечки)"></noscript><div class="simple-slider-list__label hit"><i>hit</i></div></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/1805/otzivi/" rel="nofollow">283 отзыва</a></div><a href="/product/1805/" data-default-name="Elizabeth Arden Green Tea - Парфюмированная вода (тестер без крышечки)" class="simple-slider-list__name">Elizabeth Arden Green Tea</a><div class="simple-slider-list__description">Парфюмированная вода (тестер без крышечки)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">303</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="11282" data-brand="Elizabeth Arden" data-parent-category="Парфюмерия/Крем для тела" data-price="364" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/11282/" class="simple-slider-list__image"><img id="option-preview-11282" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/d/dn/dn9y0okdagsr.jpg" data-src-x2="https://u.makeup.com.ua/b/ba/bad0noaoiwsj.jpg" title="Elizabeth Arden Green Tea Honey Drops - Крем для тела" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea Honey Drops - Крем для тела"><noscript><img src="https://u.makeup.com.ua/d/dn/dn9y0okdagsr.jpg" alt="Духи, Парфюмерия, косметика Elizabeth Arden Green Tea Honey Drops - Крем для тела"></noscript><div class="simple-slider-list__label hit"><i>hit</i></div></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/11282/otzivi/" rel="nofollow">46 отзывов</a></div><a href="/product/11282/" data-default-name="Elizabeth Arden Green Tea Honey Drops - Крем для тела" class="simple-slider-list__name">Elizabeth Arden Green Tea Honey Drops</a><div class="simple-slider-list__description">Крем для тела</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price"><span class="rus">364</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="601461" data-brand="Evis" data-parent-category="Парфюмерия/Парфюмированная вода" data-price="54" data-price-old="90" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/601461/" class="simple-slider-list__image"><img id="option-preview-601461" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/v/vj/vjzzdmzjcm6a.jpg" data-src-x2="https://u.makeup.com.ua/u/ug/ug5fqbmnpx16.jpg" title="Evis Intense Collection №20 - Парфюмированая вода (мини)" alt="Духи, Парфюмерия, косметика Evis Intense Collection №20 - Парфюмированая вода (мини)"><noscript><img src="https://u.makeup.com.ua/v/vj/vjzzdmzjcm6a.jpg" alt="Духи, Парфюмерия, косметика Evis Intense Collection №20 - Парфюмированая вода (мини)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/601461/" data-default-name="Evis Intense Collection №20 - Парфюмированая вода (мини)" class="simple-slider-list__name">Evis Intense Collection №20</a><div class="simple-slider-list__description">Парфюмированая вода (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">90</span></span><span class="simple-slider-list__price"><span class="rus">54</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="401217" data-brand="Eva Cosmetics" data-parent-category="Парфюмерия/Туалетная вода" data-price="50" data-price-old="54" data-require-options="xyz" class="simple-slider-list__item"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/401217/" class="simple-slider-list__image"><img id="option-preview-401217" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/r/rg/rg1n62qg2diy.jpg" data-src-x2="https://u.makeup.com.ua/y/yw/ywpwyyjwmat9.jpg" title="Eva Cosmetics Green Tint - Туалетная вода" alt="Духи, Парфюмерия, косметика Eva Cosmetics Green Tint - Туалетная вода"><noscript><img src="https://u.makeup.com.ua/r/rg/rg1n62qg2diy.jpg" alt="Духи, Парфюмерия, косметика Eva Cosmetics Green Tint - Туалетная вода"></noscript></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/401217/otzivi/" rel="nofollow">18 отзывов</a></div><a href="/product/401217/" data-default-name="Eva Cosmetics Green Tint - Туалетная вода" class="simple-slider-list__name">Eva Cosmetics Green Tint</a><div class="simple-slider-list__description">Туалетная вода</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">54</span></span><span class="simple-slider-list__price"><span class="rus">50</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="450155" data-brand="Eva Cosmetics" data-parent-category="Парфюмерия/Парфюмированная вода" data-price="30" data-price-old="35" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/450155/" class="simple-slider-list__image"><img id="option-preview-450155" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/r/rg/rgyztkn04b3u.jpg" data-src-x2="https://u.makeup.com.ua/c/c4/c4vkizkyvnn1.jpg" title="Eva Cosmetics Green Tint - Парфюмированная вода (мини)" alt="Духи, Парфюмерия, косметика Eva Cosmetics Green Tint - Парфюмированная вода (мини)"><noscript><img src="https://u.makeup.com.ua/r/rg/rgyztkn04b3u.jpg" alt="Духи, Парфюмерия, косметика Eva Cosmetics Green Tint - Парфюмированная вода (мини)"></noscript><div class="simple-slider-list__label hit"><i>hit</i></div></a><div class="simple-slider-list__reviews"><span class="star-list">★★★★</span><a href="/product/450155/otzivi/" rel="nofollow">42 отзыва</a></div><a href="/product/450155/" data-default-name="Eva Cosmetics Green Tint - Парфюмированная вода (мини)" class="simple-slider-list__name">Eva Cosmetics Green Tint</a><div class="simple-slider-list__description">Парфюмированная вода (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">35</span></span><span class="simple-slider-list__price"><span class="rus">30</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="632227" data-brand="MSPerfum" data-parent-category="Парфюмерия/Духи" data-price="209" data-price-old="279" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/632227/" class="simple-slider-list__image"><img id="option-preview-632227" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/b/b2/b2wlcof3doin.jpg" data-src-x2="https://u.makeup.com.ua/d/dz/dzlpka4gtq6y.jpg" title="MSPerfum Sport Fever - Духи" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи"><noscript><img src="https://u.makeup.com.ua/b/b2/b2wlcof3doin.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/632227/" data-default-name="MSPerfum Sport Fever - Духи" class="simple-slider-list__name">MSPerfum Sport Fever</a><div class="simple-slider-list__description">Духи</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">279</span></span><span class="simple-slider-list__price"><span class="rus">209</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="574491" data-brand="MSPerfum" data-parent-category="Парфюмерия/Миниатюра" data-price="60" data-price-old="80" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/574491/" class="simple-slider-list__image"><img id="option-preview-574491" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/v/vv/vvzav8khc2sq.jpg" data-src-x2="https://u.makeup.com.ua/z/zo/zotlxzzvwc46.jpg" title="MSPerfum Sport Fever - Духи (мини)" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи (мини)"><noscript><img src="https://u.makeup.com.ua/v/vv/vvzav8khc2sq.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи (мини)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/574491/" data-default-name="MSPerfum Sport Fever - Духи (мини)" class="simple-slider-list__name">MSPerfum Sport Fever</a><div class="simple-slider-list__description">Духи (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">80</span></span><span class="simple-slider-list__price"><span class="rus">60</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="575789" data-brand="MSPerfum" data-parent-category="Парфюмерия/Миниатюра" data-price="60" data-price-old="80" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/575789/" class="simple-slider-list__image"><img id="option-preview-575789" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/o/ow/ow1qkxmdlacd.jpg" data-src-x2="https://u.makeup.com.ua/5/5t/5taj7xqsqlqx.jpg" title="MSPerfum Le Pamplemousse - Духи (мини)" alt="Духи, Парфюмерия, косметика MSPerfum Le Pamplemousse - Духи (мини)"><noscript><img src="https://u.makeup.com.ua/o/ow/ow1qkxmdlacd.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Le Pamplemousse - Духи (мини)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/575789/" data-default-name="MSPerfum Le Pamplemousse - Духи (мини)" class="simple-slider-list__name">MSPerfum Le Pamplemousse</a><div class="simple-slider-list__description">Духи (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">80</span></span><span class="simple-slider-list__price"><span class="rus">60</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="595375" data-brand="MSPerfum" data-parent-category="Парфюмерия/Пробник" data-price="22" data-price-old="29" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/595375/" class="simple-slider-list__image"><img id="option-preview-595375" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/n/ne/neyuwezvvqvu.jpg" data-src-x2="https://u.makeup.com.ua/n/nt/ntbenniuwp5i.jpg" title="MSPerfum Sport Fever - Духи (пробник)" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи (пробник)"><noscript><img src="https://u.makeup.com.ua/n/ne/neyuwezvvqvu.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Sport Fever - Духи (пробник)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/595375/" data-default-name="MSPerfum Sport Fever - Духи (пробник)" class="simple-slider-list__name">MSPerfum Sport Fever</a><div class="simple-slider-list__description">Духи (пробник)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">29</span></span><span class="simple-slider-list__price"><span class="rus">22</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="632205" data-brand="MSPerfum" data-parent-category="Парфюмерия/Духи" data-price="209" data-price-old="279" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/632205/" class="simple-slider-list__image"><img id="option-preview-632205" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/6/65/6573xbo7e0mt.jpg" data-src-x2="https://u.makeup.com.ua/q/qv/qvdfwbz24upe.jpg" title="MSPerfum Sentiment Tendre For Men - Духи" alt="Духи, Парфюмерия, косметика MSPerfum Sentiment Tendre For Men - Духи"><noscript><img src="https://u.makeup.com.ua/6/65/6573xbo7e0mt.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Sentiment Tendre For Men - Духи"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/632205/" data-default-name="MSPerfum Sentiment Tendre For Men - Духи" class="simple-slider-list__name">MSPerfum Sentiment Tendre For Men</a><div class="simple-slider-list__description">Духи</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">279</span></span><span class="simple-slider-list__price"><span class="rus">209</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="632225" data-brand="MSPerfum" data-parent-category="Парфюмерия/Духи" data-price="209" data-price-old="279" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/632225/" class="simple-slider-list__image"><img id="option-preview-632225" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/i/il/iljcb4ji2bq0.jpg" data-src-x2="https://u.makeup.com.ua/x/xm/xmtumr8krcov.jpg" title="MSPerfum Eros - Духи" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи"><noscript><img src="https://u.makeup.com.ua/i/il/iljcb4ji2bq0.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/632225/" data-default-name="MSPerfum Eros - Духи" class="simple-slider-list__name">MSPerfum Eros</a><div class="simple-slider-list__description">Духи</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">279</span></span><span class="simple-slider-list__price"><span class="rus">209</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="574569" data-brand="MSPerfum" data-parent-category="Парфюмерия/Миниатюра" data-price="60" data-price-old="80" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/574569/" class="simple-slider-list__image"><img id="option-preview-574569" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/x/xn/xnybtdkr1c6u.jpg" data-src-x2="https://u.makeup.com.ua/m/mz/mzew3iee5me4.jpg" title="MSPerfum Eros - Духи (мини)" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи (мини)"><noscript><img src="https://u.makeup.com.ua/x/xn/xnybtdkr1c6u.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи (мини)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/574569/" data-default-name="MSPerfum Eros - Духи (мини)" class="simple-slider-list__name">MSPerfum Eros</a><div class="simple-slider-list__description">Духи (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">80</span></span><span class="simple-slider-list__price"><span class="rus">60</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="576739" data-brand="MSPerfum" data-parent-category="Парфюмерия/Миниатюра" data-price="60" data-price-old="80" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/576739/" class="simple-slider-list__image"><img id="option-preview-576739" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/q/qw/qwniymtnffey.jpg" data-src-x2="https://u.makeup.com.ua/n/na/nazenrl3emee.jpg" title="MSPerfum Tentation - Духи (мини)" alt="Духи, Парфюмерия, косметика MSPerfum Tentation - Духи (мини)"><noscript><img src="https://u.makeup.com.ua/q/qw/qwniymtnffey.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Tentation - Духи (мини)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/576739/" data-default-name="MSPerfum Tentation - Духи (мини)" class="simple-slider-list__name">MSPerfum Tentation</a><div class="simple-slider-list__description">Духи (мини)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">80</span></span><span class="simple-slider-list__price"><span class="rus">60</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li><li data-id="595405" data-brand="MSPerfum" data-parent-category="Парфюмерия/Пробник" data-price="22" data-price-old="29" data-require-options="xyz" class="simple-slider-list__item labeled"><div class="simple-slider-hover"></div><div class="simple-slider-list__link"><a href="/product/595405/" class="simple-slider-list__image"><img id="option-preview-595405" src="/theme/site/img/loading.gif" data-src="https://u.makeup.com.ua/0/09/09ylzn5zaheh.jpg" data-src-x2="https://u.makeup.com.ua/t/tq/tqkenjr2xpnx.jpg" title="MSPerfum Eros - Духи (пробник)" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи (пробник)"><noscript><img src="https://u.makeup.com.ua/0/09/09ylzn5zaheh.jpg" alt="Духи, Парфюмерия, косметика MSPerfum Eros - Духи (пробник)"></noscript><div class="simple-slider-list__label action"><i>hot</i></div></a><a href="/product/595405/" data-default-name="MSPerfum Eros - Духи (пробник)" class="simple-slider-list__name">MSPerfum Eros</a><div class="simple-slider-list__description">Духи (пробник)</div><div class="simple-slider-list__price_container"><span class="simple-slider-list__price_old"><span class="rus">29</span></span><span class="simple-slider-list__price"><span class="rus">22</span></span></div></div><div class="simple-slider-list__other-info">        <div class="simple-slider-list-buttons"><div class="button buy">Купить</div></div></div></li></ul></div><div class="slider-button left"><label for="id-slider-1560373570544--1"></label><label for="id-slider-1560373570544-0"></label><label for="id-slider-1560373570544-1"></label><label for="id-slider-1560373570544-2"></label></div><div class="slider-button right"><label for="id-slider-1560373570544-1"></label><label for="id-slider-1560373570544-2"></label><label for="id-slider-1560373570544-3"></label><label for="id-slider-1560373570544-4"></label></div><div class="slider-page page"><label for="id-slider-1560373570544-0"></label><label for="id-slider-1560373570544-1"></label><label for="id-slider-1560373570544-2"></label><label for="id-slider-1560373570544-3"></label></div></div></div>
+        <div class="product-info__description">
+            <h2 class="page-header">
+                Описание MSPerfum Green Tea </h2>
+            <div><p>Парфюм производства MSPerfum отличается высоким качеством. В составе фрагранса 50% аромамасел (по классификации - это духи), что обеспечивает стойкость аромата на одежде более 5 дней, а на коже от 24 часов! Аромат раскрывается такими нотами, как ревень, мята, апельсиновая кожура, бергамот, лимон; в "сердце" аромата гвоздика, мускус, жасмин, дубовый мох, белая амбра, фенхель; базу аромата составляют такие ноты, как тмин, амбра, мускус, зеленый чай, жасмин, гвоздика, дубовый мох, семена сельдерея. Аромат подчеркивает Вашу индивидуальность и привносит в образ некую изюминку.</p></div>
+        </div>
+        <div class="ajax-loadable-slider" data-src="/ajax/block/product-block/bottom/"></div>
+        <div class="ajax-loadable-slider" data-src="/ajax/block/related/">
+            <div data-default-name="Другие клиенты также купили" class="page-header">Другие клиенты также купили</div>
+        </div>
+        <h1 class="page-header comments-start">MSPerfum Green Tea - Духи</h1>
+        <div class="align-center">
+            <div data-popup-handler="leave-comment" class="add-comment button-more">
+                оставить отзыв
+                / Задать вопрос
+            </div>
+            <div data-popup-handler="leave-comment" data-id="632463" class="ask-question button-more product-item__question" style="display:none;">Задать вопрос</div>
+            <form data-popup="leave-comment" action="#" method="post" novalidate="" class="form_send-comment ng-pristine ng-valid">
+                <div class="popup-description-close"><span>Закрыть</span></div><div class="form__comment-columns"><h2>Вы можете оставить отзыв или задать вопрос</h2><div class="form__comment-column"><p>Используйте данную форму для того, чтобы оставить отзыв о товаре или задать вопрос.</p><p>Все комментарии, не касающиеся продукта, будут удалены!</p><p><b>Комментарий будет выведен только после предварительной проверки нашими сотрудниками.</b></p><p>*Оставьте свой email и мы отправим оповещение сразу после того, как специалист даст ответ на ваш вопрос.</p></div><div class="form__comment-column"><div class="private-office__row"><div class="input-column"><label for="comments-name" class="label">Ваше имя</label><div class="input-wrap"><input name="fio" id="comments-name" type="text" required="" value="" class="input" title="overall type: NAME_FIRST
+server type: NAME_FIRST
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя
+parseable name: fio
+section: fio_1-default
+field signature: 1249862250
+form signature: 1624077406806980778" autofill-information="overall type: NAME_FIRST
+server type: NAME_FIRST
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя
+parseable name: fio
+section: fio_1-default
+field signature: 1249862250
+form signature: 1624077406806980778" autofill-prediction="NAME_FIRST"></div></div></div><div class="private-office__row"><div class="input-column"><label for="mail" class="label">E-mail*</label><div class="input-wrap "><input id="mail" type="text" name="email" value="" class="input" title="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: E-mail*
+parseable name: email
+section: fio_1-default
+field signature: 420638584
+form signature: 1624077406806980778" autofill-information="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: E-mail*
+parseable name: email
+section: fio_1-default
+field signature: 420638584
+form signature: 1624077406806980778" autofill-prediction="EMAIL_ADDRESS"></div></div></div><div class="private-office__row" id="rate"><div class="input-column"><label for="id_rate5" class="label">Ваша оценка</label><div class="input-wrap"><div class="stars-wrap"><input id="id_rate0" type="radio" name="stars" value="" checked="" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><input id="id_rate1" type="radio" name="stars" value="1" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><input id="id_rate2" type="radio" name="stars" value="2" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><input id="id_rate3" type="radio" name="stars" value="3" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><input id="id_rate4" type="radio" name="stars" value="4" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><input id="id_rate5" type="radio" name="stars" value="5" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: stars
+section: fio_1-default
+field signature: 2683962680
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"><ul class="stars"><li title="0" class="stars__item"><label for="id_rate0"></label></li><li title="1" class="stars__item"><label for="id_rate1"></label></li><li title="2" class="stars__item"><label for="id_rate2"></label></li><li title="3" class="stars__item"><label for="id_rate3"></label></li><li title="4" class="stars__item"><label for="id_rate4"></label></li><li title="5" class="stars__item"><label for="id_rate5"></label></li></ul></div></div></div></div></div><div class="form__comment-column"><div class="private-office__row"><div class="input-column"><label for="comments-message" class="label">Текст сообщения</label><div class="input-wrap"><textarea name="body" id="comments-message" required="" class="text-area" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Текст сообщения
+parseable name: body
+section: fio_1-default
+field signature: 3530958362
+form signature: 1624077406806980778" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Текст сообщения
+parseable name: body
+section: fio_1-default
+field signature: 3530958362
+form signature: 1624077406806980778" autofill-prediction="UNKNOWN_TYPE"></textarea></div><div class="add-c"><a onclick="$('#comment-img').click();">Добавить изображение </a><span id="discuss_img_name"></span></div><input type="file" name="image" id="comment-img" style="display:none;"></div></div><div class="private-office__row status"><button type="submit" formnovalidate="" class="button">Добавить сообщение</button></div></div><div class="loading-block"></div></div><input type="hidden" name="parent" value="" id="comment-parent-id"><input type="hidden" name="is_question" value="0"><input type="hidden" name="add_topic" value="yes"><input type="hidden" name="productID" id="respond-product" value="632463"><input type="hidden" name="wide" value="0">
+            </form>
+        </div>
+        <div id="reviews-list" class="pagination-ajax-container">
+            <div class="comments"><ul class="comments-list"><li class="comments-list__item" itemprop="review" itemscope="" itemtype="http://schema.org/Review"><div class="comment-user-column"><div class="comment__name"><span class="review-author-name" itemprop="author">Марина</span></div><time datetime="2019-06-10" class="comment__time">10 июня 2019</time><div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating"><meta itemprop="ratingValue" content="5"><span class="star-list">★★★★★</span></div></div><div class="comment-user-data"><p itemprop="reviewBody">Аромат чудесный, свежий, летний, легкий. Мне очень понравились.</p><div class="add-c"><a data-popup-handler="leave-comment" data-parentid="3665475" class="add-answer">ответить</a></div></div><meta itemprop="datePublished" content="2019-06-10"></li></ul></div> </div>
+    </div>
+    <div class="ajax-loadable-slider with-header" data-src="/ajax/block/viewed/">
+        <h2 data-default-name="Вы недавно просматривали" class="page-header">Вы недавно просматривали</h2>
+    </div>
+</div>

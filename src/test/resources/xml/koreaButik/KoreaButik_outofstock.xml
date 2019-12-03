@@ -1,0 +1,227 @@
+<div data-qaid="product-info">
+    <ul class="b-product-data"
+        data-tg-became-visible="[{&quot;ns&quot;: &quot;ontheio&quot;, &quot;method&quot;: &quot;pageviewsProduct&quot;, &quot;args&quot;: [{&quot;view_type&quot;: &quot;full&quot;}], &quot;payloads&quot;: {&quot;oi_common&quot;: 257559303}, &quot;uuid&quot;: &quot;f1d03dba26647adb584748350c0770f06af12718760b51eac8f2f366a0b587af&quot;}]">
+        <li class="b-product-data__item b-product-data__item_type_clarify" data-qaid="presence_data">Нет в наличии</li>
+    </ul>
+    <h1 class="cs-product__name cs-online-edit">
+        <a class="cs-online-edit__link" data-edit-role="productInfo" data-edit-id="257559303"
+           title="Редактировать название товара" style="display:none"></a>
+        <a class="cs-online-edit__horizontal-borders" data-edit-role="productInfo" data-edit-id="257559303"
+           style="display:none"></a>
+        <a class="cs-online-edit__vertical-borders" data-edit-role="productInfo" data-edit-id="257559303"
+           style="display:none"></a>
+        <span data-qaid="product_name">Увлажняющий крем Laneige Water Bank Moisture Cream, 10 мл</span>
+    </h1>
+    <div class="cs-product__price-wrap cs-online-edit">
+        <div class="b-product-cost">
+            <p class="b-product-cost__price"><span data-qaid="product_price">55</span>&nbsp;<span class="notranslate"
+                                                                                                  data-qaid="currency">
+                грн.
+            </span>
+            </p>
+        </div>
+        <a class="cs-online-edit__link" data-edit-role="productInfo" data-edit-id="257559303"
+           title="Редактировать цену товара" style="display:none"></a>
+        <a class="cs-online-edit__horizontal-borders" data-edit-role="productInfo" data-edit-id="257559303"
+           style="display:none"></a>
+        <a class="cs-online-edit__vertical-borders" data-edit-role="productInfo" data-edit-id="257559303"
+           style="display:none"></a>
+    </div>
+    <div class="cs-product__btn-wrap">
+        <button class="cs-product__btn cs-custom-button cs-custom-button_page_product" data-qaid="write_us"
+                data-extend="RContactNow" data-rcn-company-id="2081757"
+                data-rcn-hash="E6516017EE8B850178E6EB77500993AB6908E9D9BB5E2CBBE9C8"
+                data-rcn-product-data-url="https://prom.ua/product_view/get_products_for_overlay?product_id=257559303"
+                data-rcn-product-id="257559303" data-rcn-product-type="product"
+                data-rcn-signed-company-id="MjA4MTc1Nw.d1WskDx_licApdRZI-wdrc39C4s"
+                data-rcn-subject="Запрос по товару «Увлажняющий крем Laneige Water Bank Moisture Cream, 10 мл»"
+                data-tg-chain="{&quot;view_type&quot;: &quot;full&quot;}" id="Z17EDCF98-F1EF-4AD6-824E-7B550A1C86C8">
+            Написать
+        </button>
+    </div>
+    <div class="cs-product__drop-phones">
+        <div id="ID-44800ee9-a880-463a-918e-9253fdc38865" class="cs-drop-phones">
+            <ul class="cs-drop-phones__list">
+                <li class="cs-drop-phones__item js-ga-phone-hover"
+                    data-tg-hovered="[{&quot;ns&quot;: &quot;main&quot;, &quot;method&quot;: &quot;gatrackQueue&quot;, &quot;args&quot;: [&quot;contact_view&quot;, &quot;hover_phones&quot;, {&quot;label/label&quot;: &quot;company_site-product_view&quot;}], &quot;uuid&quot;: &quot;06880416b5f4f52d4c03b5688717d7fb2f1c5df4b130316e646bb783646ac7d3&quot;}, {&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;company_contacts_hovered&quot;], &quot;uuid&quot;: &quot;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&quot;}]">
+                    <div class="cs-drop-phones__number cs-drop-phones__number_type_list">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate cs-drop-phones__code">93</span>
+                        <span class="notranslate">105-93-45</span>
+                    </div>
+                </li>
+                <li class="cs-drop-phones__item js-ga-phone-hover"
+                    data-tg-hovered="[{&quot;ns&quot;: &quot;main&quot;, &quot;method&quot;: &quot;gatrackQueue&quot;, &quot;args&quot;: [&quot;contact_view&quot;, &quot;hover_phones&quot;, {&quot;label/label&quot;: &quot;company_site-product_view&quot;}], &quot;uuid&quot;: &quot;06880416b5f4f52d4c03b5688717d7fb2f1c5df4b130316e646bb783646ac7d3&quot;}, {&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;company_contacts_hovered&quot;], &quot;uuid&quot;: &quot;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&quot;}]">
+                    <div class="cs-drop-phones__number cs-drop-phones__number_type_list">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate cs-drop-phones__code">96</span>
+                        <span class="notranslate">180-34-98</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="b-sundry">
+        <li id="delivery_info_link_id" class="b-sundry__item b-sundry__item_type_delivery" data-qaid="delivery_link"
+            data-extend="DeliveryInfo" data-subscribe="click : DeliveryInfo/open"
+            data-deliveryinfo-url="https://my.prom.ua/remote/shop_settings/get_delivery_info_html?free_delivery=False&amp;is_service=False&amp;company_id=2081757&amp;group_id=7503268&amp;product_name=%D0%A3%D0%B2%D0%BB%D0%B0%D0%B6%D0%BD%D1%8F%D1%8E%D1%89%D0%B8%D0%B9+%D0%BA%D1%80%D0%B5%D0%BC+Laneige+Water+Bank+Moisture+Cream%2C+10+%D0%BC%D0%BB"
+            data-netio-data-type="json">Условия оплаты и доставки
+        </li>
+
+
+        <li class="b-sundry__item b-sundry__item_type_schedule" id="ID-4ce5eba6-a61b-4abc-bac5-76673a01623f">
+            График работы
+            <div class="b-schedule">
+                <table class="b-schedule__table">
+                    <tr>
+                        <th class="b-schedule__header">День</th>
+                        <th class="b-schedule__header">Время работы</th>
+                        <th class="b-schedule__header">Перерыв</th>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Понедельник</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Вторник</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Среда</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Четверг</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Пятница</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Суббота</td>
+                        <td class="b-schedule__cell">
+                            Выходной
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Воскресенье</td>
+                        <td class="b-schedule__cell">
+                            Выходной
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                </table>
+                <p class="b-schedule__remark">
+                    * Время указано для региона: Украина, Киев
+                </p>
+            </div>
+        </li>
+        <li id="company_contacts_info" class="b-sundry__item b-sundry__item_type_contacts"
+            data-tg-clicked="[{&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;contacts_view_on_company_site&quot;], &quot;uuid&quot;: false}]">
+            Адрес и контакты
+            <div class="b-contacts">
+                <div id="ID-37fe0180-005c-4f65-9f13-84a20656212b" class="b-contacts__row" title="Телефон">
+                    <div class="b-contacts__phone js-ga-phone-hover"
+                         data-tg-hovered="[{&#34;ns&#34;: &#34;main&#34;, &#34;method&#34;: &#34;gatrackQueue&#34;, &#34;args&#34;: [&#34;contact_view&#34;, &#34;hover_phones&#34;, {&#34;label/label&#34;: &#34;company_site-product_view_popup&#34;}], &#34;uuid&#34;: &#34;06bb6a343466e8a92d73646f1e51f62b2b61d018c9a31064d26a8658fa3e7647&#34;}, {&#34;ns&#34;: &#34;ym&#34;, &#34;method&#34;: &#34;reachGoal&#34;, &#34;args&#34;: [&#34;company_contacts_hovered&#34;], &#34;uuid&#34;: &#34;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&#34;}]">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate b-contacts__code">93</span>
+                        <span class="b-contacts__comma notranslate">105-93-45</span>
+                    </div>
+                    <div class="b-contacts__phone js-ga-phone-hover"
+                         data-tg-hovered="[{&#34;ns&#34;: &#34;main&#34;, &#34;method&#34;: &#34;gatrackQueue&#34;, &#34;args&#34;: [&#34;contact_view&#34;, &#34;hover_phones&#34;, {&#34;label/label&#34;: &#34;company_site-product_view_popup&#34;}], &#34;uuid&#34;: &#34;06bb6a343466e8a92d73646f1e51f62b2b61d018c9a31064d26a8658fa3e7647&#34;}, {&#34;ns&#34;: &#34;ym&#34;, &#34;method&#34;: &#34;reachGoal&#34;, &#34;args&#34;: [&#34;company_contacts_hovered&#34;], &#34;uuid&#34;: &#34;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&#34;}]">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate b-contacts__code">96</span>
+                        <span class="b-contacts__comma notranslate">180-34-98</span>
+                    </div>
+                </div>
+                <address class="b-contacts__row" title="Адрес">
+                    <span class="b-contacts__comma" title="Украина">Украина</span>
+                    <span class="b-contacts__comma" title="Киев">Киев</span>
+                </address>
+                <div class="b-contacts__row" title="Email">
+                    <a class="b-contacts__link" href="mailto:korea-butik@ukr.net" title="korea-butik@ukr.net">
+                        korea-butik@ukr.net
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="cs-return-policy">
+        <b class="cs-return-policy__label" title="Условия возврата: "></b>
+        <span class="cs-return-policy__text" data-qaid="return_policy_info">Законом не предусмотрен возврат и обмен
+            данного товара надлежащего качества
+        </span>
+        <h4 class="h-bold h-font-size-16 h-mv-10">
+            Компания руководствуется Законом
+            <a class="h-underlined h-nohover-decoration h-blue-link"
+               href="http://zakon2.rada.gov.ua/laws/show/1023-12" target="_blank" rel="nofollow">«О защите прав
+                потребителей»
+            </a>
+            в вопросах возврата и обмена товаров надлежащего качества.
+        </h4>
+        <p class="h-font-size-14 h-mv-10">
+            Согласно Закону <a class="h-underlined h-nohover-decoration h-blue-link"
+                               href="http://zakon2.rada.gov.ua/laws/show/1023-12" target="_blank"
+                               rel="nofollow">«О защите прав потребителей»</a>,
+            компания может отказать потребителю в обмене и возврате
+            товаров надлежащего качества, если они относятся к
+            категориям, указанным в действующем
+            <a class="h-underlined h-nohover-decoration h-blue-link"
+               href="http://zakon2.rada.gov.ua/laws/show/172-94-%D0%BF" target="_blank" rel="nofollow">Перечне
+                непродовольственных товаров
+                надлежащего качества, не подлежащих возврату и обмену</a>.
+        </p>
+        <p class="h-font-size-14 h-mv-10">
+            Товары надлежащего качества, для которых разрешен возврат и
+            обмен, могут быть возвращены в течение 14 дней после
+            получения покупателем, если:
+        </p>
+        <ul class="disc-marked">
+            <li class=" h-font-size-14">
+                товар не был в употреблении и не имеет следов
+                использования потребителем: царапин, сколов, потёртостей,
+                пятен и т. п.;
+            </li>
+            <li class=" h-font-size-14">
+                товар полностью укомплектован и сохранена фабричная
+                упаковка;
+            </li>
+            <li class=" h-font-size-14">сохранены все ярлыки и заводская маркировка;</li>
+            <li class=" h-font-size-14">
+                товар сохраняет товарный вид и свои потребительские
+                свойства.
+            </li>
+        </ul>
+    </div>
+</div>

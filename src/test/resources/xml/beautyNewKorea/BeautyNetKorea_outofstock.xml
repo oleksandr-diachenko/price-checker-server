@@ -1,0 +1,192 @@
+<div class="xans-element- xans-product xans-product-detail "><div class="detailArea">
+    <!-- 이미지 영역 -->
+    <div class="xans-element- xans-product xans-product-image imgArea "><div class="keyImg">
+        <!-- 공급사 바로가기버튼 영역 -->
+        <div class="topLogo displaynone">
+            <span></span>
+        </div>
+        <!--// 공급사 바로가기버튼 영역 -->
+        <a href="/product/image_zoom2.html?product_no=7039&amp;cate_no=407" alt="P0000KKS" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=450,height=693,left=0,top=0', this);return false;"><img src="//beautynetkorea.com/web/product/big/201806/7039_shop2_1529999697634.jpg" alt="" class="BigImage "><span id="zoomMouseGiude" style="display: block; position: relative; width: 170px; margin: 0px auto;"><img src="//img.echosting.cafe24.com/design/skin/admin/en_US/txt_product_zoom.gif" id="zoomGuideImage" alt="Hover mouse here." style="position: absolute; top: -27px; right: 0px;"></span></a>
+    </div>
+        <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+        <div class="xans-element- xans-product xans-product-addimage listImg"><ul>
+            <li class="xans-record-"><img src="//beautynetkorea.com/web/product/small/201806/7039_shop2_1529999697634.jpg" class="ThumbImage"></li>
+        </ul>
+        </div>
+        <!-- //참고
+                    <div class="control">
+                        <span class="prev"><a href="#none" onclick="ImagePreview.viewProductBtnClick('prev');" style="display:;"><img src="http://img.echosting.cafe24.com/skin/base_en_US/product/btn_product_prev.gif" alt="이전상품" /></a></span>
+                        <span class="next"><a href="#none" onclick="ImagePreview.viewProductBtnClick('next');" style="display:;"><img src="http://img.echosting.cafe24.com/skin/base_en_US/product/btn_product_next.gif" alt="다음 제품 보기" /></a></span>
+                        <a href="/product/image_zoom2.html?product_no=7039&cate_no=407" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=560,height=710,left=0,top=0', this);return false;"><img src="http://img.echosting.cafe24.com/skin/base_en_US/product/btn_product_zoom.gif" alt="확대보기" /></a>
+                    </div>
+
+                 <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다.
+                    <div class="button" module="product_action">
+                        <a href="#none" onclick=""><img src="http://img.echosting.cafe24.com/skin/base_en_US/product/btn_recommend_email.gif" alt="추천메일 보내기" /></a>
+                        <a href="#none" onclick="" class="displaynone"><img src="http://img.echosting.cafe24.com/skin/base_en_US/product/btn_product_request.gif" alt="상품조르기" /></a>
+                    </div><!-- //참고 -->
+    </div>
+    <!-- //이미지 영역 -->
+
+
+
+    <!-- 상세정보 내역 -->
+    <div class="infoArea">
+        <div class="icon"><img src="//img0001.echosting.cafe24.com/front/type_en/image/common/icon_sellout.gif" class="icon_img" alt="Out-of-stock">   </div>
+        <h3> [CP-1] Bright Complex Intense Nourishing Shampoo 100ml<span style="color:#368AFF"> (Weight : 125g)</span> <span class="displaynone">(해외배송 가능상품)</span>
+        </h3>
+
+        <div class="xans-element- xans-product xans-product-detaildesign"><!--
+                    출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
+                    count = 10
+                -->
+            <table border="1" summary="">
+                <caption> Basic Information</caption>
+                <tbody>
+                    <tr class=" xans-record-">
+                        <th scope="row"><span style="font-size:13px;color:#2b2b2b;font-weight:bold;">Product Name</span></th>
+                        <td><span style="font-size:13px;color:#2b2b2b;font-weight:bold;">[CP-1] Bright Complex Intense Nourishing Shampoo 100ml<span style="color:#368AFF"> (Weight : 125g)</span></span></td>
+                    </tr>
+                    <tr class=" xans-record-">
+                        <th scope="row"><span style="font-size:12px;color:#2b2b2b;">Origin</span></th>
+                        <td><span style="font-size:12px;color:#2b2b2b;">South Korea</span></td>
+                    </tr>
+                    <tr class=" xans-record-">
+                        <th scope="row"><span style="font-size:12px;color:#2b2b2b;">Sale Price</span></th>
+                        <td><span style="font-size:12px;color:#2b2b2b;"><strong id="span_product_price_text" style="text-decoration: line-through;"> ($ 9.52 USD) (KRW 9,996)</strong><input id="product_price" name="product_price" value="" type="hidden"></span></td>
+                    </tr>
+                    <tr class=" xans-record-">
+                        <th scope="row"><span style="font-size:12px;color:#c20404;font-weight:bold;">Discounted Price</span></th>
+                        <td><span><span style="font-size:12px;color:#c20404;font-weight:bold;"><span id="span_product_price_sale"> ($ 2.28 USD) (KRW 2,394) </span></span></span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <input name="delv_type" value="B" product_no="" type="hidden"></div>
+
+        <table border="1" summary="">
+            <caption>Product promotion via SNS</caption>
+            <tbody><tr class="">
+                <th scope="row">Product promotion via SNS</th>
+                <td class="social"><img src="//img.cafe24.com/images/ec_admin/icon/icon_facebook.gif" onclick="SnsLinkAction('facebook',7039);" alt=""> <img src="//img.cafe24.com/images/ec_admin/icon/icon_twitter.gif" onclick="SnsLinkAction('twitter',7039);" alt=""> <ul class="xans-element- xans-product xans-product-customsns xans-record-"><li></li>
+                </ul>
+                </td>
+            </tr></tbody>
+        </table>
+        <div id="zoom_wrap"><p class="image_zoom_large" style="display: none;"><span class="image_zoom_large_relative"><img id="zoom_image" alt="확대 이미지" src="//beautynetkorea.com/web/product/big/201806/7039_shop2_1529999697634.jpg" style="width: 1120px; height: 1120px; left: 0px; top: -704px;"></span></p></div>
+
+
+        <p class="displaynone"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/txt_naver.gif" alt="To use or earn Naver Mileages, please check out through personal payment window."></p>
+        <!-- //상세정보 내역 -->
+
+
+        <table border="1" summary="">
+            <caption>Product Option</caption>
+            <tbody class="xans-element- xans-product xans-product-option xans-record-"><!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. --></tbody>
+        </table>
+        <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. --><p class="info ">(Minimum Order : 1 or more<span class="displaynone"> / Maximum Order 0 or less</span>)</p>
+        <!-- //참고 -->
+
+        <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+        <!-- //참고 -->
+
+
+        <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+        <!-- //참고 -->
+
+        <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+        <div id="totalProducts" class="">
+            <p class="ec-base-help txtWarn txt11 ">  Select quantity.</p>
+            <p class="ec-base-help txtWarn txt11 displaynone"> To add product, select an option in the above option box.</p>
+            <table border="1" summary="">
+                <caption>Product List</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:76px;">
+                    <col style="width:150px;">
+                </colgroup>
+                <thead><tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                </tr></thead>
+                <tbody class=""><tr>
+                    <td>[CP-1] Bright Complex Intense Nourishing Shampoo 100ml<span style="color:#368AFF"> (Weight : 125g)</span></td>
+                    <td>
+                        <span class="quantity">
+                            <input id="" name="quantity_opt[]" style="" value="0" type="text" title="overall type: ADDRESS_HOME_ZIP
+server type: NO_SERVER_DATA
+heuristic type: ADDRESS_HOME_ZIP
+label: [CP-1] Bright Complex Intense Nourishing Shampoo 100ml (Weight : 125g)
+parseable name: quantity_opt[]
+section: quantity_opt[]_1-default
+field signature: 1544677028
+form signature: 2185429692021139548" autofill-information="overall type: ADDRESS_HOME_ZIP
+server type: NO_SERVER_DATA
+heuristic type: ADDRESS_HOME_ZIP
+label: [CP-1] Bright Complex Intense Nourishing Shampoo 100ml (Weight : 125g)
+parseable name: quantity_opt[]
+section: quantity_opt[]_1-default
+field signature: 1544677028
+form signature: 2185429692021139548" autofill-prediction="ADDRESS_HOME_ZIP">                                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/btn_count_up.gif" alt="up" class=" up"></a>
+                            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/btn_count_down.gif" alt="down" class=" down"></a>
+                        </span>
+                    </td>
+                    <td class="right">
+                        <span class="quantity_price"> ($ 9.52 USD)<input type="hidden" name="option_box_price" class="option_box_price" value="9.52" item_code="P0000KKS000A"></span> <span class="mileage displaynone" style="display: none;">(<img src="/web/upload/icon_201605131043202800.jpg"> &nbsp;<span class="mileage_price">0</span>)</span>
+                    </td>
+                </tr></tbody>
+                <!-- 참고 : 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다.--><tbody><!-- tr>
+                            <td>
+                                <p class="product">
+                                    $상품명<br />
+                                    <span>$옵션</span>
+                                </p>
+                            </td>
+                            <td>
+                                <span class="quantity">
+                                    <input type="text" class="quantity_opt" />
+                                    &nbsp;<a href="#none"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/btn_count_up.gif" alt="up" class="up" /></a>
+                                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/btn_count_down.gif" alt="down" class="down" /></a>
+                                </span>
+                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_price_delete.gif" alt="Remove" class="option_box_del" /></a>
+                            </td>
+                            <td class="right">
+                                <span>$가격</span>
+                                <span class="mileage">(<img src="//img.echosting.cafe24.com/design/skin/admin/en_US/product/ico_pay_point.gif" /> &nbsp;<span class="mileage_price">$적립금</span>)</span>
+                            </td>
+                        </tr --></tbody>
+                <!-- //참고 --><tfoot><tr>
+                <td colspan="3">
+                    <strong>Total</strong>(Quantity) : <span class="total"><strong><em> ($ 0 USD)</em></strong> (0 item(s)) / (KRW 0)</span>
+                    <p class="ec-base-help txt11 displaynone EC-price-warning">Discounted amount of your subtotal will appear when you place your orders.</p>
+                </td>
+            </tr></tfoot>
+            </table>
+        </div>
+        <!-- //참고 -->
+
+        <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+        <div class="xans-element- xans-product xans-product-action "><div class="btnArea">
+            <a href="#none" class="first displaynone" onclick="product_submit(1, '/exec/front/order/basket/', this)"><img src="/web/season2_skin/skin48/btn/btn_buy_big.gif" alt="Buy Now" id="btnBuy"><img src="//img.echosting.cafe24.com/skin/base_en_US/product/btn_reserve.gif" alt="Backorder" class="displaynone" id="btnReserve" style="display: none;"></a>
+            <a href="#none" class="displaynone" onclick="product_submit(2, '/exec/front/order/basket/', this)"><img src="/web/season2_skin/skin48/btn/btn_cart_big.gif" alt="Add to Cart"></a>
+            <span class=""><img src="/web/season2_skin/skin48/btn/btn_sold_out.gif" alt="SOLD OUT"></span>
+            <a href="#none" onclick="add_wishlist_nologin('/member/login.html');" class=""><img src="/web/season2_skin/skin48/btn/btn_wish2.gif" alt="Add to Wish List"></a>
+        </div>
+            <!-- 네이버 체크아웃 구매 버튼 -->
+            <div id="NaverChk_Button"></div>
+            <!-- //네이버 체크아웃 구매 버튼 -->
+
+
+        </div>
+        <!-- //참고 -->
+    </div>
+</div>
+    <!-- 공급사:판매사정보 -->
+    <div class="supplyInfo displaynone">
+    </div>
+    <!-- //공급사:판매사정보 -->
+    <div class="eventArea">
+        <div class="event"></div>
+    </div>
+</div>

@@ -1,0 +1,272 @@
+<div data-qaid="product-info">
+    <ul class="b-product-data"
+        data-tg-became-visible="[{&quot;ns&quot;: &quot;ontheio&quot;, &quot;method&quot;: &quot;pageviewsProduct&quot;, &quot;args&quot;: [{&quot;view_type&quot;: &quot;full&quot;}], &quot;payloads&quot;: {&quot;oi_common&quot;: 383415662}, &quot;uuid&quot;: &quot;c67499d0e12344007f653d77663b4cebc68aaf9a0fb7f474b3832f0f7783129c&quot;}]">
+        <li class="b-product-data__item b-product-data__item_type_available" data-qaid="presence_data">В наличии</li>
+    </ul>
+    <h1 class="cs-product__name cs-online-edit">
+        <a class="cs-online-edit__link" data-edit-role="productInfo" data-edit-id="383415662"
+           title="Редактировать название товара" style="display:none"></a>
+        <a class="cs-online-edit__horizontal-borders" data-edit-role="productInfo" data-edit-id="383415662"
+           style="display:none"></a>
+        <a class="cs-online-edit__vertical-borders" data-edit-role="productInfo" data-edit-id="383415662"
+           style="display:none"></a>
+        <span data-qaid="product_name">ББ крем Missha M Perfect Cover BB Cream 42 SPF/PA+++ 50 мл тон 23, 50 мл</span>
+    </h1>
+    <div class="cs-product__price-wrap cs-online-edit">
+        <div class="b-product-cost">
+            <p class="b-product-cost__old-price" data-qaid="old_product_price">375&nbsp;<span class="notranslate">грн.
+            </span>
+            </p>
+            <p class="b-product-cost__price" data-qaid="product_price">337,50&nbsp;<span class="notranslate">грн.</span>
+            </p>
+        </div>
+        <a class="cs-online-edit__link" data-edit-role="productInfo" data-edit-id="383415662"
+           title="Редактировать цену товара" style="display:none"></a>
+        <a class="cs-online-edit__horizontal-borders" data-edit-role="productInfo" data-edit-id="383415662"
+           style="display:none"></a>
+        <a class="cs-online-edit__vertical-borders" data-edit-role="productInfo" data-edit-id="383415662"
+           style="display:none"></a>
+    </div>
+    <time class="cs-countdown" datetime="2019-09-15T00:00:00" data-extend="ICountdownDatetime"
+          data-countdown-date="Sep 16, 2019" id="Z8F1D7CD9-4199-49FD-9FFF-D1F1E0DE8905">
+        <div class="cs-countdown__item">
+            <span class="cs-countdown__caption js-countdown-days-caption" data-days="01">День</span>
+            <div class="cs-countdown__digit-wrap">
+                <span class="cs-countdown__digit cs-countdown__digit_pos_first js-countdown-days-digit1"
+                      data-days-digit1="0">0
+                </span>
+                <span class="cs-countdown__digit js-countdown-days-digit2" data-days-digit2="1">1</span>
+            </div>
+        </div>
+        <div class="cs-countdown__item">
+            <span class="cs-countdown__caption js-countdown-hours-caption" data-hours="16">Часов</span>
+            <div class="cs-countdown__digit-wrap">
+                <span class="cs-countdown__digit cs-countdown__digit_pos_first js-countdown-hours-digit1"
+                      data-hours-digit1="1">1
+                </span>
+                <span class="cs-countdown__digit js-countdown-hours-digit2" data-hours-digit2="6">6</span>
+            </div>
+        </div>
+        <div class="cs-countdown__item">
+            <span class="cs-countdown__caption js-countdown-minutes-caption" data-minutes="10">Минут</span>
+            <div class="cs-countdown__digit-wrap">
+                <span class="cs-countdown__digit cs-countdown__digit_pos_first js-countdown-minutes-digit1"
+                      data-minutes-digit1="1">1
+                </span>
+                <span class="cs-countdown__digit js-countdown-minutes-digit2" data-minutes-digit2="0">0</span>
+            </div>
+        </div>
+        <div class="cs-countdown__item">
+            <span class="cs-countdown__caption js-countdown-seconds-caption" data-seconds="50">Секунд</span>
+            <div class="cs-countdown__digit-wrap">
+                <span class="cs-countdown__digit cs-countdown__digit_pos_first js-countdown-seconds-digit1"
+                      data-seconds-digit1="5">5
+                </span>
+                <span class="cs-countdown__digit js-countdown-seconds-digit2" data-seconds-digit2="0">0</span>
+            </div>
+        </div>
+    </time>
+    <div class="cs-product__btn-wrap">
+        <a class="cs-product__btn cs-custom-button cs-custom-button_page_product csjs-button-buy js-product-buy-button js-buy-button__text"
+           href="/shopping_cart_static?product_id=MzgzNDE1NjYy.RwUCQeuGYIokw6T6kCSez4R_LJM" target="_blank"
+           rel="nofollow" data-qaid="buy-button" data-class-state-done="cs-custom-button_type_active"
+           data-class-state-in-cart="cs-custom-button_type_active" data-custom-buy-button-text="Купить"
+           data-product-id="383415662" data-product-sign="MzgzNDE1NjYy.RwUCQeuGYIokw6T6kCSez4R_LJM"
+           data-company-id="2081757"
+           data-product-name="ББ крем Missha M Perfect Cover BB Cream 42 SPF/PA+++ 50 мл тон 23, 50 мл"
+           data-product-url="/p383415662-krem-missha-perfect.html"
+           data-product-big-picture="https://images.ua.prom.st/543136193_w200_h200_bb-krem-missha.jpg"
+           data-product-small-picture="https://images.ua.prom.st/543136193_w40_h40_bb-krem-missha.jpg"
+           data-tg-chain="{&quot;view_type&quot;: &quot;full&quot;}" data-product-price="375 грн."
+           data-product-discounted-price="337,50 грн.">Купить
+        </a>
+    </div>
+    <div class="cs-product__drop-phones">
+        <div id="ID-1546b768-8dcb-43b4-946b-f15dad82f633" class="cs-drop-phones">
+            <ul class="cs-drop-phones__list">
+                <li class="cs-drop-phones__item js-ga-phone-hover"
+                    data-tg-hovered="[{&quot;ns&quot;: &quot;main&quot;, &quot;method&quot;: &quot;gatrackQueue&quot;, &quot;args&quot;: [&quot;contact_view&quot;, &quot;hover_phones&quot;, {&quot;label/label&quot;: &quot;company_site-product_view&quot;}], &quot;uuid&quot;: &quot;06880416b5f4f52d4c03b5688717d7fb2f1c5df4b130316e646bb783646ac7d3&quot;}, {&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;company_contacts_hovered&quot;], &quot;uuid&quot;: &quot;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&quot;}]">
+                    <div class="cs-drop-phones__number cs-drop-phones__number_type_list">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate cs-drop-phones__code">93</span>
+                        <span class="notranslate">105-93-45</span>
+                    </div>
+                </li>
+                <li class="cs-drop-phones__item js-ga-phone-hover"
+                    data-tg-hovered="[{&quot;ns&quot;: &quot;main&quot;, &quot;method&quot;: &quot;gatrackQueue&quot;, &quot;args&quot;: [&quot;contact_view&quot;, &quot;hover_phones&quot;, {&quot;label/label&quot;: &quot;company_site-product_view&quot;}], &quot;uuid&quot;: &quot;06880416b5f4f52d4c03b5688717d7fb2f1c5df4b130316e646bb783646ac7d3&quot;}, {&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;company_contacts_hovered&quot;], &quot;uuid&quot;: &quot;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&quot;}]">
+                    <div class="cs-drop-phones__number cs-drop-phones__number_type_list">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate cs-drop-phones__code">96</span>
+                        <span class="notranslate">180-34-98</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="b-sundry">
+        <li id="delivery_info_link_id" class="b-sundry__item b-sundry__item_type_delivery" data-qaid="delivery_link"
+            data-extend="DeliveryInfo" data-subscribe="click : DeliveryInfo/open"
+            data-deliveryinfo-url="https://my.prom.ua/remote/shop_settings/get_delivery_info_html?free_delivery=False&amp;is_service=False&amp;company_id=2081757&amp;group_id=7308415&amp;product_name=%D0%91%D0%91+%D0%BA%D1%80%D0%B5%D0%BC+Missha+M+Perfect+Cover+BB+Cream+42+SPF%2FPA%2B%2B%2B+50+%D0%BC%D0%BB+%D1%82%D0%BE%D0%BD+23%2C+50+%D0%BC%D0%BB"
+            data-netio-data-type="json">Условия оплаты и доставки
+        </li>
+
+
+        <li class="b-sundry__item b-sundry__item_type_schedule" id="ID-2a715d0b-f60f-4dff-b570-073f5cce71af">
+            График работы
+            <div class="b-schedule">
+                <table class="b-schedule__table">
+                    <tr>
+                        <th class="b-schedule__header">День</th>
+                        <th class="b-schedule__header">Время работы</th>
+                        <th class="b-schedule__header">Перерыв</th>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Понедельник</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Вторник</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Среда</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Четверг</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Пятница</td>
+                        <td class="b-schedule__cell">
+                            09:30&nbsp;&nbsp;17:30
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Суббота</td>
+                        <td class="b-schedule__cell">
+                            Выходной
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-schedule__cell">Воскресенье</td>
+                        <td class="b-schedule__cell">
+                            Выходной
+                        </td>
+                        <td class="b-schedule__cell">
+
+                        </td>
+                    </tr>
+                </table>
+                <p class="b-schedule__remark">
+                    * Время указано для региона: Украина, Киев
+                </p>
+            </div>
+        </li>
+        <li id="company_contacts_info" class="b-sundry__item b-sundry__item_type_contacts"
+            data-tg-clicked="[{&quot;ns&quot;: &quot;ym&quot;, &quot;method&quot;: &quot;reachGoal&quot;, &quot;args&quot;: [&quot;contacts_view_on_company_site&quot;], &quot;uuid&quot;: false}]">
+            Адрес и контакты
+            <div class="b-contacts">
+                <div id="ID-aad0ebaf-c918-4fcc-943b-fad1357bc564" class="b-contacts__row" title="Телефон">
+                    <div class="b-contacts__phone js-ga-phone-hover"
+                         data-tg-hovered="[{&#34;ns&#34;: &#34;main&#34;, &#34;method&#34;: &#34;gatrackQueue&#34;, &#34;args&#34;: [&#34;contact_view&#34;, &#34;hover_phones&#34;, {&#34;label/label&#34;: &#34;company_site-product_view_popup&#34;}], &#34;uuid&#34;: &#34;06bb6a343466e8a92d73646f1e51f62b2b61d018c9a31064d26a8658fa3e7647&#34;}, {&#34;ns&#34;: &#34;ym&#34;, &#34;method&#34;: &#34;reachGoal&#34;, &#34;args&#34;: [&#34;company_contacts_hovered&#34;], &#34;uuid&#34;: &#34;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&#34;}]">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate b-contacts__code">93</span>
+                        <span class="notranslate b-contacts__comma">105-93-45</span>
+                    </div>
+                    <div class="b-contacts__phone js-ga-phone-hover"
+                         data-tg-hovered="[{&#34;ns&#34;: &#34;main&#34;, &#34;method&#34;: &#34;gatrackQueue&#34;, &#34;args&#34;: [&#34;contact_view&#34;, &#34;hover_phones&#34;, {&#34;label/label&#34;: &#34;company_site-product_view_popup&#34;}], &#34;uuid&#34;: &#34;06bb6a343466e8a92d73646f1e51f62b2b61d018c9a31064d26a8658fa3e7647&#34;}, {&#34;ns&#34;: &#34;ym&#34;, &#34;method&#34;: &#34;reachGoal&#34;, &#34;args&#34;: [&#34;company_contacts_hovered&#34;], &#34;uuid&#34;: &#34;d017546a89ff2662214ea1032d6a6a8e1f18d9795666436aa63998a315e0966d&#34;}]">
+                        <span class="notranslate">+380</span>
+                        <span class="notranslate b-contacts__code">96</span>
+                        <span class="notranslate b-contacts__comma">180-34-98</span>
+                    </div>
+                </div>
+                <address class="b-contacts__row" title="Адрес">
+                    <span class="b-contacts__comma" title="Украина">Украина</span>
+                    <span class="b-contacts__comma" title="Киев">Киев</span>
+                </address>
+                <div class="b-contacts__row" title="Email">
+                    <a class="b-contacts__link" href="mailto:korea-butik@ukr.net" title="korea-butik@ukr.net">
+                        korea-butik@ukr.net
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="cs-return-policy">
+        <b class="cs-return-policy__label" title="Условия возврата: "></b>
+        <span class="cs-return-policy__text" data-qaid="return_policy_info">Законом не предусмотрен возврат и обмен
+            данного товара надлежащего качества
+        </span>
+        <button id="ID-3f2bcdb6-0b35-4637-a736-ab3b78f9a75c" data-qaid="return_policy_btn"
+                class="cs-return-policy__button" title="Подробно об условиях возврата и обмена">Подробнее
+            <h4 class="h-bold h-font-size-16 h-mv-10">
+                Компания руководствуется Законом
+                <a class="h-underlined h-nohover-decoration h-blue-link"
+                   href="http://zakon2.rada.gov.ua/laws/show/1023-12" target="_blank" rel="nofollow">«О защите прав
+                    потребителей»
+                </a>
+                в вопросах возврата и обмена товаров надлежащего качества.
+            </h4>
+            <p class="h-font-size-14 h-mv-10">
+                Согласно Закону <a class="h-underlined h-nohover-decoration h-blue-link"
+                                   href="http://zakon2.rada.gov.ua/laws/show/1023-12" target="_blank"
+                                   rel="nofollow">«О защите прав потребителей»</a>,
+                компания может отказать потребителю в обмене и возврате
+                товаров надлежащего качества, если они относятся к
+                категориям, указанным в действующем
+                <a class="h-underlined h-nohover-decoration h-blue-link"
+                   href="http://zakon2.rada.gov.ua/laws/show/172-94-%D0%BF" target="_blank" rel="nofollow">Перечне
+                    непродовольственных товаров
+                    надлежащего качества, не подлежащих возврату и обмену</a>.
+            </p>
+            <p class="h-font-size-14 h-mv-10">
+                Товары надлежащего качества, для которых разрешен возврат и
+                обмен, могут быть возвращены в течение 14 дней после
+                получения покупателем, если:
+            </p>
+            <ul class="disc-marked">
+                <li class=" h-font-size-14">
+                    товар не был в употреблении и не имеет следов
+                    использования потребителем: царапин, сколов, потёртостей,
+                    пятен и т. п.;
+                </li>
+                <li class=" h-font-size-14">
+                    товар полностью укомплектован и сохранена фабричная
+                    упаковка;
+                </li>
+                <li class=" h-font-size-14">сохранены все ярлыки и заводская маркировка;</li>
+                <li class=" h-font-size-14">
+                    товар сохраняет товарный вид и свои потребительские
+                    свойства.
+                </li>
+            </ul>
+        </button>
+    </div>
+</div>

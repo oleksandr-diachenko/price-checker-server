@@ -1,0 +1,426 @@
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+
+        <div class="woocommerce-notices-wrapper"></div>
+        <div id="product-950"
+             class="product type-product post-950 status-publish first instock product_cat-67 product_cat-69 product_cat-68 product_cat-70 product_cat-66 product_cat-61 product_cat-27 product_cat-60 has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+
+            <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
+                 data-columns="4" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;">
+                <a href="#" class="woocommerce-product-gallery__trigger">🔍</a>
+                <figure class="woocommerce-product-gallery__wrapper">
+                    <div data-thumb="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw-100x100.jpg"
+                         data-thumb-alt="" class="woocommerce-product-gallery__image"
+                         style="position: relative; overflow: hidden;">
+                        <a href="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw.jpg">
+                            <img width="600" height="600"
+                                 src="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw-600x600.jpg"
+                                 class="wp-post-image" alt="" title="2SAzEG6A2XLiY2vBTvXGw" data-caption=""
+                                 data-src="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw.jpg"
+                                 data-large_image="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw.jpg"
+                                 data-large_image_width="600" data-large_image_height="600"
+                                 srcset="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw.jpg 600w, https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw-150x150.jpg 150w, https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw-300x300.jpg 300w, https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw-100x100.jpg 100w"
+                                 sizes="(max-width: 600px) 100vw, 600px"/>
+                        </a>
+                        <img role="presentation" alt=""
+                             src="https://korea.in.ua/wp-content/uploads/2019/09/2SAzEG6A2XLiY2vBTvXGw.jpg"
+                             class="zoomImg"
+                             style="position: absolute; top: -106.919px; left: -178.594px; opacity: 0; width: 600px; height: 600px; border: none; max-width: none; max-height: none;">
+                    </div>
+                </figure>
+            </div>
+
+            <div class="summary entry-summary">
+                <h1 class="product_title entry-title">COSRX Centella Water Alcohol-Free Toner Безспиртовой тонер для
+                    чувствительной и проблемной кожи
+                </h1>
+                <p class="price">
+                    <span class="woocs_price_code" data-product-id="950">
+                        <del>
+                            <span class="woocommerce-Price-amount amount">440.00&nbsp;<span
+                                    class="woocommerce-Price-currencySymbol">грн.
+                            </span>
+                            </span>
+                        </del>
+                        <ins>
+                            <span class="woocommerce-Price-amount amount">380.00&nbsp;<span
+                                    class="woocommerce-Price-currencySymbol">грн.
+                            </span>
+                            </span>
+                        </ins>
+                    </span>
+                </p>
+                <div class="woocommerce-product-details__short-description">
+                    <p>Безалкогольный тоник увлажняет и успокаивает кожу, одновременно обеспечивая ее витаминами и
+                        минералами, позволяет справиться с покраснениями, куперозом, а также высыпаниями акне
+                    </p>
+                </div>
+                <p class="stock in-stock">В наличии</p>
+
+
+                <form class="cart"
+                      action="https://korea.in.ua/?product=cosrx-centella-water-alcohol-free-toner-%d0%b1%d0%b5%d0%b7%d1%81%d0%bf%d0%b8%d1%80%d1%82%d0%be%d0%b2%d0%be%d0%b9-%d1%82%d0%be%d0%bd%d0%b5%d1%80-%d0%b4%d0%bb%d1%8f-%d1%87%d1%83%d0%b2%d1%81%d1%82%d0%b2"
+                      method="post" enctype="multipart/form-data">
+
+                    <div class="quantity">
+                        <label class="screen-reader-text" for="quantity_5d7f8154e8a99">Количество COSRX Centella Water
+                            Alcohol-Free Toner Безспиртовой тонер для чувствительной и проблемной кожи
+                        </label>
+                        <input type="number" id="quantity_5d7f8154e8a99" class="input-text qty text" step="1" min="1"
+                               max="12" name="quantity" value="1" title="overall type: UNKNOWN_TYPE
+                                                                                server type: NO_SERVER_DATA
+                                                                                heuristic type: UNKNOWN_TYPE
+                                                                                label: Количество COSRX Centella Water Alcohol-Free Toner Безспиртовой тонер для чувствительной и проблемно
+                                                                                parseable name: quantity
+                                                                                section: quantity_1-default
+                                                                                field signature: 1475624612
+                                                                                form signature: 4897057484416118855" size="4" inputmode="numeric" autofill-information="overall type: UNKNOWN_TYPE
+                                                                                server type: NO_SERVER_DATA
+                                                                                heuristic type: UNKNOWN_TYPE
+                                                                                label: Количество COSRX Centella Water Alcohol-Free Toner Безспиртовой тонер для чувствительной и проблемно
+                                                                                parseable name: quantity
+                                                                                section: quantity_1-default
+                                                                                field signature: 1475624612
+                                                                                form signature: 4897057484416118855" autofill-prediction="UNKNOWN_TYPE"/>
+                    </div>
+
+                    <button type="submit" name="add-to-cart" value="950" class="single_add_to_cart_button button alt">В
+                        корзину
+                    </button>
+
+                </form>
+
+
+                <div class="product_meta">
+
+
+                    <span class="posted_in">Категории: <a
+                            href="https://korea.in.ua/?product_cat=%d0%b4%d0%bb%d1%8f-%d0%b2%d1%81%d0%b5%d1%85-%d1%82%d0%b8%d0%bf%d0%be%d0%b2-%d0%ba%d0%be%d0%b6%d0%b8"
+                            rel="tag">Для всех типов кожи</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d0%b4%d0%bb%d1%8f-%d0%b6%d0%b8%d1%80%d0%bd%d0%be%d0%b9-%d0%b8-%d0%ba%d0%be%d0%bc%d0%b1%d0%b8%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b9-%d0%ba%d0%be%d0%b6%d0%b8"
+                            rel="tag">Для жирной и комбинированной кожи</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d0%b4%d0%bb%d1%8f-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d0%bd%d0%be%d0%b9-%d0%ba%d0%be%d0%b6%d0%b8"
+                            rel="tag">Для проблемной кожи</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d0%b4%d0%bb%d1%8f-%d1%81%d1%83%d1%85%d0%be%d0%b9-%d0%b8-%d0%bd%d0%be%d1%80%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b9-%d0%ba%d0%be%d0%b6%d0%b8"
+                            rel="tag">Для сухой и нормальной кожи</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d0%b4%d0%bb%d1%8f-%d1%87%d1%83%d0%b2%d1%81%d1%82%d0%b2%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be%d0%b9-%d0%ba%d0%be%d0%b6%d0%b8-%d0%bf%d0%be-%d1%82%d0%b8%d0%bf%d0%b0%d0%bc-%d0%ba%d0%be%d0%b6%d0%b8"
+                            rel="tag">Для чувствительной кожи</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d1%81%d0%bd%d1%8f%d1%82%d1%8c-%d0%b2%d0%be%d1%81%d0%bf%d0%b0%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f"
+                            rel="tag">Снять воспаления</a>, <a
+                            href="https://korea.in.ua/?product_cat=%d1%81%d1%82%d0%b0%d1%80%d1%82%d0%b5%d1%80%d1%8b-%d0%b8-%d1%81%d1%8b%d0%b2%d0%be%d1%80%d0%be%d1%82%d0%ba%d0%b8"
+                            rel="tag">Тонеры, стартеры</a>,
+                        <a href="https://korea.in.ua/?product_cat=%d1%83%d0%b2%d0%bb%d0%b0%d0%b6%d0%bd%d0%b8%d1%82%d1%8c"
+                           rel="tag">Увлажнить
+                        </a>
+                    </span>
+
+
+                    <span class="product-brand tagged_as">
+                        Бренд:
+
+                        <a href="https://korea.in.ua/?product_brand=cosrx">COSRX</a>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="woocommerce-tabs wc-tabs-wrapper">
+                <ul class="tabs wc-tabs" role="tablist">
+                    <li class="description_tab active" id="tab-title-description" role="tab"
+                        aria-controls="tab-description">
+                        <a href="#tab-description">Описание</a>
+                    </li>
+                    <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+                        <a href="#tab-reviews">Отзывы (0)</a>
+                    </li>
+                </ul>
+                <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
+                     id="tab-description" role="tabpanel" aria-labelledby="tab-title-description"
+                     style="display: block;">
+
+                    <h2>Описание</h2>
+
+                    <p>Безспиртовой тонер для чувствительной и проблемной кожи COSRX Centella Water Alcohol-Free Toner
+                    </p>
+                    <p>Высококонцентрированный тонер на 82% состоящий из минеральной воды и 10% экстракта центеллы
+                        обеспечивает нежный и бережный ухода для чувствительной и раздраженной кожи, испытывающей стресс
+                        от потери влаги.
+                    </p>
+                    <p>Безалкогольный тоник увлажняет и успокаивает кожу,&nbsp; обеспечивает ее витаминами и минералами,
+                        справляется с покраснениями, куперозом, а также высыпаниями акне. Повышает&nbsp;тонус и
+                        упругость зрелой кожи, делает ее более гладкой и подтянутой.
+                    </p>
+                    <p><strong>Экстракт центеллы азиатской обладает мощными целебными свойствами</strong>. Сапонины
+                        оказывают доказанное противовоспалительное, ранозаживляющее, увлажняющее, укрепляющее и
+                        омолаживающее действие.
+                    </p>
+                    <p>Укреплят&nbsp;стенки кровеносных сосудов, благодаря чему исчезает купероз. Улучшение
+                        микроциркуляции крови в тканях кожных покровов, а также выработки коллагена&nbsp;<strong>
+                            приводит к разглаживанию морщин, повышению упругости и эластичности кожи</strong>. Также
+                        осветляет&nbsp;пигментацию и выравнивает тон кожи.
+                    </p>
+                    <p>Способ применения: Распылить тонер на ватный диск и протереть им лицо, избегая области глаз и
+                        рта. Также средство можно использовать в качестве миста, чтобы освежить кожу в течение дня.
+                    </p>
+                    <p>Объём: 150 мл</p>
+                    <p>
+                        <img class="alignnone size-full wp-image-952"
+                             src="https://korea.in.ua/wp-content/uploads/2019/09/images-42.jpg" alt="" width="276"
+                             height="183"/>
+                    </p>
+                </div>
+                <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
+                     id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews" style="display: none;">
+                    <div id="reviews" class="woocommerce-Reviews">
+                        <div id="comments">
+                            <h2 class="woocommerce-Reviews-title">
+                                Отзывы
+                            </h2>
+
+                            <p class="woocommerce-noreviews">Отзывов пока нет.</p>
+                        </div>
+
+                        <div id="review_form_wrapper">
+                            <div id="review_form">
+                                <div id="respond" class="comment-respond">
+                                    <span id="reply-title" class="comment-reply-title">Будьте первым, кто оставил отзыв
+                                        на “COSRX Centella Water Alcohol-Free Toner Безспиртовой тонер для
+                                        чувствительной и проблемной кожи”
+                                        <small>
+                                            <a rel="nofollow" id="cancel-comment-reply-link"
+                                               href="/?product=cosrx-centella-water-alcohol-free-toner-%D0%B1%D0%B5%D0%B7%D1%81%D0%BF%D0%B8%D1%80%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%BE%D0%BD%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2#respond"
+                                               style="display:none;">Отменить ответ
+                                            </a>
+                                        </small>
+                                    </span>
+                                    <form action="https://korea.in.ua/wp-comments-post.php" method="post"
+                                          id="commentform" class="comment-form">
+                                        <div class="comment-form-rating">
+                                            <label for="rating">Ваша оценка</label>
+                                            <p class="stars">
+                                                <span>
+                                                    <a class="star-1" href="#">1</a>
+                                                    <a class="star-2" href="#">2</a>
+                                                    <a class="star-3" href="#">3</a>
+                                                    <a class="star-4" href="#">4</a>
+                                                    <a class="star-5" href="#">5</a>
+                                                </span>
+                                            </p>
+                                            <select name="rating" id="rating" required="" style="display: none;" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: rating
+section: rating_1-default
+field signature: 2177863668
+form signature: 10332477449060593391" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваша оценка
+parseable name: rating
+section: rating_1-default
+field signature: 2177863668
+form signature: 10332477449060593391" autofill-prediction="UNKNOWN_TYPE">
+                                                <option value="">Оценка…</option>
+                                                <option value="5">Отлично</option>
+                                                <option value="4">Хорошо</option>
+                                                <option value="3">Средне</option>
+                                                <option value="2">Неплохо</option>
+                                                <option value="1">Очень плохо</option>
+                                            </select>
+                                        </div>
+                                        <p class="comment-form-comment">
+                                            <label for="comment">Ваш отзыв&nbsp;<span class="required">*</span>
+                                            </label>
+                                            <textarea id="comment" name="comment" cols="45" rows="8" required="" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш отзыв *
+parseable name: comment
+section: rating_1-default
+field signature: 815021361
+form signature: 10332477449060593391" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш отзыв *
+parseable name: comment
+section: rating_1-default
+field signature: 815021361
+form signature: 10332477449060593391" autofill-prediction="UNKNOWN_TYPE"></textarea>
+                                        </p>
+                                        <p class="comment-form-author">
+                                            <label for="author">Имя</label>
+                                            <input id="author" name="author" type="text" value="" size="30" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Имя
+parseable name: author
+section: rating_1-default
+field signature: 3399293859
+form signature: 10332477449060593391" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Имя
+parseable name: author
+section: rating_1-default
+field signature: 3399293859
+form signature: 10332477449060593391" autofill-prediction="UNKNOWN_TYPE"/>
+                                        </p>
+                                        <p class="comment-form-email">
+                                            <label for="email">Email</label>
+                                            <input id="email" name="email" type="email" value="" size="30" title="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: Email
+parseable name: email
+section: rating_1-default
+field signature: 1029417091
+form signature: 10332477449060593391" autofill-information="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: Email
+parseable name: email
+section: rating_1-default
+field signature: 1029417091
+form signature: 10332477449060593391" autofill-prediction="EMAIL_ADDRESS"/>
+                                        </p>
+                                        <p class="comment-form-cookies-consent">
+                                            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent"
+                                                   type="checkbox" value="yes" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+parseable name: wp-comment-cookies-consent
+section: rating_1-default
+field signature: 957285938
+form signature: 10332477449060593391" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+parseable name: wp-comment-cookies-consent
+section: rating_1-default
+field signature: 957285938
+form signature: 10332477449060593391" autofill-prediction="UNKNOWN_TYPE"/>
+                                            <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес
+                                                сайта в этом браузере для последующих моих комментариев.
+                                            </label>
+                                        </p>
+                                        <p class="form-submit">
+                                            <input name="submit" type="submit" id="submit" class="submit"
+                                                   value="Отправить"/>
+                                            <input type="hidden" name="comment_post_ID" value="950"
+                                                   id="comment_post_ID"/>
+                                            <input type="hidden" name="comment_parent" id="comment_parent" value="0"/>
+                                        </p>
+                                    </form>
+                                </div><!-- #respond -->
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="related products">
+
+                <h2>Похожие товары</h2>
+
+                <ul class="products columns-3">
+
+
+                    <li class="product type-product post-844 status-publish first instock product_cat-27 product_cat-60 product_cat-67 product_cat-69 product_cat-68 product_cat-70 product_cat-66 has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <a href="https://korea.in.ua/?product=innisfree-blueberry-rebalancing-skin-%d0%b1%d0%b0%d0%bb%d0%b0%d0%bd%d1%81%d0%b8%d1%80%d1%83%d1%8e%d1%89%d0%b8%d0%b9-%d1%82%d0%be%d0%bd%d0%b5%d1%80-%d1%81-%d1%8d%d0%ba%d1%81%d1%82%d1%80%d0%b0%d0%ba"
+                           class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                            <img width="300" height="225"
+                                 src="https://korea.in.ua/wp-content/uploads/2019/09/inntr001b-300x225.jpg"
+                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""/>
+                            <h2 class="woocommerce-loop-product__title">INNISFREE Blueberry Rebalancing Skin
+                                Балансирующий тонер с экстрактом черники
+                            </h2>
+                            <span class="price">
+                                <span class="woocs_price_code" data-product-id="844">
+                                    <span class="woocommerce-Price-amount amount">295.00&nbsp;<span
+                                            class="woocommerce-Price-currencySymbol">грн.
+                                    </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                        <a href="/?product=cosrx-centella-water-alcohol-free-toner-%D0%B1%D0%B5%D0%B7%D1%81%D0%BF%D0%B8%D1%80%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%BE%D0%BD%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2&amp;add-to-cart=844"
+                           data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                           data-product_id="844" data-product_sku=""
+                           aria-label="Добавить &quot;INNISFREE Blueberry Rebalancing Skin Балансирующий тонер с экстрактом черники&quot; в корзину"
+                           rel="nofollow">В корзину
+                        </a>
+                    </li>
+
+
+                    <li class="product type-product post-212 status-publish instock product_cat-27 product_cat-60 product_cat-67 has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <a href="https://korea.in.ua/?product=farmstay-collagen-hyaluronic-acid-all-in-one-ampoule-%d0%b0%d0%bc%d0%bf%d1%83%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d1%81%d1%8b%d0%b2%d0%be%d1%80%d0%be%d1%82%d0%ba%d0%b0-%d1%81-%d0%ba%d0%be%d0%bb%d0%bb"
+                           class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                            <img width="300" height="225"
+                                 src="https://korea.in.ua/wp-content/uploads/2019/09/575.750x0-300x225.jpg"
+                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""/>
+                            <h2 class="woocommerce-loop-product__title">FARMSTAY Collagen &amp; Hyaluronic Acid
+                                All-In-One Ampoule Ампульная сыворотка с коллагеном и гиалуроновой кислотой
+                            </h2>
+                            <span class="price">
+                                <span class="woocs_price_code" data-product-id="212">
+                                    <span class="woocommerce-Price-amount amount">290.00&nbsp;<span
+                                            class="woocommerce-Price-currencySymbol">грн.
+                                    </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                        <a href="/?product=cosrx-centella-water-alcohol-free-toner-%D0%B1%D0%B5%D0%B7%D1%81%D0%BF%D0%B8%D1%80%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%BE%D0%BD%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2&amp;add-to-cart=212"
+                           data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                           data-product_id="212" data-product_sku=""
+                           aria-label="Добавить &quot;FARMSTAY Collagen &amp; Hyaluronic Acid All-In-One Ampoule Ампульная сыворотка с коллагеном и гиалуроновой кислотой&quot; в корзину"
+                           rel="nofollow">В корзину
+                        </a>
+                    </li>
+
+
+                    <li class="product type-product post-929 status-publish last instock product_cat-27 product_cat-63 product_cat-61 product_cat-55 product_cat-62 product_cat-69 product_cat-68 has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                        <a href="https://korea.in.ua/?product=elizavecca-hell-pore-clean-up-aha-fruit-toner-%d1%82%d0%be%d0%bd%d0%b5%d1%80-%d0%bf%d0%b8%d0%bb%d0%b8%d0%bd%d0%b3-%d1%81-aha-%d0%b8-bha-%d0%ba%d0%b8%d1%81%d0%bb%d0%be%d1%82%d0%b0%d0%bc%d0%b8-%d0%b4"
+                           class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                            <img width="300" height="225"
+                                 src="https://korea.in.ua/wp-content/uploads/2019/09/tonico-anti-poros-hell-pore-clean-up-aha-fruit-toner-1-300x225.jpg"
+                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""/>
+                            <h2 class="woocommerce-loop-product__title">Elizavecca Hell Pore Clean Up AHA Fruit Toner
+                                Тонер-пилинг с AHA и BHA кислотами для ежедневного ухода за кожей
+                            </h2>
+                            <div class="star-rating" role="img" aria-label="Оценка 5.00 из 5">
+                                <span style="width:100%">Оценка <strong class="rating">5.00</strong> из 5
+                                </span>
+                            </div>
+                            <span class="price">
+                                <span class="woocs_price_code" data-product-id="929">
+                                    <span class="woocommerce-Price-amount amount">295.00&nbsp;<span
+                                            class="woocommerce-Price-currencySymbol">грн.
+                                    </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                        <a href="/?product=cosrx-centella-water-alcohol-free-toner-%D0%B1%D0%B5%D0%B7%D1%81%D0%BF%D0%B8%D1%80%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%BE%D0%BD%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2&amp;add-to-cart=929"
+                           data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                           data-product_id="929" data-product_sku=""
+                           aria-label="Добавить &quot;Elizavecca Hell Pore Clean Up AHA Fruit Toner Тонер-пилинг с AHA и BHA кислотами для ежедневного ухода за кожей&quot; в корзину"
+                           rel="nofollow">В корзину
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </section>
+
+        </div>
+
+
+    </main><!-- #main -->
+</div>

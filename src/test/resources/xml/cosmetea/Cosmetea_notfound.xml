@@ -1,0 +1,993 @@
+<div class="row">
+    <div id="content" class="col-sm-9">
+        <style type="text/css">
+
+            .ui-autocomplete .image {
+            float: left;
+            margin: 0 5px 0 0;
+            }
+            .ui-autocomplete .name {
+            color: #38B0E3;
+            font-weight: bold;
+            text-decoration: none;
+            height: 20px;
+            }
+        </style>
+        <div class="row product-info">
+            <div class="col-sm-6">
+                <ul class="thumbnails">
+                    <li>
+                        <span data-mfp-src="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-750x1000.jpg"
+                              data-group="1" class="thumbnail thumbnail-gallery thumbnail-magnific"
+                              title="Holika Holika Aloe soothing gel 250 ml">
+                            <img src="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-600x800.jpg"
+                                 title="Holika Holika Aloe soothing gel 250 ml"
+                                 alt="Holika Holika Aloe soothing gel 250 ml"
+                                 data-large="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-750x1000.jpg"
+                                 class="my-foto-container" style="visibility: visible;"/>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="gallery-text">
+                            <span>Галерея фото</span>
+                        </div>
+                    </li>
+                    <ul id="product-gallery" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                        <div class="owl-wrapper-outer">
+                            <div class="owl-wrapper"
+                                 style="width: 176px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                <div class="owl-item" style="width: 88px;">
+                                    <li class="image-additional">
+                                        <span data-mfp-src="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-750x1000.jpg"
+                                              data-group="1" class="thumbnail"
+                                              title="Holika Holika Aloe soothing gel 250 ml">
+                                            <img src="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-600x800.jpg"
+                                                 title="Holika Holika Aloe soothing gel 250 ml"
+                                                 alt="Holika Holika Aloe soothing gel 250 ml"
+                                                 data-large="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-750x1000.jpg"
+                                                 class="my-foto"/>
+                                        </span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    <script type="text/javascript"><!--
+
+                $(".my-foto-container").imagezoomsl({
+                    zoomrange: [1, 4],
+                    zoomstart: 2,
+                    innerzoom: true,
+                    magnifierborder: "none"
+                  });
+
+              //клик по превью-картинке
+                $(".my-foto").click(function(e){
+
+                  e.preventDefault();
+
+
+                   var that = this;
+
+                 //копируем атрибуты из превью-картинки в контейнер-картинку
+                   $(".my-foto-container").fadeOut(600, function(){
+
+                     $(this).attr("src",              $(that).attr("src"))              // путь до small картинки
+                            .attr("data-large",       $(that).attr("data-large"))       // путь до big картинки
+
+                            //дополнительные атрибуты, если есть
+                            //.attr("data-title",       $(that).attr("data-title"))       // заголовок подсказки
+                            //.attr("data-help",        $(that).attr("data-help"))        // текст подсказки
+                            //.attr("data-text-bottom", $(that).attr("data-text-bottom")) // текст снизу картинки
+
+                            .fadeIn(1000);
+                   });
+               });
+
+              $('#product-gallery').owlCarousel({
+                items: 5,
+                autoPlay: 4000,
+                navigation: false,
+                pagination: false,
+                itemsTablet: [767,4],
+                itemsTabletSmall: [479,4],
+                itemsMobile : [360,3],
+              });
+          --></script>
+                </ul>
+            </div>
+            <div class="col-sm-6 product-options">
+                <h1 class="product-title">Holika Holika Aloe soothing gel 250 ml</h1>
+                <ul class="list-unstyled description">
+                    <li class="brand-logo">
+                        <a href="https://cosmetea.com.ua/holika" class="brand-image">
+                            <img src="https://cosmetea.com.ua/image/cache/catalog/i/id/dj/dbee136d4788f2790793f28af7b9c01b-100x100.png"
+                                 title="Holika Holika"/>
+                        </a>
+                        <a href="https://cosmetea.com.ua/holika" class="brand-logo-text">Holika Holika</a>
+                    </li>
+                    <li>Успокаивающий гель с 99% органическим алоэ вера</li>
+                    <li>Код товара: HH01</li>
+                    <li>Доступность: На складе</li>
+                </ul>
+                <ul class="list-unstyled">
+                </ul>
+                <div id="product">
+                    <div class="form-group form-group-quantity">
+                        <div class="quantity">
+                            <span class="minus">-</span>
+                            <input type="text" name="quantity" value="1" size="2" id="input-quantity"
+                                   class="form-control" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 1
+parseable name: quantity
+section: search_1-default
+field signature: 2305562610
+form signature: 16271880320751029594" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 1
+parseable name: quantity
+section: search_1-default
+field signature: 2305562610
+form signature: 16271880320751029594" autofill-prediction="UNKNOWN_TYPE"/>
+                            <span class="plus">+</span>
+                        </div>
+                        <button type="button" id="button-cart" data-loading-text="Загрузка..."
+                                class="btn btn-buy btn-product-buy">Купить
+                        </button>
+                        <input type="hidden" name="product_id" value="430"/>
+                    </div>
+                </div>
+                <div class="form-group instant-order">
+                    <form action="#" method="post">
+                        <input id="instant_tel" type="text" name="instant_tel" placeholder="+38(123)123-45-67" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: +38(123)123-45-67
+parseable name: instant_tel
+section: instant_tel_1-default
+field signature: 3413408441
+form signature: 4959947750640406584" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: +38(123)123-45-67
+parseable name: instant_tel
+section: instant_tel_1-default
+field signature: 3413408441
+form signature: 4959947750640406584" autofill-prediction="UNKNOWN_TYPE"/>
+                        <input id="instant_product_name" type="text" name="instant_product_name"
+                               value="Holika Holika Aloe soothing gel 250 ml" hidden="" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Holika Holika Aloe soothing gel 250 ml Успокаивающий гель с 99% органическим алоэ вера Цена:
+parseable name: instant_product_name
+section: instant_tel_1-default
+field signature: 3338182653
+form signature: 4959947750640406584" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Holika Holika Aloe soothing gel 250 ml Успокаивающий гель с 99% органическим алоэ вера Цена:
+parseable name: instant_product_name
+section: instant_tel_1-default
+field signature: 3338182653
+form signature: 4959947750640406584" autofill-prediction="UNKNOWN_TYPE"/>
+                        <a href="javascript: void(0);" id="btn_submit_prod" type="submit" class="button btn">Заказать
+                        </a>
+                    </form>
+                    <div class="message success"></div>
+                    <script>
+
+                    </script>
+                </div>
+                <div class="btn-group wishlist-compare">
+                    <button type="button" data-toggle="tooltip" class="btn btn-default" title=""
+                            onclick="wishlist.add('430');" data-original-title="В закладки">
+                        <i class="fa fa-heart"></i>
+                        В закладки
+                    </button>
+                    <button type="button" data-toggle="tooltip" class="btn btn-default" title=""
+                            onclick="compare.add('430');" data-original-title="В сравнение">
+                        <i class="fa fa-refresh"></i>
+                        В сравнение
+                    </button>
+                </div>
+                <div class="rating">
+                    <p class="stars">
+                        <span class="fa fa-stack">
+                            <i class="fa fa-star fa-stack-1x"></i>
+                            <i class="fa fa-star-o fa-stack-1x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                            <i class="fa fa-star fa-stack-1x"></i>
+                            <i class="fa fa-star-o fa-stack-1x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                            <i class="fa fa-star fa-stack-1x"></i>
+                            <i class="fa fa-star-o fa-stack-1x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                            <i class="fa fa-star fa-stack-1x"></i>
+                            <i class="fa fa-star-o fa-stack-1x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                            <i class="fa fa-star fa-stack-1x"></i>
+                            <i class="fa fa-star-o fa-stack-1x"></i>
+                        </span>
+                        <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">3 отзывов</a>
+                        /
+                        <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">Написать
+                            отзыв
+                        </a>
+                    </p>
+                </div>
+                <div class="social-likes"> <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style"
+                         data-url="https://cosmetea.com.ua/holika-holika-aloe-soothing-gel-250-ml">
+                        <a class="addthis_button_facebook_like at300b" :layout="button_count">
+                            <div class="fb-like fb_iframe_widget" data-layout="button_count" data-show_faces="false"
+                                 data-share="false" data-action="like" data-width="90" data-height="25"
+                                 data-font="arial"
+                                 data-href="https://cosmetea.com.ua/holika-holika-aloe-soothing-gel-250-ml"
+                                 data-send="false" style="height: 25px;" fb-xfbml-state="rendered"
+                                 fb-iframe-plugin-query="action=like&amp;app_id=172525162793917&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=https%3A%2F%2Fcosmetea.com.ua%2Fholika-holika-aloe-soothing-gel-250-ml&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=90">
+                                <span style="vertical-align: bottom; width: 61px; height: 20px;">
+                                    <iframe name="f2d19e09105c1" width="90px" height="25px"
+                                            title="fb:like Facebook Social Plugin" frameborder="0"
+                                            allowtransparency="true" allowfullscreen="true" scrolling="no"
+                                            allow="encrypted-media"
+                                            src="https://www.facebook.com/v2.6/plugins/like.php?action=like&amp;app_id=172525162793917&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df1726439041d3ac%26domain%3Dcosmetea.com.ua%26origin%3Dhttps%253A%252F%252Fcosmetea.com.ua%252Ff1690eecf3ade3c%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=https%3A%2F%2Fcosmetea.com.ua%2Fholika-holika-aloe-soothing-gel-250-ml&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=90"
+                                            style="border: none; visibility: visible; width: 61px; height: 20px;"
+                                            class=""></iframe>
+                                </span>
+                            </div>
+                        </a>
+                        <a class="addthis_button_tweet at300b">
+                            <div class="tweet_iframe_widget" style="width: 62px; height: 25px;">
+                                <span>
+                                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0"
+                                            allowtransparency="true"
+                                            class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+                                            style="position: static; visibility: visible; width: 1px; height: 1px;"
+                                            title="Twitter Tweet Button"
+                                            src="https://platform.twitter.com/widgets/tweet_button.d9084ca5af1ffbe01c8d444cfadfa6fe.ru.html#dnt=false&amp;id=twitter-widget-0&amp;lang=ru&amp;original_referer=https%3A%2F%2Fcosmetea.com.ua%2Fholika-holika-aloe-soothing-gel-250-ml&amp;size=m&amp;text=Holika%20Holika%20Aloe%20soothing%20gel%20250%20ml%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%B2%20%D0%9A%D0%B8%D0%B5%D0%B2%D0%B5%2C%20%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D0%B5%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B5%2C%20%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%B5%20%D0%B8%20%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B5%3A%20%D1%86%D0%B5%D0%BD%D0%B0%20%D0%B2%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B5%20Cosmetea%3A&amp;time=1568644421956&amp;type=share&amp;url=https%3A%2F%2Fcosmetea.com.ua%2Fholika-holika-aloe-soothing-gel-250-ml%23.XX-dREMmV4M.twitter"
+                                            data-url="https://cosmetea.com.ua/holika-holika-aloe-soothing-gel-250-ml#.XX-dREMmV4M.twitter"></iframe>
+                                </span>
+                            </div>
+                        </a>
+                        <a class="addthis_button_pinterest_pinit at300b"></a>
+                        <a class="addthis_counter addthis_pill_style" href="#" style="display: inline-block;">
+                            <a class="atc_s addthis_button_compact">Поделиться
+                                <span></span>
+                            </a>
+                            <a class="addthis_button_expanded" target="_blank" title="Еще..." href="#"></a>
+                        </a>
+                        <div class="atclear"></div>
+                    </div>
+                    <script type="text/javascript"
+                            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> <!-- AddThis Button END -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul id="tabs" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#tab-description" data-toggle="tab">Описание</a>
+                    </li>
+                    <li>
+                        <a href="#tab-filters" data-toggle="tab">Характеристики</a>
+                    </li>
+                    <li>
+                        <a href="#tab-review" data-toggle="tab">Отзывы (3)</a>
+                    </li>
+                    <li>
+                        <a href="#tab-questions" data-toggle="tab">Вопросы и ответы (0)</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="tab-questions">
+                        <form class="form-horizontal">
+                            <div id="question" style="margin-bottom:25px">
+                                <p style="margin-top:5px;">Нет вопросов об этом товаре.</p>
+                            </div>
+                            <h2 id="ask_heading">Задать вопрос об этом товаре</h2>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-q-name">Ваше имя:</label>
+                                    <input type="text" name="q_name" value="" id="input-q-name" class="form-control"
+                                           title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя:
+parseable name: q_name
+section: q_name_1-default
+field signature: 2274315779
+form signature: 6458712998434662493" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя:
+parseable name: q_name
+section: q_name_1-default
+field signature: 2274315779
+form signature: 6458712998434662493" autofill-prediction="UNKNOWN_TYPE"/>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-email">Ваш E-mail
+                                        <span style="color:#999999">(не публикуется)</span>
+                                    </label>
+                                    <input type="text" name="q_email" value="" id="input-email" class="form-control"
+                                           title="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: Ваш E-mail (не публикуется)
+parseable name: q_email
+section: q_name_1-default
+field signature: 4211064954
+form signature: 6458712998434662493" autofill-information="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: EMAIL_ADDRESS
+label: Ваш E-mail (не публикуется)
+parseable name: q_email
+section: q_name_1-default
+field signature: 4211064954
+form signature: 6458712998434662493" autofill-prediction="EMAIL_ADDRESS"/>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-question">Ваш вопрос</label>
+                                    <textarea name="q_text" rows="5" id="input-question" class="form-control" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш вопрос
+parseable name: q_text
+section: q_name_1-default
+field signature: 134916552
+form signature: 6458712998434662493" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш вопрос
+parseable name: q_text
+section: q_name_1-default
+field signature: 134916552
+form signature: 6458712998434662493" autofill-prediction="UNKNOWN_TYPE"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group required">
+                                    <label class="control-label" for="input-captcha_product_questions">Ответ на вопрос
+                                        ниже
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon captcha_wrap">
+                                            <img src="index.php?route=product/question/captcha" alt=""
+                                                 id="captcha_product_questions"/>
+                                        </span>
+                                        <input type="text" name="captcha_product_questions" value=""
+                                               id="input-captcha_product_questions" class="form-control" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ответ на вопрос ниже
+parseable name: captcha_product_questions
+section: q_name_1-default
+field signature: 1186514116
+form signature: 6458712998434662493" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ответ на вопрос ниже
+parseable name: captcha_product_questions
+section: q_name_1-default
+field signature: 1186514116
+form signature: 6458712998434662493" autofill-prediction="UNKNOWN_TYPE"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12 text-right">
+                                    <button type="button" id="button-question" data-loading-text="Загрузка..."
+                                            class="btn btn-primary">Отправить
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <script type="text/javascript"><!--
+$(document).ready(function() {
+	$('#button_ask').click(function (e) {
+  	e.preventDefault();
+  	$('.nav-tabs a[href="#tab-questions"]').tab('show') ;
+	$('html, body').animate({
+        scrollTop: $(".nav.nav-tabs.md").offset().top
+    }, 1000);
+});
+});
+
+
+$('#question').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+$("html,body").animate({scrollTop:(($("#question").offset().top)-50)},500);
+    $('#question').fadeOut(50);
+
+    $('#question').load(this.href);
+
+    $('#question').fadeIn(500);
+});
+
+
+$('#input-private-fake').on('change', function(){
+   $('#input-private').val(this.checked ? 1 : 0);
+});
+
+$('#question').load('index.php?route=product/question/question_list&product_id=430');
+
+$('#button-question').on('click', function() {
+	$.ajax({
+		url: 'index.php?route=product/question/ask_question&product_id=430',
+		type: 'post',
+		dataType: 'json',
+		data: 'name=' + encodeURIComponent($('input[name=\'q_name\']').val()) +
+			  '&email=' + encodeURIComponent($('input[name=\'q_email\']').val()) +
+			  '&text=' + encodeURIComponent($('textarea[name=\'q_text\']').val()) +
+			  '&private=' + encodeURIComponent($('input[name=\'q_private\']').val()) +
+			  '&captcha_product_questions=' + encodeURIComponent($('input[name=\'captcha_product_questions\']').val()),
+
+		beforeSend: function() {
+			$('#button-question').button('loading');
+		},
+		complete: function() {
+			$('#button-question').button('reset');
+			$('#captcha_product_questions').attr('src', 'index.php?route=product/question/captcha#'+new Date().getTime());
+			$('input[name=\'captcha_product_questions\']').val('');
+		},
+		success: function(json) {
+			$('.alert-success, .alert-danger').remove();
+
+			if (json['error']) {
+				$('#question').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+			}
+
+			if (json['success']) {
+				$('#question').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+				$('input[name=\'q_name\']').val('');
+				$('input[name=\'q_email\']').val('');
+				$('textarea[name=\'q_text\']').val('');
+				$('input[name=\'q_private\']:checked').prop('checked', false);
+				$('input[name=\'captcha_product_questions\']').val('');
+			}
+		}
+	});
+});
+//--></script>
+                    </div>
+                    <div class="tab-pane active" id="tab-description">
+                        <h1 data-mce-style="text-align: center;"
+                            style="margin-top: 20px; margin-bottom: 10px; font-size: 30px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); text-align: center;">
+                            <span color="#333333" face="Arial, sans-serif"
+                                  data-mce-style="color: #333333; font-family: Arial, sans-serif;"
+                                  style="font-family: Arial, sans-serif;">
+                                <span style="font-weight: 700;">Holika Holika Aloe soothing gel 250 ml</span>
+                            </span>
+                            <br>
+                        </h1>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            <span style="font-weight: 700;">&nbsp; &nbsp;Успокаивающий гель с 99% органическим алоэ
+                                вера
+                            </span>
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Универсальный, многофункциональный гель, может использоваться как для кожи
+                            лица, так и для кожи тела, а также для ухода за волосами.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Легкая водянистая текстура&nbsp;<span style="font-weight: 700;">HOLIKA HOLIKA
+                            Aloe 99% Soothing Gel</span>&nbsp;быстро впитывается кожей и дарит ей глубокое увлажнение,
+                            успокаивает, тонизирует и освежает.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Сок алоэ увлажняет и подтягивает кожу, восстанавливает обмен веществ,
+                            стимулирует регенерацию клеток, снимает раздражения, очищает поры, отшелушивает ороговевшие
+                            клетки, размягчая их и удаляя с поверхности кожи, делая ее мягче и ровнее.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Алоэ создает на коже незаметный, но очень эффективный барьер, препятствующий
+                            проникновению болезнетворных бактерий и грибковых инфекций, а также помогает справиться с
+                            уже существующей угревой сыпью.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Сок алоэ не закупоривает поры, регулирует работу сальных желез и придает коже
+                            здоровую матовость.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Гель великолепно напитывает кожу, делает ее гладкой, мягкой, нежной. Гель может
+                            использоваться для увлажнение и успокоения кожи или как экспресс-маска в том числе и для
+                            кожи век.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Гель поможет при солнечных ожогах, укусах насекомых (наносится на пострадавшую
+                            часть тела), а также применяется как маска для волос, чтобы восстановить ослабленные и
+                            пересушенные, непослушные волосы (наносим на 10 минут и смываем).
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;Хранить гель рекомендуется в холодильнике для придания дополнительного
+                            освежающего и охлаждающего эффекта.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;<span data-mce-style="text-decoration: underline;"
+                                               style="text-decoration-line: underline;">
+                            <span style="font-weight: 700;">Способ применения:</span>
+                        </span>&nbsp;Использовать для кожи лица или тела – наносить на очищенную кожу. В качестве
+                            экспресс-маски – нанести гель на ватные диски и наложить на нужные вам участки кожи.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;В качестве маски для волос – нанести на чистые влажные волосы на 10-15 минут,
+                            затем смыть теплой водой. Также гель можно использовать как средство после бритья.
+                        </p>
+                        <p style="margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                            &nbsp; &nbsp;&nbsp;<span style="font-weight: 700;">Объём:</span>&nbsp;250 мл
+                        </p>
+                    </div>
+                    <div class="tab-pane" id="tab-filters">
+                        <table class="attribute">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <strong>По типу кожи</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Для всех типов кожи</td>
+                                </tr>
+                                <tr>
+                                    <td>Возрастная</td>
+                                </tr>
+                                <tr>
+                                    <td>Жирная</td>
+                                </tr>
+                                <tr>
+                                    <td>Комбинированная</td>
+                                </tr>
+                                <tr>
+                                    <td>Нормальная</td>
+                                </tr>
+                                <tr>
+                                    <td>Обезвоженная</td>
+                                </tr>
+                                <tr>
+                                    <td>Проблемная</td>
+                                </tr>
+                                <tr>
+                                    <td>Склонная к аллергиям</td>
+                                </tr>
+                                <tr>
+                                    <td>Сухая</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <strong>По эффекту</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Антисептический</td>
+                                </tr>
+                                <tr>
+                                    <td>Борьба с акне</td>
+                                </tr>
+                                <tr>
+                                    <td>Восстановление</td>
+                                </tr>
+                                <tr>
+                                    <td>Защита от солнца</td>
+                                </tr>
+                                <tr>
+                                    <td>Противовоспалительный</td>
+                                </tr>
+                                <tr>
+                                    <td>Снятие воспалений</td>
+                                </tr>
+                                <tr>
+                                    <td>Снятие отечности</td>
+                                </tr>
+                                <tr>
+                                    <td>Увлажнение</td>
+                                </tr>
+                                <tr>
+                                    <td>Успокаивание</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <strong>Активный компонент</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Алое</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <strong>По возрасту</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>До 18</td>
+                                </tr>
+                                <tr>
+                                    <td>18-25</td>
+                                </tr>
+                                <tr>
+                                    <td>25-30</td>
+                                </tr>
+                                <tr>
+                                    <td>От 30</td>
+                                </tr>
+                                <tr>
+                                    <td>Без ограничений</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="tab-review">
+                        <h2>Отзывы о Holika Holika Aloe soothing gel 250 ml</h2>
+                        <form class="form-horizontal" id="form-review">
+                            <div id="review">
+                                <table class="table-review">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="review-author">Марьяна</strong>
+                                                16.10.2018
+                                            </td>
+                                            <td class="text-left"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p>Отличный гель, быстро впитывается, не липнет, пахнет хорошо</p>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table-review">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="review-author">Alex&nbsp;Mua</strong>
+                                                03.10.2018
+                                            </td>
+                                            <td class="text-left"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p>Не знаю, есть ли смысл лишний раз нахваливать это средство, поэтому
+                                                    просто напишу краткий отзыв)
+                                                    <br>
+                                                    Универсальное средство, которое использую для всего тела и даже
+                                                    волос.
+                                                    <br>
+                                                    Для тех, кто ходит в солярий - всесезонный помощник и для тех, кто
+                                                    летает в тёплые страны так же.
+                                                    <br>
+                                                    Отлично помогает облегчить и успокоить ожоги и увлажнить кожу. Но
+                                                    только в этих случаях, не рассчитывайте заменить этим гелем
+                                                    увлажняющий крем.
+                                                    <br>
+                                                    Отличный помощник после эпиляции: кожа чувствует комфорт, сводит
+                                                    вероятность раздражения к минимуму.
+                                                    <br>
+                                                    Для волос можно нанести после того же отдыха в качестве гель-маски,
+                                                    походить со средством минут 20-30. Или в случае, если Ваши волосы
+                                                    просто сухие. Сиюсекундно спасения не ждите, но ,однозначно, картина
+                                                    становится приятнее.
+                                                </p>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table-review">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="review-author">Ксения</strong>
+                                                18.09.2018
+                                            </td>
+                                            <td class="text-left"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p>Максимально универсальный гель. Заказываю уже 3 раз. Подходит для
+                                                    всего: для волос, для лица, для век, от ожогов, даже при укусах
+                                                    насекомых. Вещь, я считаю, необходимая в каждом доме!
+                                                </p>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                                <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                    <i class="fa fa-star-o fa-stack-2x"></i>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-right"></div>
+                            </div>
+                            <h2 class="heading-title" id="review-title">Написать отзыв</h2>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-name">Ваше имя:</label>
+                                    <input type="text" name="name" value="" id="input-name" class="form-control" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя:
+parseable name: name
+section: name_1-default
+field signature: 3489289364
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваше имя:
+parseable name: name
+section: name_1-default
+field signature: 3489289364
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-review">Ваш отзыв</label>
+                                    <textarea name="text" rows="5" id="input-review" class="form-control" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш отзыв
+parseable name: text
+section: name_1-default
+field signature: 2676195141
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Ваш отзыв
+parseable name: text
+section: name_1-default
+field signature: 2676195141
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"></textarea>
+                                    <div class="help-block">
+                                        <span class="text-danger">Внимание:</span>
+                                        HTML не поддерживается! Используйте обычный текст!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label">Рейтинг</label>
+                                    &nbsp;&nbsp;&nbsp; Плохо&nbsp;
+                                    <input type="radio" name="rating" value="1" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="2" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="3" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="4" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Рейтинг Плохо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="5" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Хорошо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Хорошо
+parseable name: rating
+section: name_1-default
+field signature: 763486327
+form signature: 17964472501464985440" autofill-prediction="UNKNOWN_TYPE"/>
+                                    &nbsp;Хорошо
+                                </div>
+                            </div>
+                            <div class="buttons clearfix">
+                                <div class="pull-left">
+                                    <button type="button" id="button-review" data-loading-text="Загрузка..."
+                                            class="btn btn-primary">Продолжить
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sets_position"></div>
+    </div>
+    <aside id="column-right" class="col-sm-3 hidden-xs">
+        <div>
+            <h2>Cosmetea</h2>
+            <div class="right-column">
+                <p style="margin-bottom: 10px; caret-color: rgb(51, 51, 51); color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                    ✅&nbsp;Есть магазин в Днепре
+                </p>
+            </div>
+            <div>
+                <p style="margin-bottom: 10px; caret-color: rgb(51, 51, 51); color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                    ✈️&nbsp;Бесплатная доставка НП от 1000 грн
+                </p>
+            </div>
+            <div>
+                <p style="margin-bottom: 10px; caret-color: rgb(51, 51, 51); color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">
+                    🔬&nbsp;Только оригинальная и проверенная продукция
+                </p>
+            </div>
+        </div>
+        <h3>Просмотренные</h3>
+        <div class="row product-grid">
+            <div class="product-layout product-item">
+                <div class="product-thumb transition"> <!--                  -->
+                    <div class="image">
+                        <a href="https://cosmetea.com.ua/holika-holika-aloe-soothing-gel-250-ml" class="product-link">
+                            <img src="https://cosmetea.com.ua/image/cache/catalog/i/np/bi/66c689640a86ccf554638080e529d1d0-200x200.jpg"
+                                 alt="Holika Holika Aloe soothing gel 250 ml"
+                                 title="Holika Holika Aloe soothing gel 250 ml" class="img-responsive"/>
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">
+                            <a href="https://cosmetea.com.ua/holika-holika-aloe-soothing-gel-250-ml">Holika Holika Aloe
+                                soothing gel 250 ml
+                            </a>
+                        </div>
+                        <p class="price">
+                            Цена: 250 грн.
+                        </p>
+                        <div class="rating">
+                            <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>

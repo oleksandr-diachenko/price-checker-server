@@ -1,0 +1,1332 @@
+<div class="row" style="position: relative;">
+    <div id="center_column" class="center_column col-xs-12 col-sm-12">
+        <div itemscope="">
+            <div class="primary_block row">
+                <div class="container"></div>
+                <div class="pb-left-column col-xs-12 col-sm-6 col-md-5" style="margin-bottom:20px;">
+                    <div id="image-block" class="clearfix">
+                        <span id="view_full_size">
+                            <img id="bigpic" itemprop="image"
+                                 src="https://sweetness.com.ua/4010-large_default/the-saem-fresh-bamboo-soothing-gel-99-bambukovyj-uvlazhnyayushhij-gel.jpg"
+                                 title="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель"
+                                 alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель" width="458"
+                                 height="458"/>
+                            <span class="span_link no-print">Увеличить</span>
+                        </span>
+                    </div>
+                    <div id="views_block" class="clearfix hidden">
+                        <div id="thumbs_list">
+                            <ul id="thumbs_list_frame" style="width: 90px;">
+                                <li id="thumbnail_4010" class="last">
+                                    <a href="https://sweetness.com.ua/4010-thickbox_default/the-saem-fresh-bamboo-soothing-gel-99-bambukovyj-uvlazhnyayushhij-gel.jpg"
+                                       data-fancybox-group="other-views" class="fancybox shown"
+                                       title="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель">
+                                        <img class="img-responsive" id="thumb_4010"
+                                             src="https://sweetness.com.ua/4010-cart_default/the-saem-fresh-bamboo-soothing-gel-99-bambukovyj-uvlazhnyayushhij-gel.jpg"
+                                             alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель"
+                                             title="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель"
+                                             height="80" width="80" itemprop="image"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-center-column col-xs-12 col-sm-6 col-md-4">
+                    <h1 itemprop="name"
+                        style="text-transform:uppercase; font: normal 16px/20px 'Helvica', 'Arial', sans-serif; color: #333333;">
+                        The Saem Fresh Bamboo Soothing Gel 99%
+                    </h1>
+                    <span>
+                        <p>Бамбуковый увлажняющий гель, 260мл.</p>
+                    </span>
+                    <div class="top-hr"></div>
+                    <div class="content_prices clearfix">
+                        <div class="content_prices_row">
+                            <span class="content_prices_item" id="old_price">
+                                <span id="old_price_display"></span>
+                            </span>
+                            <span class="content_prices_item" id="reduction_percent" style="display:none;">
+                                <span id="reduction_percent_display"></span>
+                            </span>
+                            <span class="content_prices_item" id="reduction_amount" style="display:none">
+                                <span id="reduction_amount_display"></span>
+                            </span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="top-hr"></div>
+                    <p id="product_reference">
+                        <label>Артикул</label>
+                        <span class="editable" itemprop="sku">BD301100112</span>
+                    </p>
+                    <p id="manufacturer">
+                        <label>Производитель:</label>
+                        <a href="https://sweetness.com.ua/30_the-saem">
+                            <span itemprop="brand">The Saem</span>
+                        </a>
+                    </p>
+                    <p id="product-series">
+                        <label>Серия:</label>
+                        <a href="https://sweetness.com.ua/search?tag=Saem+Fresh+Bamboo">Saem Fresh Bamboo,</a>
+                    </p>
+                    <p id="availability_statut" style="display: none;">
+                        <label>Наличие:</label>
+                        <span id="availability_value" class="label label-success"></span>
+                    </p>
+                    <div id="oosHook" style="display: none;">
+                        <p class="form-group">
+                            <input type="email" id="oos_customer_email" name="customer_email" size="20"
+                                   placeholder="укажите@ваш.адрес" class="mailalerts_oos_email form-control" title="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: UNKNOWN_TYPE
+label: укажите@ваш.адрес
+parseable name: customer_email
+section: customer_email_1-default
+field signature: 2184366486
+form signature: 15448957608704714962" autofill-information="overall type: EMAIL_ADDRESS
+server type: EMAIL_ADDRESS
+heuristic type: UNKNOWN_TYPE
+label: укажите@ваш.адрес
+parseable name: customer_email
+section: customer_email_1-default
+field signature: 2184366486
+form signature: 15448957608704714962" autofill-prediction="EMAIL_ADDRESS"/>
+                        </p>
+                        <a href="#" title="Сообщите мне, когда товар появится в продаже" id="mailalert_link"
+                           rel="nofollow">Сообщите мне, когда товар появится в продаже
+                        </a>
+                        <span id="oos_customer_email_result" style="display:none; display: block;"></span>
+                    </div>
+                    <p class="warning_inline" id="last_quantities" style="display: none">Внимание: ограниченное
+                        количество товара в наличии!
+                    </p>
+                    <p id="availability_date" style="display: none;">
+                        <span id="availability_date_label">Будет доступен:</span>
+                        <span id="availability_date_value"></span>
+                    </p>
+                    <div id="short_description_block" style="display:none;">
+                        <div class="top-hr"></div>
+                        <div id="short_description_content" class="rte align_justify" itemprop="description"></div>
+                        <p class="buttons_bottom_block">
+                            <a href="javascript:{}" class="button">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="top-hr"></div>
+                    <form id="buy_block" action="https://sweetness.com.ua/cart" method="post">
+                        <p class="hidden">
+                            <input type="hidden" name="token" value="08424b53658b798f4b20916d8d6bec0e"/>
+                            <input type="hidden" name="id_product" value="1494" id="product_page_product_id"/>
+                            <input type="hidden" name="add" value="1"/>
+                            <input type="hidden" name="id_product_attribute" id="idCombination" value=""/>
+                        </p>
+                        <div class="box-info-product">
+                            <div class="product_attributes clearfix">
+                                <p id="quantity_wanted_p">
+                                    <label>Количество</label>
+                                    <input type="text" name="qty" id="quantity_wanted" class="text" value="1" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Количество
+parseable name: qty
+section: qty_1-default
+field signature: 3166992832
+form signature: 11711262986969540499" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: Количество
+parseable name: qty
+section: qty_1-default
+field signature: 3166992832
+form signature: 11711262986969540499" autofill-prediction="UNKNOWN_TYPE"/>
+                                    <a href="#" data-field-qty="qty"
+                                       class="btn btn-default button-minus product_quantity_down">
+                                        <span>
+                                            <i class="icon-minus"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" data-field-qty="qty"
+                                       class="btn btn-default button-plus product_quantity_up">
+                                        <span>
+                                            <i class="icon-plus"></i>
+                                        </span>
+                                    </a>
+                                    <span class="clearfix"></span>
+                                </p>
+                                <p id="minimal_quantity_wanted_p" style="display: none;">Минимальный заказ для товара
+                                    <b id="minimal_quantity_label">1</b>
+                                </p>
+                            </div>
+                            <div class="box-cart-bottom">
+                                <div>
+                                    <div id="add_to_cart" class="buttons_bottom_block no-print">
+                                        <button type="submit" name="Submit" class="exclusive">
+                                            <em class="icon-shopping-cart" id="icon-heart"></em>
+                                            <span>В корзину</span>
+                                        </button>
+                                    </div>
+                                    <button type="button" href="#" class="exclusive"
+                                            onclick="WishlistCart('wishlist_block_list', 'add', '1494', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;"
+                                            rel="nofollow" title="В избранное">
+                                        <em class="icon-heart" id="icon-heart"></em>
+                                        <span>В ЖЕлание</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <span itemprop="aggregateRating" itemscope="">
+                        <div class="rating_block_product_page">
+                            <p class="average-heading-title">
+                                <label style="font-size: 13px;">Оценки и отзывы</label>
+                            </p>
+                            <div class="mycomments-comment">
+                                <div class="star-rating"></div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 80%;"></div>
+                                        <input value="4" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Four Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Four Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-primary">Four Stars</span>
+                                    </div>
+                                </div>
+                                <span itemprop="ratingValue" style="display: none;">4</span>
+                                <span class="rating_list" itemprop="reviewCount">19</span>
+                                <span style="font-size: 10px;">голос(ов)</span>
+                            </div>
+                            <a class="button btn btn-default" style="color: white;" href="javascript:void(0);"
+                               onclick="$.scrollTo('#mymodcomments-content-tab', 1200);">Посмотреть отзывы
+                            </a>
+                        </div>
+                    </span>
+                </div>
+                <div id="cmsinfo_block" class="col-sm-12 col-md-3" style="border:0;">
+                    <div class="pb-right-column" style="width: 100%;">
+                        <ul class="advantages">
+                            <li>
+                                <em class="icon-thumbs-up-alt" id="icon-thumbs-up-alt"></em>
+                                <div class="type-text">
+                                    <h3>100% ОРИГИНАЛ</h3>
+                                    <p>
+                                        <a href="https://sweetness.com.ua/content/37_garantiya-podlinnosti">Гарантия
+                                            оригинальности и свежести продуктов
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-gift" id="icon-gift"></em>
+                                <div class="type-text">
+                                    <h3>ПОЛУЧИТЕ ПОДАРКИ!</h3>
+                                    <p>Бесплатные пробники в каждом заказе^^</p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-truck" id="icon-truck"></em>
+                                <div class="type-text">
+                                    <h3>Быстрая доставка!</h3>
+                                    <p>Отправка в 14.00 каждый день, кроме выходных.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <em class="icon-money" id="icon-money"></em>
+                                <div class="type-text">
+                                    <h3>НАЛОЖЕННЫЙ ПЛАТЕЖ</h3>
+                                    <p>Возможность оплаты при получении заказа на отделении Новой Почты</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="center_column" class="center_column col-xs-12 col-sm-9">
+                <section class="page-product-box">
+                    <h3 class="page-product-heading">Характеристики</h3>
+                    <table class="table-data-sheet">
+                        <tbody>
+                            <tr class="even">
+                                <td>Срок реализации:</td>
+                                <td>
+                                    <div>
+                                        <div>до 2021-11-18</div>
+                                    </div>
+                                    <p class="expire-info-link">
+                                        <a target="_blank"
+                                           href="https://sweetness.com.ua/content/10_kak-pravilno-opredelit-sroki-godnosti-korejskoj-kosmetiki">
+                                            Как определить срок годности корейской косметики?
+                                        </a>
+                                    </p>
+                                    <style>.expire-info-link {
+                                        margin:10px 0 0;
+                                        }
+                                        .expire-info-link a {
+                                        color:#F38098;
+                                        text-decoration: underline;
+                                        }
+                                        .expire-info-link a:hover {
+                                        color:#F38098;
+                                        text-decoration: none;
+                                        }
+                                        .table-expire-container {
+                                        -webkit-column-count: 2;
+                                        -moz-column-count: 2;
+                                        column-count: 2;
+                                        }
+                                        .table-expire-dates tr {
+                                        border:0;
+                                        }
+                                        .table-expire-dates th {
+                                        padding:0 10px 0 0 !important;
+                                        vertical-align: top !important;
+                                        }
+                                        .table-expire-dates td {
+                                        padding:0 !important;
+                                        }
+                                        @media (max-width: 440px) {
+                                        .table-expire-dates,
+                                        .table-expire-dates tbody,
+                                        .table-expire-dates tr,
+                                        .table-expire-dates td,
+                                        .table-expire-dates td {
+                                        display: block;
+                                        }
+                                        .table-expire-dates td {
+                                        padding: 0 0 2px 10px !important;
+                                        }
+                                        .table-expire-container {
+                                        -webkit-column-count: auto;
+                                        -moz-column-count: auto;
+                                        column-count: auto;
+                                        }
+                                        }
+                                    </style>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Объем</td>
+                                <td>260 мл</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Активный ингредиент</td>
+                                <td>Бамбук</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="page-product-box">
+                    <h3 class="page-product-heading">Описание</h3>
+                    <div class="rte">
+                        <div>
+                            <p class="p1">Фото-отзыв №1 на бамбуковый гель</p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-1.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 1 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-2.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 2 | Sweetness"
+                                     width="700" height="700"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-3.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 3 | Sweetness"
+                                     width="700" height="700"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-4.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 4 | Sweetness"
+                                     width="700" height="700"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-5.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 5 | Sweetness"
+                                     width="700" height="462"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-6.jpg"
+                                     alt="" width="700" height="448"/>
+                            </p>
+                            <h2 class="p1">Фото-отзыв №2</h2>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-7.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 6 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-8.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 7 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-9.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 8 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-10.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 9 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <p class="p1">
+                                <img src="https://sweetness.com.ua/img/cms/the-saem/bamboo/soothing-gel-99/the-saem-fresh-bamboo-soothing-gel-99-11.jpg"
+                                     alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 10 | Sweetness"
+                                     width="700" height="467"/>
+                            </p>
+                            <h2 class="p1">Фото упаковки: полная версия и миниатюра</h2>
+                            <img src="https://sweetness.com.ua/img/cms/the-saem/Saem-bamboo_gel_99.jpg"
+                                 alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 11 | Sweetness"
+                                 width="700" height="700" style="margin-left:auto;margin-right:auto;"/>
+                        </div>
+                        <div></div>
+                        <div>
+                            <img src="https://sweetness.com.ua/img/cms/the-saem/Saem-bamboo_gel_99-02.jpg"
+                                 alt="The Saem Fresh Bamboo Soothing Gel 99% Бамбуковый увлажняющий гель фото 12 | Sweetness"
+                                 width="607" height="1080" style="margin-left:auto;margin-right:auto;"/>
+                        </div>
+                        <div></div>
+                        <div>Универсальный гель для лица и тела на основе сока бамбука (99% в составе). Сок бамбука
+                            смягчает, успокаивает и освежает кожу, наполняет ее влагой, делает мягкой и бархатистой.
+                            Также средство борется с первыми признаками старения, при этом препятствует появлению
+                            различных несовершенств, дарит коже ощущение свежести и комфорта. Сок бамбука способствуют
+                            рассасыванию отеков и гематом, борется с растяжками и целлюлитом. Идеально подходит для
+                            регулярного применения для максимального увлажнения кожи. Имеет легкий ненавязчивый аромат.
+                        </div>
+                        <div></div>
+                        <div>Использование: нанесите на чистую кожу и равномерно распределите легкими похлопывающими
+                            движениями. Гель можно использовать на коже вокруг глаз, подходит для всех типов кожи.
+                        </div>
+                        <div></div>
+                        <div>Объем: 260 мл.</div>
+                    </div>
+                </section>
+                <section class="page-product-box">
+                    <div id="ajax">
+                        <h3 class="page-product-heading" id="mymodcomments-content-tab">Поделитесь своим мнением о
+                            товаре!^^
+                        </h3>
+                        <div class="rte">
+                            <div class="mycomments-comment">
+                                <div>Евгения Слышак.
+                                    <small>09:04:23, 28-04-2019</small>
+                                </div>
+                                <div class="star-rating">
+                                    <strong>Оценка</strong>
+                                </div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 60%;"></div>
+                                        <input value="3" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Three Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Three Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-info">Three Stars</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Комментарий:</strong>
+                                    Не понравился. Бамбук должен делать кожу матовой, а не
+                                    натянуто-глянцевой. По сравнению с Тони Моли вообще ни о чем... Жаль, что Тони Моли
+                                    нет в наличии уже давно. Для лица использовать точно не буду.
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="mycomments-comment">
+                                <div>Таня Вовк.
+                                    <small>23:05:41, 18-01-2019</small>
+                                </div>
+                                <div class="star-rating">
+                                    <strong>Оценка</strong>
+                                </div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                        <input value="5" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-success">Five Stars</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Комментарий:</strong>
+                                    Девченки, этот гель идет доп. уход за вашей кожей. У
+                                    кого возникает чувство стянутости значит кроме этого средства вам нужен еще какой то
+                                    крем или эмульсия.
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="mycomments-comment">
+                                <div>Маша Якубець.
+                                    <small>21:24:08, 22-09-2018</small>
+                                </div>
+                                <div class="star-rating">
+                                    <strong>Оценка</strong>
+                                </div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 60%;"></div>
+                                        <input value="3" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Three Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Three Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-info">Three Stars</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Комментарий:</strong>
+                                    немного сушит кожу.
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="mycomments-comment">
+                                <div>Ольга Кисличенко.
+                                    <small>13:20:55, 13-08-2018</small>
+                                </div>
+                                <div class="star-rating">
+                                    <strong>Оценка</strong>
+                                </div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 20%;"></div>
+                                        <input value="1" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: One Star
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: One Star
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-danger">One Star</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Комментарий:</strong>
+                                    Самый ужасный гель, который у меня был! Брала
+                                    маленькую упаковку. Увлажнения ноль, ужасное чувство стянутости кожи, как будто из
+                                    нее вытянули всю влагу. Не подошел даже для тела - эффект тот же. Да еще и аллергию
+                                    начал вызывать. Состав не понравился. Видимо, для разных упаковок он отличается.
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="mycomments-comment">
+                                <div>Крупа Дарья.
+                                    <small>19:11:31, 12-08-2018</small>
+                                </div>
+                                <div class="star-rating">
+                                    <strong>Оценка</strong>
+                                </div>
+                                <div class="star-rating rating-xs rating-disabled">
+                                    <div class="clear-rating " title="Clear">
+                                        <i class="glyphicon glyphicon-minus-sign"></i>
+                                    </div>
+                                    <div class="rating-container rating-gly" data-content="">
+                                        <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                        <input value="5" data-symbol="" type="number" class="rating form-control"
+                                               min="0" max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                    </div>
+                                    <div class="caption">
+                                        <span class="label label-success">Five Stars</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Комментарий:</strong>
+                                    самое крутой,легкий крем и на запах и на коже,обладаю
+                                    жирной/комби кожи очень крутой,не липки и на лето самое то особенно когда сгорела
+                                    кожа.
+                                </div>
+                            </div>
+                            <hr/>
+                        </div>
+                        <div class="rte">
+                            <ul class="pagination">
+                                <li class="active current">
+                                    <span id="pp">
+                                        <span>1</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a id="nbpage" rel="nofollow" href="2">2</a>
+                                </li>
+                                <li>
+                                    <a id="nbpage" rel="nofollow" href="3">3</a>
+                                </li>
+                                <li>
+                                    <a id="nbpage" rel="nofollow" href="4">4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rte"></div>
+                    <script>function addComment(ajax_grade, ajax_comment) {
+
+                        $.ajax({
+
+                        type: 'POST',
+
+                        data: {
+                        action: 'AddComment',
+                        ajax_grade: ajax_grade,
+                        ajax_comment: ajax_comment
+                        },
+                        success: function (output) {
+                        console.log(output);
+                        $('#ajax').empty();
+                        $('#ajax').html(output);
+
+
+                        },
+                        error: function(error){
+                        console.log(error);
+                        }
+                        });
+
+                        }
+
+
+                        $('.pagination').click(function (e) {
+                        e.preventDefault();
+
+                        $.ajax({
+
+                        type: 'POST',
+
+                        data: {
+                        action: 'Pagination',
+                        page: e.target.innerText
+                        },
+                        success: function (output) {
+                        $('#ajax').empty();
+                        $('#ajax').html(output);
+
+
+                        },
+                        error: function(error){
+                        console.log(error);
+                        }
+                        });
+                        });
+                    </script>
+                    <h3 class="page-product-heading">С этим товаром покупают:</h3>
+                    <ul class="product_list grid row">
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line last-item-of-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/aksessuary-dlya-ochissheniya/5105-missha-cleansing-pad.html"
+                                               title="Missha Cleansing Pad" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/6387-home_default/missha-cleansing-pad.jpg"
+                                                     alt="Missha Cleansing Pad" title="Missha Cleansing Pad"
+                                                     itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/aksessuary-dlya-ochissheniya/5105-missha-cleansing-pad.html"
+                                                           rel="https://sweetness.com.ua/aksessuary-dlya-ochissheniya/5105-missha-cleansing-pad.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_5105" href="#" rel="5105"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '5105', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/aksessuary-dlya-ochissheniya/5105-missha-cleansing-pad.html"
+                                                           data-id-product="5105" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/aksessuary-dlya-ochissheniya/5105-missha-cleansing-pad.html"
+                                                       title="Missha Cleansing Pad" itemprop="url">Missha Cleansing Pad
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <div class="mycomments-comment">
+                                                            <div class="star-rating"></div>
+                                                            <div class="star-rating rating-xs rating-disabled">
+                                                                <div class="clear-rating " title="Clear">
+                                                                    <i class="glyphicon glyphicon-minus-sign"></i>
+                                                                </div>
+                                                                <div class="rating-container rating-gly"
+                                                                     data-content="">
+                                                                    <div class="rating-stars" data-content=""
+                                                                         style="width: 100%;"></div>
+                                                                    <input value="5" data-symbol="" type="number"
+                                                                           class="rating form-control" min="0" max="5"
+                                                                           step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <span class="label label-success">Five Stars</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="rating_list">1 Голос(ов)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Силиконовая щетка для чистки лица
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">85 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=5105&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="5105"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-line last-item-of-tablet-line last-item-of-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/ukhod/4593-the-saem-silk-hair-anti-hair-loss-treatment.html"
+                                               title="The Saem Silk Hair Hair Loss Care Treatment" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/5561-home_default/the-saem-silk-hair-anti-hair-loss-treatment.jpg"
+                                                     alt="The Saem Silk Hair Hair Loss Care Treatment"
+                                                     title="The Saem Silk Hair Hair Loss Care Treatment"
+                                                     itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/ukhod/4593-the-saem-silk-hair-anti-hair-loss-treatment.html"
+                                                           rel="https://sweetness.com.ua/ukhod/4593-the-saem-silk-hair-anti-hair-loss-treatment.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_4593" href="#" rel="4593"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '4593', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/ukhod/4593-the-saem-silk-hair-anti-hair-loss-treatment.html"
+                                                           data-id-product="4593" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/ukhod/4593-the-saem-silk-hair-anti-hair-loss-treatment.html"
+                                                       title="The Saem Silk Hair Hair Loss Care Treatment"
+                                                       itemprop="url">The Saem Silk Hair Hair Loss Care Treatment
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <div class="mycomments-comment">
+                                                            <div class="star-rating"></div>
+                                                            <div class="star-rating rating-xs rating-disabled">
+                                                                <div class="clear-rating " title="Clear">
+                                                                    <i class="glyphicon glyphicon-minus-sign"></i>
+                                                                </div>
+                                                                <div class="rating-container rating-gly"
+                                                                     data-content="">
+                                                                    <div class="rating-stars" data-content=""
+                                                                         style="width: 100%;"></div>
+                                                                    <input value="5" data-symbol="" type="number"
+                                                                           class="rating form-control" min="0" max="5"
+                                                                           step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <span class="label label-success">Five Stars</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="rating_list">2 Голос(ов)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Бальзам против выпадения волос , 150мл.
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">270 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=4593&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="4593"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-in-line last-line first-item-of-tablet-line last-item-of-mobile-line last-mobile-line">
+                            <div class="product-container border_inside" itemscope="">
+                                <div class="product_listing">
+                                    <div class="left-block">
+                                        <div class="product-image-container">
+                                            <a class="product_img_link"
+                                               href="https://sweetness.com.ua/konsiler/2700-the-saem-cover-perfection-smart-concealer-kit.html"
+                                               title="The Saem Cover Perfection Smart Concealer Kit" itemprop="url">
+                                                <img class="replace-2x img-responsive"
+                                                     src="https://sweetness.com.ua/2471-home_default/the-saem-cover-perfection-smart-concealer-kit.jpg"
+                                                     alt="The Saem Cover Perfection Smart Concealer Kit"
+                                                     title="The Saem Cover Perfection Smart Concealer Kit"
+                                                     itemprop="image"/>
+                                            </a>
+                                            <div class="add-to-links">
+                                                <div class="cartbottom_btn">
+                                                    <div class="quick-view-wrapper">
+                                                        <a class="quick-view toolstip"
+                                                           href="https://sweetness.com.ua/konsiler/2700-the-saem-cover-perfection-smart-concealer-kit.html"
+                                                           rel="https://sweetness.com.ua/konsiler/2700-the-saem-cover-perfection-smart-concealer-kit.html"
+                                                           title="Быстрый просмотр">
+                                                            <i class="icon-eye-open"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wishlist">
+                                                        <a class="addToWishlist wishlistProd_2700" href="#" rel="2700"
+                                                           onclick="WishlistCart('wishlist_block_list', 'add', '2700', false, 1); return false;"
+                                                           title="Добавить в желания">
+                                                            <i class="icon-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="compare">
+                                                        <a class="add_to_compare toolstip"
+                                                           href="https://sweetness.com.ua/konsiler/2700-the-saem-cover-perfection-smart-concealer-kit.html"
+                                                           data-id-product="2700" title="В сравнение">
+                                                            <i class="icon-signal"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="product-info">
+                                            <div class="product-info__section">
+                                                <h4 class="product-info__item product-info__title" itemprop="name">
+                                                    <a class="product-name"
+                                                       href="https://sweetness.com.ua/konsiler/2700-the-saem-cover-perfection-smart-concealer-kit.html"
+                                                       title="The Saem Cover Perfection Smart Concealer Kit"
+                                                       itemprop="url">The Saem Cover Perfection Smart Concealer Kit
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item product-info__review">
+                                                    <div class="hook-reviews">
+                                                        <div class="mycomments-comment">
+                                                            <div class="star-rating"></div>
+                                                            <div class="star-rating rating-xs rating-disabled">
+                                                                <div class="clear-rating " title="Clear">
+                                                                    <i class="glyphicon glyphicon-minus-sign"></i>
+                                                                </div>
+                                                                <div class="rating-container rating-gly"
+                                                                     data-content="">
+                                                                    <div class="rating-stars" data-content=""
+                                                                         style="width: 100%;"></div>
+                                                                    <input value="5" data-symbol="" type="number"
+                                                                           class="rating form-control" min="0" max="5"
+                                                                           step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <span class="label label-success">Five Stars</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="rating_list">1 Голос(ов)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <p class="product-info__item product-info__desc product-desc"
+                                                   itemprop="description">Набор консилеров, 4,2г.
+                                                </p>
+                                            </div>
+                                            <div class="product-info__section">
+                                                <div class="product-info__item prodcut-info__meta">
+                                                    <div class="content_price">
+                                                        <span class="price product-price">295 грн</span>
+                                                    </div>
+                                                    <div class="button-container">
+                                                        <div class="cart rx-cart">
+                                                            <a class="button ajax_add_to_cart_button btn btn-default"
+                                                               href="https://sweetness.com.ua/cart?add=1&amp;id_product=2700&amp;token=08424b53658b798f4b20916d8d6bec0e"
+                                                               rel="nofollow" title="Add to cart"
+                                                               data-id-product-attribute="0" data-id-product="2700"
+                                                               data-minimal_quantity="0">
+                                                                <span>
+                                                                    <i class="icon-shopping-cart"></i>
+                                                                    В корзину
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-flags"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <script type="text/javascript">jQuery(document).ready(function(){
+                        var MBG = GoogleAnalyticEnhancedECommerce;
+                        MBG.setCurrency('UAH');
+                        MBG.addProductDetailView({"id":1494,"name":"\"The Saem Fresh Bamboo Soothing Gel
+                        99%\"","category":"\"krem-gel\"","brand":"\"The
+                        Saem\"","variant":"null","type":"typical","position":"0","quantity":1,"list":"product","url":"","price":"175.00"});
+                        });
+                    </script>
+                </section>
+            </div>
+        </div>
+        <div id="right_column" class="col-xs-12 col-sm-3 column">
+            <div id="right_block_comments">
+                <h3 class="page-product-heading">Последние</h3>
+                <div class="rte">
+                    <div class="mycomments-comment">
+                        <div>Аліса Малишева.
+                            <br/>
+                            <small>13:27:03, 16-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Нравится лёгкая текстура. Не стот наносить сразу на всё лицо и...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/bb-krem/1051-holika-holika-aqua-petit-jelly-bb-cream-spf20-pa.html"
+                               style="color: #F38098;">Holika Holika Aqua Petit Jelly BB cream SPF20 PA++
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Светлана Медведева.
+                            <br/>
+                            <small>16:24:51, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Отличные патчи, только получила и сразу испытала. Приятное...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/patchi-pod-glaza/1181-secret-key-gold-premium-first-eye-patch.html"
+                               style="color: #F38098;">Уценка!!! Secret Key Gold Premium First Eye Patch
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Илья Гавришин.
+                            <br/>
+                            <small>16:19:58, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Крем тянется (у меня такой в первый раз, т.ч. это немного смутило),...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/krem/4495-baroness-snail-cream.html"
+                               style="color: #F38098;">Baroness Snail Cream
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Маша Легкая.
+                            <br/>
+                            <small>14:34:21, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Состав просто бомба! Действие - ракета! Много витаминных сывороток...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/syvorotka/5491-purito-pure-vitamin-c-serum.html"
+                               style="color: #F38098;">PURITO Pure Vitamin C Serum
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mycomments-comment">
+                        <div>Маша Легкая.
+                            <br/>
+                            <small>14:26:13, 15-09-2019</small>
+                        </div>
+                        <div class="star-rating">
+                            <strong>Оценка</strong>
+                        </div>
+                        <div class="star-rating rating-xs rating-disabled">
+                            <div class="clear-rating " title="Clear">
+                                <i class="glyphicon glyphicon-minus-sign"></i>
+                            </div>
+                            <div class="rating-container rating-gly" data-content="">
+                                <div class="rating-stars" data-content="" style="width: 100%;"></div>
+                                <input value="5" data-symbol="" type="number" class="rating form-control" min="0"
+                                       max="5" step="1" data-size="xs" title="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-information="overall type: UNKNOWN_TYPE
+server type: CREDIT_CARD_EXP_MONTH
+heuristic type: UNKNOWN_TYPE
+label: Five Stars
+parseable name:
+section: customer_email_1-default
+field signature: 2096205953
+form signature: 15448957608704714962" autofill-prediction="UNKNOWN_TYPE" style="display: none;"/>
+                            </div>
+                            <div class="caption">
+                                <span class="label label-success">Five Stars</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong>
+                            Марта, я пробовала эмульсию этой серии, у меня в прошлом очень...
+                        </div>
+                        <div>
+                            <a href="https://sweetness.com.ua/nabori-trevel-seti/5955-farmstay-grape-stem-cell-skin-care-5set.html"
+                               style="color: #F38098;">Farmstay Grape Stem Cell Skin Care 5 Set
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
