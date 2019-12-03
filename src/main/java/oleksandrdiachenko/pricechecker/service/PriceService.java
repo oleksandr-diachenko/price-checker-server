@@ -35,6 +35,7 @@ public class PriceService {
                 }
             }
         }
+        excel.write(table, "./1212121.xlsx");
         return table;
     }
 

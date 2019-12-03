@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 
 @Controller
@@ -31,12 +32,14 @@ public class PriceController {
 
     @GetMapping("/downloadPriceTable")
     public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
-        File file = new File("C:\\Users\\Oleksandr_Diachenko\\IdeaProjects\\price-checker-web\\Book1.xlsx");
+        File file = new File("./1212121.xlsx");
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-        return ResponseEntity.ok()
+        ResponseEntity<InputStreamResource> body = ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION,
                         "attachment;filename=" + file.getName())
                 .contentType(MediaType.APPLICATION_PDF).contentLength(file.length())
                 .body(resource);
+        Files.deleteIfExists(file.toPath());
+        return body;
     }
 }
