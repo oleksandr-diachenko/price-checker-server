@@ -7,30 +7,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
 @Controller
-public class TestController {
+public class PriceController {
 
     @Autowired
     private PriceService priceService;
 
-    @GetMapping("/")
-    public String testMethod(Model model) throws IOException, InvalidFormatException {
+    @GetMapping("/price-table")
+    public String getPriceTable(Model model) throws IOException, InvalidFormatException {
         List<List<String>> priceTable = priceService.buildPriceTable("./Book1.xlsx", 1, 2);
         model.addAttribute("priceTable", priceTable);
-        return "test";
-    }
-
-    private String getFilePath(String fileName) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource(fileName);
-        if (resource != null) {
-            return new File(resource.getFile()).getAbsolutePath();
-        }
-        return "";
+        return "priceTable";
     }
 }
