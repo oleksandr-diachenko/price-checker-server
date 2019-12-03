@@ -5,9 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-test
-    <tr th:each="row : ${priceTable}">
-        <td th:text="${row}"></td>
-    </tr>
+    <table border="1">
+        <tr th:each="row : ${priceTable}">
+            <td th:each="cell : ${row}">
+                <span th:text="${cell}"></span>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
