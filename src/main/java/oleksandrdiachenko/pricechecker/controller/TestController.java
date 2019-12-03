@@ -20,7 +20,7 @@ public class TestController {
 
     @GetMapping("/")
     public String testMethod(Model model) throws IOException, InvalidFormatException {
-        List<List<String>> priceTable = priceService.buildPriceTable(getFilePath("Book1.xlsx"), 1, 2);
+        List<List<String>> priceTable = priceService.buildPriceTable(getFilePath("./Book1.xlsx"), 1, 2);
         model.addAttribute("priceTable", priceTable);
         return "test";
     }
