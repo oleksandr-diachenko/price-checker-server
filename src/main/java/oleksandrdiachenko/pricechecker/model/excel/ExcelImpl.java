@@ -26,8 +26,8 @@ public class ExcelImpl implements Excel {
      * @throws IOException            Throws IOException if file read failed.
      */
     @Override
-    public List<List<Object>> read(String path) throws IOException {
-        List<List<Object>> table = new ArrayList<>();
+    public List<List<String>> read(String path) throws IOException {
+        List<List<String>> table = new ArrayList<>();
         Workbook workbook = getWorkbook(path);
         for (int sheetIndex = 0; sheetIndex < workbook.getNumberOfSheets(); sheetIndex++) {
             Sheet sheet = workbook.getSheetAt(sheetIndex);
@@ -42,8 +42,8 @@ public class ExcelImpl implements Excel {
         }
     }
 
-    private List<List<Object>> getTableFromSheet(Sheet sheet) {
-        List<List<Object>> table = new ArrayList<>();
+    private List<List<String>> getTableFromSheet(Sheet sheet) {
+        List<List<String>> table = new ArrayList<>();
         Iterator rows = sheet.rowIterator();
         while (rows.hasNext()) {
             table.add(getRaw(rows));
@@ -51,8 +51,8 @@ public class ExcelImpl implements Excel {
         return table;
     }
 
-    private List<Object> getRaw(Iterator rows) {
-        List<Object> raw = new ArrayList<>();
+    private List<String> getRaw(Iterator rows) {
+        List<String> raw = new ArrayList<>();
         Row row = (Row) rows.next();
         int index = 0;
         short lastCellNum = row.getLastCellNum();
@@ -81,11 +81,11 @@ public class ExcelImpl implements Excel {
      * @throws IOException Throws IOException if file write failed.
      */
     @Override
-    public void write(List<List<Object>> table, String path) throws IOException {
+    public void write(List<List<String>> table, String path) throws IOException {
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet(WorkbookUtil.createSafeSheetName("New sheet"));
         for (int rawIndex = 0; rawIndex < table.size(); rawIndex++) {
-            List<Object> raw = table.get(rawIndex);
+            List<String> raw = table.get(rawIndex);
             Row row = sheet.createRow(rawIndex);
             for (int colIndex = 0; colIndex < raw.size(); colIndex++) {
                 Object obj = raw.get(colIndex);

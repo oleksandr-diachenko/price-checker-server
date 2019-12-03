@@ -18,7 +18,7 @@ public interface Excel {
      * @throws IOException            Throws IOException if file read failed.
      * @throws InvalidFormatException Throws InvalidFormatException if it is not excel file(.xls or .xlsx).
      */
-    List<List<Object>> read(final String path) throws IOException, InvalidFormatException;
+    List<List<String>> read(final String path) throws IOException, InvalidFormatException;
 
     /**
      * Write List<List<>> to excel file.
@@ -27,7 +27,7 @@ public interface Excel {
      * @param path  Path to new excel file.
      * @throws IOException Throws IOException if file write failed.
      */
-    void write(final List<List<Object>> table, final String path) throws IOException;
+    void write(final List<List<String>> table, final String path) throws IOException;
 
     /**
      * Return sheet column count.
