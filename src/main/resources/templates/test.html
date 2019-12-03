@@ -11,17 +11,19 @@
 </head>
 
 <body>
-    <div class="full-container">
-        <div class="row table-responsive">
-            <table id="priceTable" class="table">
-                <tbody>
-                    <tr th:each="row : ${priceTable}">
-                        <td th:each="cell : ${row}">
-                            <span th:text="${cell}"></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="table-responsive">
+                <table id="priceTable" class="table table-bordered table-sm">
+                    <tbody>
+                        <tr th:each="row : ${priceTable}">
+                            <td th:each="cell : ${row}">
+                                <span th:text="${cell}"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
