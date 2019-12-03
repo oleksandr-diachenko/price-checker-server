@@ -4,6 +4,7 @@ import oleksandrdiachenko.pricechecker.model.excel.Excel;
 import oleksandrdiachenko.pricechecker.model.excel.ExcelImpl;
 import oleksandrdiachenko.pricechecker.model.magazine.*;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,19 +13,11 @@ import java.util.List;
 /**
  * @author Alexander Diachenko.
  */
+@Service
 public class PriceService {
 
-    private String filePath;
-    private Integer urlColumn;
-    private Integer insertColumn;
-
-    public PriceService(String filePath, Integer urlColumn, Integer insertColumn) {
-        this.filePath = filePath;
-        this.urlColumn = urlColumn;
-        this.insertColumn = insertColumn;
-    }
-
-    public List<List<String>> buildPriceTable() throws IOException, InvalidFormatException {
+    public List<List<String>> buildPriceTable(String filePath, Integer urlColumn, Integer insertColumn)
+            throws IOException, InvalidFormatException {
         Excel excel = new ExcelImpl();
         List<Magazine> magazines = getMagazines();
         List<List<String>> table = excel.read(filePath);
