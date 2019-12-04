@@ -3,7 +3,6 @@ package oleksandrdiachenko.pricechecker.controller;
 import oleksandrdiachenko.pricechecker.service.PriceService;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +16,7 @@ public class PriceRestController {
     @Autowired
     private PriceService priceService;
 
-    @CrossOrigin(origins = "http://localhost:4200")
-    @RequestMapping("/price-table/{urlColumnNumber}/{insertColumnNumber}")
+    @RequestMapping("/api/price-table/{urlColumnNumber}/{insertColumnNumber}")
     public List<List<String>> getPriceTable(@PathVariable Integer urlColumnNumber,
                                             @PathVariable Integer insertColumnNumber)
             throws IOException, InvalidFormatException {
