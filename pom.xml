@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>oleksandr-diachenko</groupId>
-	<artifactId>price-checker</artifactId>
+	<artifactId>price-checker-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>price-checker</name>
 	<description>Price checker for internet magazines</description>
