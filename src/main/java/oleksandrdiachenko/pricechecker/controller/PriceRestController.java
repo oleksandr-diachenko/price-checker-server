@@ -20,6 +20,6 @@ public class PriceRestController {
     public List<List<String>> getPriceTable(@PathVariable Integer urlColumnNumber,
                                             @PathVariable Integer insertColumnNumber)
             throws IOException, InvalidFormatException {
-        return priceService.buildPriceTable("./price.xlsx", urlColumnNumber, insertColumnNumber);
+        return priceService.buildPriceTable("./file/price.xlsx", urlColumnNumber, insertColumnNumber);
     }
 }
