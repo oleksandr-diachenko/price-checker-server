@@ -15,6 +15,8 @@ import java.util.List;
 @RestController
 public class PriceRestController {
 
+    private static final String FILE_PATH = "./file/price.xlsx";
+
     @Autowired
     private PriceService priceService;
 
@@ -22,12 +24,12 @@ public class PriceRestController {
     public List<List<String>> getPriceTable(@PathVariable Integer urlColumnNumber,
                                             @PathVariable Integer insertColumnNumber)
             throws IOException, InvalidFormatException {
-        return priceService.buildPriceTable("./file/price.xlsx", urlColumnNumber, insertColumnNumber);
+        return priceService.buildPriceTable(FILE_PATH, urlColumnNumber, insertColumnNumber);
     }
 
     @PostMapping("/api/file-upload")
     public void uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
-        try (OutputStream out = new FileOutputStream(new File("./file/price.xlsx"))) {
+        try (OutputStream out = new FileOutputStream(new File(FILE_PATH))) {
             out.write(file.getBytes());
         }
     }
