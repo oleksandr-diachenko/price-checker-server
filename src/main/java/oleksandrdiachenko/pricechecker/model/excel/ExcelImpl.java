@@ -74,11 +74,10 @@ public class ExcelImpl implements Excel {
      * Write List<List<>> to checker.excel file.
      *
      * @param table Data in List<List<>>.
-     * @param path  Path to new excel file.
      * @throws IOException Throws IOException if file write failed.
      */
     @Override
-    public void write(List<List<String>> table, String path) throws IOException {
+    public byte[] getNewTable(List<List<String>> table) throws IOException {
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet(WorkbookUtil.createSafeSheetName("New sheet"));
         for (int rawIndex = 0; rawIndex < table.size(); rawIndex++) {
@@ -91,13 +90,13 @@ public class ExcelImpl implements Excel {
             }
         }
         autoResizeSheet(sheet);
-        write(workbook, path);
+        return getBytes(workbook);
     }
 
-    private void write(Workbook workbook, String path) throws IOException {
-        try (FileOutputStream outputStream = new FileOutputStream(new File(path))) {
-            workbook.write(outputStream);
-        }
+    private byte[] getBytes(Workbook workbook) throws IOException {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        workbook.write(os);
+        return os.toByteArray();
     }
 
     /**

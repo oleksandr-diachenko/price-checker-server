@@ -25,10 +25,9 @@ public interface Excel {
      * Write List<List<>> to excel file.
      *
      * @param table Data in List<List<>>.
-     * @param path  Path to new excel file.
      * @throws IOException Throws IOException if file write failed.
      */
-    void write(final List<List<String>> table, final String path) throws IOException;
+    byte[] getNewTable(final List<List<String>> table) throws IOException;
 
     /**
      * Return sheet column count.
