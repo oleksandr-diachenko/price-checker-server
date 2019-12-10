@@ -3,6 +3,7 @@ package oleksandrdiachenko.pricechecker.model.excel;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -13,12 +14,12 @@ public interface Excel {
     /**
      * Return list representation of excel file.
      *
-     * @param path Path to excel file.
+     * @param bytes Byte array of the excel file.
      * @return List representation of excel file.
      * @throws IOException            Throws IOException if file read failed.
      * @throws InvalidFormatException Throws InvalidFormatException if it is not excel file(.xls or .xlsx).
      */
-    List<List<String>> read(final String path) throws IOException, InvalidFormatException;
+    List<List<String>> read(final byte[] bytes) throws IOException, InvalidFormatException;
 
     /**
      * Write List<List<>> to excel file.

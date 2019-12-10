@@ -20,9 +20,9 @@ public class PriceService {
     @Autowired
     private List<Magazine> magazines;
 
-    public List<List<String>> buildPriceTable(String filePath, Integer urlColumn, Integer insertColumn)
+    public List<List<String>> buildPriceTable(byte[] bytes, Integer urlColumn, Integer insertColumn)
             throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(filePath);
+        List<List<String>> table = excel.read(bytes);
         for (List<String> row : table) {
             if (row.size() < urlColumn) {
                 continue;

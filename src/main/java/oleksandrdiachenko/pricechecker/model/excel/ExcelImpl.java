@@ -6,10 +6,7 @@ import org.apache.poi.ss.util.WorkbookUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,14 +20,14 @@ public class ExcelImpl implements Excel {
     /**
      * Return list representation of excel file.
      *
-     * @param path Path to excel file.
+     * @param bytes Byte array of the excel file.
      * @return List representation of excel file.
-     * @throws IOException            Throws IOException if file read failed.
+     * @throws IOException Throws IOException if file read failed.
      */
     @Override
-    public List<List<String>> read(String path) throws IOException {
+    public List<List<String>> read(byte[] bytes) throws IOException {
         List<List<String>> table = new ArrayList<>();
-        Workbook workbook = getWorkbook(path);
+        Workbook workbook = getWorkbook(bytes);
         for (int sheetIndex = 0; sheetIndex < workbook.getNumberOfSheets(); sheetIndex++) {
             Sheet sheet = workbook.getSheetAt(sheetIndex);
             table.addAll(getTableFromSheet(sheet));
@@ -38,10 +35,8 @@ public class ExcelImpl implements Excel {
         return table;
     }
 
-    private Workbook getWorkbook(String path) throws IOException {
-        try (FileInputStream is = new FileInputStream(new File(path))) {
-            return WorkbookFactory.create(is);
-        }
+    private Workbook getWorkbook(byte[] bytes) throws IOException {
+        return WorkbookFactory.create(new ByteArrayInputStream(bytes));
     }
 
     private List<List<String>> getTableFromSheet(Sheet sheet) {
