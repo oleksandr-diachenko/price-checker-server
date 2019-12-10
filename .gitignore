@@ -30,3 +30,4 @@ build/
 ### VS Code ###
 .vscode/
 /1212121.xlsx
+/.mvn/wrapper/
