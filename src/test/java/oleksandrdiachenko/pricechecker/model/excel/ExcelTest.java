@@ -2,18 +2,15 @@ package oleksandrdiachenko.pricechecker.model.excel;
 
 import lombok.SneakyThrows;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -30,113 +27,106 @@ class ExcelTest {
     }
 
     @Test
-    void readExcelTest_oneField() throws IOException, InvalidFormatException {
+    void shouldContainsOneRowWhenExcelXlsxContainsOneRow() throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(getBytes("file/oneField.xlsx"));
-        assertEquals("[[SAG060003, AGENT PROVOCATEUR FATALE EDP 50 ml spray, 6, 3760264453741]]", table.toString());
+
+        assertEquals("[[SAG060003, AGENT PROVOCATEUR FATALE EDP 50 ml spray, 6, 3760264453741]]",
+                table.toString());
     }
 
     @Test
-    void readExcelTest_oneField_Xls() throws IOException, InvalidFormatException {
+    void shouldContainsOneRowWhenExcelXlsContainsOneRow() throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(getBytes("file/oneField.xls"));
+
         assertEquals("[[SAZ010009, AZZARO CHROME EDT TESTER 100 ml spray]]", table.toString());
     }
 
     @Test
-    void readExcelTest_twoField() throws IOException, InvalidFormatException {
+    void shouldContainsTwoRowsWhenExcelContainsTwoRows() throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(getBytes("file/twoField.xlsx"));
-        assertEquals(
-                "[[SAB070001, ANNA SUI ROMANTICA EDT TESTER 75 ml spray, 10], " +
-                        "[SAB070002, ANNA SUI ROMANTICA EDT 30 ml spray, 42]]", table.toString());
+
+        assertEquals("[[SAB070001, ANNA SUI ROMANTICA EDT TESTER 75 ml spray, 10], " +
+                "[SAB070002, ANNA SUI ROMANTICA EDT 30 ml spray, 42]]", table.toString());
     }
 
     @Test
-    void readExcelTest_oneField_withSpace() throws IOException, InvalidFormatException {
+    void shouldContainsOneRowWithSpacesWhenExcelContainsOneRowWithSpace() throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(getBytes("file/oneFieldWithSpace.xlsx"));
-        assertEquals(
-                "[[SBA030010, , 34]]", table.toString());
+
+        assertEquals("[[SBA030010, , 34]]", table.toString());
     }
 
-//    @Test
-//    void writeExcelTest_oneField() throws IOException, InvalidFormatException {
-//        List<List<String>> table = createTable(
-//                createList("SBA160002", "8411061784273", "ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray", "100", "EDT", "М", "15,30")
-//        );
-//
-//        byte[] newTable = excel.write(table);
-//
-//        assertEquals("[[SBA160002, 8411061784273, ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray, 100, EDT, М, 15,30]]", newTable);
-//    }
-//
-//    @Test
-//    void writeExcelTest_twoField() throws IOException, InvalidFormatException {
-//        List<List<String>> table = createTable(
-//                createList("SBA160002", "8411061784273", "ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray", "100", "EDT", "М", "15,30"),
-//                createList("SAN020002", "8427395660206", "ANGEL SCHLESSER HOMME EDT 125 ml spray", "125", "EDT", "М", "16,40")
-//        );
-//
-//        byte[] newTable = excel.write(table);
-//        System.out.println( Arrays.toString(newTable));
-//        assertEquals(3640, newTable.length);
-//    }
-
     @Test
-    void readExcelTest_twoField_different_size() throws IOException, InvalidFormatException {
+    void shouldContainsTwoRowsWhenExcelContainsTwoRowsFirstShorter() throws Exception {
         List<List<String>> table = excel.read(getBytes("file/twoFieldDifferentSizeFirstShorter.xlsx"));
-        assertEquals(
-                "[[SOT440001, 3760260453042], " +
-                        "[SOT190003, 3760260451994, 50 ml, U]]", table.toString());
+
+        assertEquals("[[SOT440001, 3760260453042], [SOT190003, 3760260451994, 50 ml, U]]", table.toString());
     }
 
     @Test
-    void readExcelTest_oneField_withSpaces_beginningAndMiddle() throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(getBytes("file/oneFieldSpacesAtBeginningAndAtMiddle.xlsx"));
-        assertEquals(
-                "[[, , SOT440001, , , 3760260453042]]", table.toString());
-    }
-
-    @Test
-    void readExcelTest_twoField_different_size2() throws IOException, InvalidFormatException {
+    void shouldContainsTwoRowWhenExcelContainsTwoRowSecondShorter() throws Exception {
         List<List<String>> table = excel.read(getBytes("file/twoFieldDifferentSizeSecondShorter.xlsx"));
-        assertEquals(
-                "[[SOT190003, 3760260451994, 50 ml, U], " +
-                        "[SOT440001, 3760260453042]]", table.toString());
+
+        assertEquals("[[SOT190003, 3760260451994, 50 ml, U], [SOT440001, 3760260453042]]", table.toString());
     }
 
     @Test
-    void readExcelTest_threeField_different_size() throws IOException, InvalidFormatException {
+    void shouldContainsOneRowWithSpacesWhenExcelContainsOneRowWithSpaces() throws Exception {
+        List<List<String>> table = excel.read(getBytes("file/oneFieldSpacesAtBeginningAndAtMiddle.xlsx"));
+
+        assertEquals("[[, , SOT440001, , , 3760260453042]]", table.toString());
+    }
+
+    @Test
+    void shouldContainsThreeRowsDifferentSizeWhenExcelContainsThreeRowsDifferentSize() throws Exception {
         List<List<String>> table = excel.read(getBytes("file/threeFieldDifferentSize.xlsx"));
-        assertEquals(
-                "[[SOT190003, 3760260451994, 50 ml, U], " +
-                        "[SOT440001, 3760260453042], " +
+
+        assertEquals("[[SOT190003, 3760260451994, 50 ml, U], [SOT440001, 3760260453042], " +
                         "[SOT470001, 3760260623042, 100 ml, M, EDP]]", table.toString());
     }
 
     @Test
-    void readExcelTest_fiveSheets() throws IOException, InvalidFormatException {
+    void shouldContainsFiveRowsWhenExcelContainsFiveSheetsWithFiveRows() throws Exception {
         List<List<String>> table = excel.read(getBytes("file/fiveSheets.xlsx"));
-        assertEquals(
-                "[[SBA030010, , 34], " +
-                        "[SOT190003, 3760260451994, 50 ml, U, ], " +
-                        "[SOT440001, 3760260453042, , , ], " +
-                        "[SOT470001, 3760260623042, 100 ml, M, EDP]]", table.toString());
+
+        assertEquals("[[SBA030010, , 34], [SOT190003, 3760260451994, 50 ml, U, ], " +
+                        "[SOT440001, 3760260453042, , , ], [SOT470001, 3760260623042, 100 ml, M, EDP]]",
+                table.toString());
     }
 
-    private Sheet getSheet(String path) throws IOException {
-        Workbook workbook = getWorkbook(path);
-        return workbook.getSheetAt(0);
+    @Test
+    void shouldCreateWorkbookWithOneRowWhenTableContainsOneRow() throws IOException {
+        List<List<String>> table = createTable(createList("SBA160002", "8411061784273",
+                        "ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray", "100", "EDT", "М", "15,30"));
+
+        Workbook workbook = excel.write(table);
+
+        assertEquals("SBA160002", getCellStringValue(workbook, 0, 0));
+        assertEquals("100", getCellStringValue(workbook, 0, 3));
+        assertEquals("15,30", getCellStringValue(workbook, 0, 6));
+    }
+
+    @Test
+    void shouldCreateWorkbookWithTwoRowWhenTableContainsTwoRowSameSize() throws Exception {
+        List<List<String>> table = createTable(createList("SBA160002", "8411061784273",
+                        "ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray", "100", "EDT", "М", "15,30"),
+                createList("SAN020002", "8427395660206",
+                        "ANGEL SCHLESSER HOMME EDT 125 ml spray", "125", "EDT", "М", "16,40"));
+
+        Workbook workbook = excel.write(table);
+
+        assertEquals("SBA160002", getCellStringValue(workbook, 0, 0));
+        assertEquals("15,30", getCellStringValue(workbook, 0, 6));
+        assertEquals("SAN020002", getCellStringValue(workbook, 1, 0));
+        assertEquals("125", getCellStringValue(workbook, 1, 3));
+        assertEquals("16,40", getCellStringValue(workbook, 1, 6));
     }
 
     @SneakyThrows
     private byte[] getBytes(String fileName) {
         ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource(fileName);
-        return resource.openStream().readAllBytes();
-    }
-
-    private Workbook getWorkbook(String path) throws IOException {
-        try (FileInputStream is = new FileInputStream(new File(path))) {
-            return WorkbookFactory.create(is);
-        }
+        return Objects.requireNonNull(resource).openStream().readAllBytes();
     }
 
     private List<String> createList(String... strings) {
@@ -146,5 +136,9 @@ class ExcelTest {
     @SafeVarargs
     private List<List<String>> createTable(List<String>... lists) {
         return Arrays.asList(lists);
+    }
+
+    private String getCellStringValue(Workbook workbook, int rowNumber, int cellNumber) {
+        return workbook.getSheet("New sheet").getRow(rowNumber).getCell(cellNumber).getStringCellValue();
     }
 }
