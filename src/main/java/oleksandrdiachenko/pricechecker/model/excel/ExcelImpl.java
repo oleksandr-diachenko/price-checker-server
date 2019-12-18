@@ -6,7 +6,9 @@ import org.apache.poi.ss.util.WorkbookUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -110,7 +112,7 @@ public class ExcelImpl implements Excel {
         int columnCount = 0;
         for (int rowNumber = 0; rowNumber <= sheet.getLastRowNum(); rowNumber++) {
             Row row = sheet.getRow(rowNumber);
-            short lastCellNum = row.getLastCellNum();
+            short lastCellNum = row.getLastCellNum(); //TODO при пустом файле паадет НПЕ
             columnCount = Math.max(columnCount, lastCellNum);
         }
         return columnCount;
