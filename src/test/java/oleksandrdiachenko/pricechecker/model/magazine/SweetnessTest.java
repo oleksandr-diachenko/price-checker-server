@@ -22,24 +22,28 @@ class SweetnessTest {
     @Test
     void shouldReturnDiscountPrice() {
         String price = sweetness.getPrice(creator.createDocumentFromFile("xml/sweetness/Sweetness_discount.xml"));
+
         assertEquals("217", price);
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = sweetness.getPrice(creator.createDocumentFromFile("xml/sweetness/Sweetness_normal.xml"));
+
         assertEquals("175", price);
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = sweetness.getPrice(creator.createDocumentFromFile("xml/sweetness/Sweetness_outofstock.xml"));
+
         assertEquals("Нет в наличии", price);
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = sweetness.getPrice(creator.createDocumentFromFile("xml/sweetness/Sweetness_notfound.xml"));
+
         assertEquals("Не найдено", price);
     }
 
@@ -50,11 +54,15 @@ class SweetnessTest {
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
-        assertFalse(sweetness.isThisWebsite("https://www.google.com.ua/"));
+        boolean isThisWebsite = sweetness.isThisWebsite("https://www.google.com.ua/");
+
+        assertFalse(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
-        assertFalse(sweetness.isThisWebsite("qwe"));
+        boolean isThisWebsite = sweetness.isThisWebsite("qwe");
+
+        assertFalse(isThisWebsite);
     }
 }

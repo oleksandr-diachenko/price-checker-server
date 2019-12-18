@@ -22,33 +22,42 @@ class SweetCoreaTest {
     @Test
     void shouldReturnNormalPrice() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_normal.xml"));
+
         assertEquals("6.300", price);
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_outofstock.xml"));
+
         assertEquals("Нет в наличии", price);
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_notfound.xml"));
+
         assertEquals("Не найдено", price);
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
-        assertTrue(sweetCorea.isThisWebsite("http://www.sweetcorea.com"));
+        boolean isThisWebsite = sweetCorea.isThisWebsite("http://www.sweetcorea.com");
+
+        assertTrue(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
-        assertFalse(sweetCorea.isThisWebsite("https://www.google.com.ua/"));
+        boolean isThisWebsite = sweetCorea.isThisWebsite("https://www.google.com.ua/");
+
+        assertFalse(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
-        assertFalse(sweetCorea.isThisWebsite("qwe"));
+        boolean isThisWebsite = sweetCorea.isThisWebsite("qwe");
+
+        assertFalse(isThisWebsite);
     }
 }

@@ -23,6 +23,7 @@ class MakeupTest {
     void shouldReturnDiscountPrice() {
         makeup.url = "https://makeup.com.ua/product/632463/#/option/1558727/";
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_discount.xml"));
+
         assertEquals("209", price);
     }
 
@@ -30,6 +31,7 @@ class MakeupTest {
     void shouldReturnNormalPrice() {
         makeup.url = "https://makeup.com.ua/product/1801/#/option/393587/";
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_normal.xml"));
+
         assertEquals("218", price);
     }
 
@@ -37,6 +39,7 @@ class MakeupTest {
     void shouldReturnOutOfStock() {
         makeup.url = "https://makeup.com.ua/product/20652/";
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_outofstock.xml"));
+
         assertEquals("Нет в наличии", price);
     }
 
@@ -44,21 +47,28 @@ class MakeupTest {
     void shouldReturnNotFound() {
         makeup.url = "https://makeup.com.ua/product/20652/";
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_notfound.xml"));
+
         assertEquals("Не найдено", price);
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
-        assertTrue(makeup.isThisWebsite("https://makeup.com.ua/"));
+        boolean isThisWebsite = makeup.isThisWebsite("https://makeup.com.ua/");
+
+        assertTrue(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
-        assertFalse(makeup.isThisWebsite("https://www.google.com.ua/"));
+        boolean isThisWebsite = makeup.isThisWebsite("https://www.google.com.ua/");
+
+        assertFalse(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
-        assertFalse(makeup.isThisWebsite("qwe"));
+        boolean isThisWebsite = makeup.isThisWebsite("qwe");
+
+        assertFalse(isThisWebsite);
     }
 }

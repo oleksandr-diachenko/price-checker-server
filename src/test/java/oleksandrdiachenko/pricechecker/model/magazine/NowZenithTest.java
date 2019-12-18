@@ -22,33 +22,42 @@ class NowZenithTest {
     @Test
     void shouldReturnDiscountPrice() {
         String price = nowZenith.getPrice(creator.createDocumentFromFile("xml/nowZenith/NowZenith_discount.xml"));
+
         assertEquals("6.19", price);
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = nowZenith.getPrice(creator.createDocumentFromFile("xml/nowZenith/NowZenith_normal.xml"));
+
         assertEquals("4.60", price);
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = nowZenith.getPrice(creator.createDocumentFromFile("xml/nowZenith/NowZenith_notfound.xml"));
+
         assertEquals("Не найдено", price);
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
-        assertTrue(nowZenith.isThisWebsite("http://www.nowzenith.com"));
+        boolean isThisWebsite = nowZenith.isThisWebsite("http://www.nowzenith.com");
+
+        assertTrue(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
-        assertFalse(nowZenith.isThisWebsite("https://www.google.com.ua/"));
+        boolean isThisWebsite = nowZenith.isThisWebsite("https://www.google.com.ua/");
+
+        assertFalse(isThisWebsite);
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
-        assertFalse(nowZenith.isThisWebsite("qwe"));
+        boolean isThisWebsite = nowZenith.isThisWebsite("qwe");
+
+        assertFalse(isThisWebsite);
     }
 }
