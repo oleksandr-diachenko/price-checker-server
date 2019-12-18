@@ -7,7 +7,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,13 +18,6 @@ import java.util.List;
 @Component
 public class ExcelImpl implements Excel {
 
-    /**
-     * Return list representation of excel file.
-     *
-     * @param bytes Byte array of the excel file.
-     * @return List representation of excel file.
-     * @throws IOException Throws IOException if file read failed.
-     */
     @Override
     public List<List<String>> read(byte[] bytes) throws IOException {
         List<List<String>> table = new ArrayList<>();
@@ -43,16 +35,16 @@ public class ExcelImpl implements Excel {
 
     private List<List<String>> getTableFromSheet(Sheet sheet) {
         List<List<String>> table = new ArrayList<>();
-        Iterator rows = sheet.rowIterator();
+        Iterator<Row> rows = sheet.rowIterator();
         while (rows.hasNext()) {
             table.add(getRaw(rows));
         }
         return table;
     }
 
-    private List<String> getRaw(Iterator rows) {
+    private List<String> getRaw(Iterator<Row> rows) {
         List<String> raw = new ArrayList<>();
-        Row row = (Row) rows.next();
+        Row row = rows.next();
         int index = 0;
         short lastCellNum = row.getLastCellNum();
         while (index < lastCellNum) {
@@ -72,14 +64,8 @@ public class ExcelImpl implements Excel {
         return !result.equals("#NULL!") ? result : "";
     }
 
-    /**
-     * Write List<List<>> to checker.excel file.
-     *
-     * @param table Data in List<List<>>.
-     * @throws IOException Throws IOException if file write failed.
-     */
     @Override
-    public byte[] getNewTable(List<List<String>> table) throws IOException {
+    public Workbook write(List<List<String>> table) {
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet(WorkbookUtil.createSafeSheetName("New sheet"));
         for (int rawIndex = 0; rawIndex < table.size(); rawIndex++) {
@@ -92,21 +78,9 @@ public class ExcelImpl implements Excel {
             }
         }
         autoResizeSheet(sheet);
-        return getBytes(workbook);
+        return workbook;
     }
 
-    private byte[] getBytes(Workbook workbook) throws IOException {
-        ByteArrayOutputStream os = new ByteArrayOutputStream();
-        workbook.write(os);
-        return os.toByteArray();
-    }
-
-    /**
-     * Return sheet column count.
-     *
-     * @param sheet sheet of excel file.
-     * @return int column count.
-     */
     @Override
     public int getColumnCount(Sheet sheet) {
         int columnCount = 0;
@@ -118,11 +92,6 @@ public class ExcelImpl implements Excel {
         return columnCount;
     }
 
-    /**
-     * Auto resize excel table. If column is empty - hide it
-     *
-     * @param sheet of table
-     */
     @Override
     public void autoResizeSheet(Sheet sheet) {
         for (int columnIndex = 0; columnIndex < getColumnCount(sheet); columnIndex++) {

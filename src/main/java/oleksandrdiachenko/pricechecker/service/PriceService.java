@@ -3,6 +3,7 @@ package oleksandrdiachenko.pricechecker.service;
 import oleksandrdiachenko.pricechecker.model.excel.Excel;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class PriceService {
     @Autowired
     private List<Magazine> magazines;
 
-    public byte[] buildPriceTable(byte[] bytes, Integer urlColumn, Integer insertColumn)
+    public Workbook getWorkbook(byte[] bytes, Integer urlColumn, Integer insertColumn)
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
         for (List<String> row : table) {
@@ -35,7 +36,7 @@ public class PriceService {
                 }
             }
         }
-        return excel.getNewTable(table);
+        return excel.write(table);
     }
 
     private void insert(List<String> row, int column, String price) {
