@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +25,8 @@ public class PriceCheckerServiceTest {
     @InjectMocks
     private PriceCheckService priceCheckService;
 
+    @Spy
+    private ArrayList<Magazine> magazines;
     @Mock
     private Excel excel;
     @Mock
@@ -30,7 +34,7 @@ public class PriceCheckerServiceTest {
 
     @BeforeEach
     void setUp() {
-        priceCheckService.setMagazines(Collections.singletonList(magazine));
+        magazines.add(magazine);
     }
 
     @Test

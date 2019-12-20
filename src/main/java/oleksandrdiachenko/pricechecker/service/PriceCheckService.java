@@ -1,7 +1,5 @@
 package oleksandrdiachenko.pricechecker.service;
 
-import lombok.Getter;
-import lombok.Setter;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
 import oleksandrdiachenko.pricechecker.service.excel.Excel;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -16,15 +14,12 @@ import java.util.List;
  * @author Alexander Diachenko.
  */
 @Service
-@Getter
-@Setter
 public class PriceCheckService {
 
-    @Autowired
     private Excel excel;
-    @Autowired
     private List<Magazine> magazines;
 
+    @Autowired
     public PriceCheckService(Excel excel, List<Magazine> magazines) {
         this.excel = excel;
         this.magazines = magazines;
