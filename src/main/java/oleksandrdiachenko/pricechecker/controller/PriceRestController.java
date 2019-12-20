@@ -1,6 +1,6 @@
 package oleksandrdiachenko.pricechecker.controller;
 
-import oleksandrdiachenko.pricechecker.service.PriceService;
+import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.WorkbookService;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -14,7 +14,7 @@ import java.io.IOException;
 public class PriceRestController {
 
     @Autowired
-    private PriceService priceService;
+    private PriceCheckService priceCheckService;
 
     @Autowired
     private WorkbookService workbookService;
@@ -27,7 +27,7 @@ public class PriceRestController {
                                 @PathVariable Integer insertColumnNumber)
             throws IOException, InvalidFormatException {
         priceTable = null;
-        priceTable = priceService.getWorkbook(file.getBytes(), urlColumnNumber, insertColumnNumber);
+        priceTable = priceCheckService.getWorkbook(file.getBytes(), urlColumnNumber, insertColumnNumber);
     }
 
     @GetMapping("/api/price-check/content")

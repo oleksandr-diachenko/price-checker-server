@@ -1,7 +1,7 @@
 package oleksandrdiachenko.pricechecker.service;
 
-import oleksandrdiachenko.pricechecker.model.excel.Excel;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
+import oleksandrdiachenko.pricechecker.service.excel.Excel;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author Alexander Diachenko.
  */
 @Service
-public class PriceService {
+public class PriceCheckService {
 
     @Autowired
     private Excel excel;

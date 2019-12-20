@@ -1,6 +1,5 @@
-package oleksandrdiachenko.pricechecker.model.excel;
+package oleksandrdiachenko.pricechecker.service.excel;
 
-import lombok.SneakyThrows;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.BeforeEach;
@@ -122,11 +121,26 @@ class ExcelTest {
         assertEquals("16,40", getCellStringValue(workbook, 1, 6));
     }
 
-    @SneakyThrows
+    @Test
+    void shouldCreateWorkbookWithTwoRowWithHiddenColumnWhenTableContainsTwoRowWithBlankColumn() throws Exception {
+        List<List<String>> table = createTable(createList("SBA160002", "8411061784273",
+                "", "100", "EDT", "М", "15,30"),
+                createList("SAN020002", "8427395660206", "", "125", "EDT", "М", "16,40"));
+
+        Workbook workbook = excel.write(table);
+
+        assertEquals(256, workbook.getSheet("New sheet").getColumnWidth(2));
+    }
+
     private byte[] getBytes(String fileName) {
         ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource(fileName);
-        return Objects.requireNonNull(resource).openStream().readAllBytes();
+        try {
+            return Objects.requireNonNull(resource).openStream().readAllBytes();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Can't read file", e);
+        }
     }
 
     private List<String> createList(String... strings) {
