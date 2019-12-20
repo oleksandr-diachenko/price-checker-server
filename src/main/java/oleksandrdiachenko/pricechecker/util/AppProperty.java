@@ -1,6 +1,8 @@
 package oleksandrdiachenko.pricechecker.util;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,7 +15,7 @@ import java.util.Properties;
  */
 public class AppProperty {
 
-    private static final Logger logger = Logger.getLogger(AppProperty.class);
+    private static final Logger logger = LoggerFactory.getLogger(AppProperty.class);
 
     private AppProperty() {
         throw new IllegalStateException("Creating object not allowed!");

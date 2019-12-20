@@ -1,9 +1,10 @@
 package oleksandrdiachenko.pricechecker.model.magazine;
 
 import oleksandrdiachenko.pricechecker.util.UrlUtils;
-import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -13,7 +14,7 @@ import java.net.MalformedURLException;
  */
 public abstract class AbstractMagazine implements Magazine {
 
-    private static final Logger logger = Logger.getLogger(AbstractMagazine.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractMagazine.class);
 
     private static final String PAGE_NOT_FOUND = "Страница не найдена";
     private static final String OUT_OF_STOCK = "Нет в наличии";

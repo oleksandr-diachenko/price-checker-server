@@ -18,7 +18,9 @@ package oleksandrdiachenko.pricechecker.util;
  */
 //package com.aionemu.commons.utils.i18n;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -59,7 +61,7 @@ import java.util.ResourceBundle;
  */
 public class ResourceBundleControl extends ResourceBundle.Control {
 
-    private final static Logger logger = Logger.getLogger(ResourceBundleControl.class);
+    private final static Logger logger = LoggerFactory.getLogger(ResourceBundleControl.class);
 
     /**
      * Encoding which will be used to read resource bundle, by defaults it's 8859_1
