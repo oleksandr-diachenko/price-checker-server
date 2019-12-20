@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * @author Alexander Diachenko.
  */
-class ExcelTest {
+class ExcelImplTest {
 
     private Excel excel;
 
