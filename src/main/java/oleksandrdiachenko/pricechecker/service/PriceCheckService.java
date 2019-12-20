@@ -37,7 +37,7 @@ public class PriceCheckService {
         }
         for (List<String> row : table) {
             for (Magazine magazine : emptyIfNull(magazines)) {
-                String url = retrieveUrl(urlColumn, row);
+                String url = retrieveUrl(row, urlColumn -1);
                 if (magazine.isThisWebsite(url)) {
                     String price = magazine.getPrice(magazine.getDocument(url));
                     insert(row, insertColumn - 1, price);
@@ -51,17 +51,17 @@ public class PriceCheckService {
         return urlColumn < FIRST_COLUMN || insertColumn < FIRST_COLUMN;
     }
 
-    private String retrieveUrl(int urlColumn, List<String> row) {
-        if (row.size() < urlColumn) {
+    private String retrieveUrl(List<String> row, int index) {
+        if (row.size() <= index) {
             return EMPTY;
         }
-        return String.valueOf(row.get(urlColumn - 1));
+        return String.valueOf(row.get(index));
     }
 
-    private void insert(List<String> row, int column, String price) {
-        while (row.size() < column) {
+    private void insert(List<String> row, int index, String price) {
+        while (row.size() < index) {
             row.add(EMPTY);
         }
-        row.add(column, price);
+        row.add(index, price);
     }
 }
