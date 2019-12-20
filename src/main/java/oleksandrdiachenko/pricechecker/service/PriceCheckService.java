@@ -32,11 +32,8 @@ public class PriceCheckService {
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
         for (List<String> row : table) {
-            if (row.size() < urlColumn) {
-                continue;
-            }
-            String url = String.valueOf(row.get(urlColumn - 1));
             for (Magazine magazine : emptyIfNull(magazines)) {
+                String url = retrieveUrl(urlColumn, row);
                 if (magazine.isThisWebsite(url)) {
                     String price = magazine.getPrice(magazine.getDocument(url));
                     insert(row, insertColumn - 1, price);
@@ -44,6 +41,10 @@ public class PriceCheckService {
             }
         }
         return excel.write(table);
+    }
+
+    private String retrieveUrl(int urlColumn, List<String> row) {
+        return String.valueOf(row.size() < urlColumn ? "" : row.get(urlColumn - 1));
     }
 
     private void insert(List<String> row, int column, String price) {
