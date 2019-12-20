@@ -1,7 +1,7 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
-import oleksandrdiachenko.pricechecker.service.WorkbookService;
+import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +15,6 @@ public class PriceRestController {
 
     @Autowired
     private PriceCheckService priceCheckService;
-
-    @Autowired
-    private WorkbookService workbookService;
 
     private Workbook priceTable;
 
@@ -34,7 +31,7 @@ public class PriceRestController {
     public @ResponseBody
     byte[] getPriceTable() throws IOException {
         if (priceTable != null) {
-            return workbookService.getBytes(priceTable);
+            return WorkbookUtils.getBytes(priceTable);
         }
         return new byte[0];
     }
