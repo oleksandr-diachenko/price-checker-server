@@ -54,7 +54,7 @@ public class PriceCheckService {
         if (row.size() <= index) {
             return EMPTY;
         }
-        return String.valueOf(row.get(index));
+        return row.get(index);
     }
 
     private void insert(List<String> row, int index, String price) {
