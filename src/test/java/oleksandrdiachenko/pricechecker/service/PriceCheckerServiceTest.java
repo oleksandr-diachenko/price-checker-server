@@ -117,6 +117,46 @@ public class PriceCheckerServiceTest {
         verify(excel).write(priceTable);
     }
 
+    @Test
+    void shouldCallWriteWithCurrentListWhenUrlColumnZero() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+
+        priceCheckService.getWorkbook(BYTES, 0, 2);
+
+        verify(excel).write(table);
+    }
+
+    @Test
+    void shouldCallWriteWithCurrentListWhenUrlColumnMinus() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+
+        priceCheckService.getWorkbook(BYTES, -1, 2);
+
+        verify(excel).write(table);
+    }
+
+    @Test
+    void shouldCallWriteWithCurrentListWhenInsertedColumnZero() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+
+        priceCheckService.getWorkbook(BYTES, 1, 0);
+
+        verify(excel).write(table);
+    }
+
+    @Test
+    void shouldCallWriteWithCurrentListWhenInsertedColumnMinus() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+
+        priceCheckService.getWorkbook(BYTES, 1, -1);
+
+        verify(excel).write(table);
+    }
+
     private List<String> createList(String... strings) {
         return Arrays.stream(strings).collect(toList());
     }

@@ -33,10 +33,12 @@ public class PriceCheckService {
         List<List<String>> table = excel.read(bytes);
         for (List<String> row : table) {
             for (Magazine magazine : emptyIfNull(magazines)) {
-                String url = retrieveUrl(urlColumn, row);
-                if (magazine.isThisWebsite(url)) {
-                    String price = magazine.getPrice(magazine.getDocument(url));
-                    insert(row, insertColumn - 1, price);
+                if (urlColumn > 0 && insertColumn > 0) {
+                    String url = retrieveUrl(urlColumn, row);
+                    if (magazine.isThisWebsite(url)) {
+                        String price = magazine.getPrice(magazine.getDocument(url));
+                        insert(row, insertColumn - 1, price);
+                    }
                 }
             }
         }
@@ -44,7 +46,10 @@ public class PriceCheckService {
     }
 
     private String retrieveUrl(int urlColumn, List<String> row) {
-        return String.valueOf(row.size() < urlColumn ? "" : row.get(urlColumn - 1));
+        if (row.size() < urlColumn) {
+            return EMPTY;
+        }
+        return String.valueOf(row.get(urlColumn - 1));
     }
 
     private void insert(List<String> row, int column, String price) {
