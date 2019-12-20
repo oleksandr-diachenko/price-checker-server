@@ -1,7 +1,7 @@
 package oleksandrdiachenko.pricechecker.util;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * @author Alexander Diachenko.
@@ -12,12 +12,8 @@ public class TimeUtil {
         throw new IllegalStateException("Creating object not allowed!");
     }
 
-    /**
-     * Method needed for getting current time in format dd-MM-yyyy_HH-mm-ss
-     *
-     * @return current time dd-MM-yyyy_HH-mm-ss
-     */
     public static String getCurrentTime() {
-        return new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy_HH-mm-ss");
+        return LocalDateTime.now().format(formatter);
     }
 }
