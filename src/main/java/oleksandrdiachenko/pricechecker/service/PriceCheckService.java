@@ -19,7 +19,6 @@ import static org.apache.commons.lang3.StringUtils.EMPTY;
 @Service
 public class PriceCheckService {
 
-    private static final int FIRST_COLUMN = 1;
     private Excel excel;
     private List<Magazine> magazines;
 
@@ -29,26 +28,26 @@ public class PriceCheckService {
         this.magazines = magazines;
     }
 
-    public Workbook getWorkbook(byte[] bytes, int urlColumn, int insertColumn)
+    public Workbook getWorkbook(byte[] bytes, int urlIndex, int insertIndex)
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
-        if (notCorrectInput(urlColumn, insertColumn)) {
+        if (!isPositives(urlIndex, insertIndex)) {
             return excel.write(table);
         }
         for (List<String> row : table) {
             for (Magazine magazine : emptyIfNull(magazines)) {
-                String url = retrieveUrl(row, urlColumn - 1);
+                String url = retrieveUrl(row, urlIndex);
                 if (magazine.isThisWebsite(url)) {
                     String price = magazine.getPrice(magazine.getDocument(url));
-                    insert(row, insertColumn - 1, price);
+                    insert(row, insertIndex, price);
                 }
             }
         }
         return excel.write(table);
     }
 
-    private boolean notCorrectInput(int urlColumn, int insertColumn) {
-        return urlColumn < FIRST_COLUMN || insertColumn < FIRST_COLUMN;
+    private boolean isPositives(int urlColumn, int insertColumn) {
+        return urlColumn >= 0 && insertColumn >= 0;
     }
 
     private String retrieveUrl(List<String> row, int index) {
