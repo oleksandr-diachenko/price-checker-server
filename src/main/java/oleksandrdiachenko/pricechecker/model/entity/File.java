@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.model;
+package oleksandrdiachenko.pricechecker.model.entity;
 
 import javax.persistence.*;
 

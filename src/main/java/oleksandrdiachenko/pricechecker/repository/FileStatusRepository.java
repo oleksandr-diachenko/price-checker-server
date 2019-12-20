@@ -1,6 +1,6 @@
 package oleksandrdiachenko.pricechecker.repository;
 
-import oleksandrdiachenko.pricechecker.model.FileStatus;
+import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
