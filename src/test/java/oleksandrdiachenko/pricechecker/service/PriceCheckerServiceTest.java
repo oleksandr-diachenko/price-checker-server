@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.service;
 
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
 import oleksandrdiachenko.pricechecker.service.excel.Excel;
+import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,6 +23,10 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class PriceCheckerServiceTest {
 
+    private static final String URL = "www.site.com/product";
+    private static final byte[] BYTES = {1, 2, 3};
+    private static final String PRICE = "100";
+
     @InjectMocks
     private PriceCheckService priceCheckService;
 
@@ -31,6 +36,8 @@ public class PriceCheckerServiceTest {
     private Excel excel;
     @Mock
     private Magazine magazine;
+    @Mock
+    private Document document;
 
     @BeforeEach
     void setUp() {
@@ -39,36 +46,46 @@ public class PriceCheckerServiceTest {
 
     @Test
     void shouldCallWriteWithEmptyListWhenBytesIsEmpty() throws Exception {
-        byte[] bytes = new byte[0];
-        when(excel.read(bytes)).thenReturn(Collections.emptyList());
+        when(excel.read(new byte[0])).thenReturn(Collections.emptyList());
 
-        priceCheckService.getWorkbook(bytes, 1, 2);
+        priceCheckService.getWorkbook(new byte[0], 1, 2);
 
         verify(excel).write(Collections.emptyList());
     }
 
     @Test
     void shouldCallWriteWithCurrentListWhenUrlColumnHigherThanTableSize() throws Exception {
-        byte[] bytes = {1, 2, 3};
         List<List<String>> table = createTable(createList("SBA160002"));
-        when(excel.read(bytes)).thenReturn(table);
+        when(excel.read(BYTES)).thenReturn(table);
 
-        priceCheckService.getWorkbook(bytes, 2, 3);
+        priceCheckService.getWorkbook(BYTES, 2, 3);
 
         verify(excel).write(table);
     }
 
     @Test
     void shouldCallWriteWithCurrentListWhenNotThisWebsite() throws Exception {
-        byte[] bytes = {1, 2, 3};
-        String url = "www.site.com/product";
-        List<List<String>> table = createTable(createList(url));
-        when(excel.read(bytes)).thenReturn(table);
-        when(magazine.isThisWebsite(url)).thenReturn(false);
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+        when(magazine.isThisWebsite(URL)).thenReturn(false);
 
-        priceCheckService.getWorkbook(bytes, 1, 2);
+        priceCheckService.getWorkbook(BYTES, 1, 2);
 
         verify(excel).write(table);
+    }
+
+    @Test
+    void shouldCallWriteWithInsertedList() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+        when(magazine.isThisWebsite(URL)).thenReturn(true);
+        when(magazine.getDocument(URL)).thenReturn(document);
+        when(magazine.getPrice(document)).thenReturn(PRICE);
+        List<List<String>> priceTable = createTable(createList(URL, PRICE));
+
+        priceCheckService.getWorkbook(BYTES, 1, 2);
+
+        verify(excel).write(priceTable);
     }
 
     private List<String> createList(String... strings) {
