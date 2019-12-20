@@ -23,8 +23,8 @@ public class PriceRestController {
 
     @PostMapping("/api/price-check/{urlColumnNumber}/{insertColumnNumber}")
     public void startPriceCheck(@RequestParam("file") MultipartFile file,
-                                @PathVariable Integer urlColumnNumber,
-                                @PathVariable Integer insertColumnNumber)
+                                @PathVariable int urlColumnNumber,
+                                @PathVariable int insertColumnNumber)
             throws IOException, InvalidFormatException {
         priceTable = null;
         priceTable = priceCheckService.getWorkbook(file.getBytes(), urlColumnNumber, insertColumnNumber);

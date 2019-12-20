@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
+import static org.apache.logging.log4j.util.Strings.EMPTY;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -75,7 +76,7 @@ public class PriceCheckerServiceTest {
     }
 
     @Test
-    void shouldCallWriteWithInsertedList() throws Exception {
+    void shouldCallWriteWithInsertedListWhenListContainsOneField() throws Exception {
         List<List<String>> table = createTable(createList(URL));
         when(excel.read(BYTES)).thenReturn(table);
         when(magazine.isThisWebsite(URL)).thenReturn(true);
@@ -84,6 +85,34 @@ public class PriceCheckerServiceTest {
         List<List<String>> priceTable = createTable(createList(URL, PRICE));
 
         priceCheckService.getWorkbook(BYTES, 1, 2);
+
+        verify(excel).write(priceTable);
+    }
+
+    @Test
+    void shouldCallWriteWithInsertedListWhenInsertingInBusyColumn() throws Exception {
+        List<List<String>> table = createTable(createList(URL, "data"));
+        when(excel.read(BYTES)).thenReturn(table);
+        when(magazine.isThisWebsite(URL)).thenReturn(true);
+        when(magazine.getDocument(URL)).thenReturn(document);
+        when(magazine.getPrice(document)).thenReturn(PRICE);
+        List<List<String>> priceTable = createTable(createList(URL, PRICE, "data"));
+
+        priceCheckService.getWorkbook(BYTES, 1, 2);
+
+        verify(excel).write(priceTable);
+    }
+
+    @Test
+    void shouldCallWriteWithInsertedListWhenInsertingInNonExistingColumn() throws Exception {
+        List<List<String>> table = createTable(createList(URL));
+        when(excel.read(BYTES)).thenReturn(table);
+        when(magazine.isThisWebsite(URL)).thenReturn(true);
+        when(magazine.getDocument(URL)).thenReturn(document);
+        when(magazine.getPrice(document)).thenReturn(PRICE);
+        List<List<String>> priceTable = createTable(createList(URL, EMPTY, PRICE));
+
+        priceCheckService.getWorkbook(BYTES, 1, 3);
 
         verify(excel).write(priceTable);
     }

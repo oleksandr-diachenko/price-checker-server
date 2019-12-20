@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
+import static org.apache.commons.collections4.ListUtils.emptyIfNull;
+import static org.apache.commons.lang3.StringUtils.EMPTY;
+
 /**
  * @author Alexander Diachenko.
  */
@@ -25,7 +28,7 @@ public class PriceCheckService {
         this.magazines = magazines;
     }
 
-    public Workbook getWorkbook(byte[] bytes, Integer urlColumn, Integer insertColumn)
+    public Workbook getWorkbook(byte[] bytes, int urlColumn, int insertColumn)
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
         for (List<String> row : table) {
@@ -33,7 +36,7 @@ public class PriceCheckService {
                 continue;
             }
             String url = String.valueOf(row.get(urlColumn - 1));
-            for (Magazine magazine : magazines) {
+            for (Magazine magazine : emptyIfNull(magazines)) {
                 if (magazine.isThisWebsite(url)) {
                     String price = magazine.getPrice(magazine.getDocument(url));
                     insert(row, insertColumn - 1, price);
@@ -44,9 +47,9 @@ public class PriceCheckService {
     }
 
     private void insert(List<String> row, int column, String price) {
-        while (row.size() <= column) {
-            row.add("");
+        while (row.size() < column) {
+            row.add(EMPTY);
         }
-        row.set(column, price);
+        row.add(column, price);
     }
 }
