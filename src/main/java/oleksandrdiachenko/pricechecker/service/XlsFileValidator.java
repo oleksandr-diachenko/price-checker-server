@@ -2,7 +2,7 @@ package oleksandrdiachenko.pricechecker.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class XlsFileValidation implements FileValidator {
+public class XlsFileValidator implements FileValidator {
 
     @Override
     public boolean isValid(MultipartFile file) {
