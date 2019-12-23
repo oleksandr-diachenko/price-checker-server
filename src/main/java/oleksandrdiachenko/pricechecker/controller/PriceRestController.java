@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
+import oleksandrdiachenko.pricechecker.service.FileValidator;
 import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
@@ -26,6 +27,8 @@ class PriceRestController {
     private PriceCheckService priceCheckService;
     @Autowired
     private MainService mainService;
+    @Autowired
+    private FileValidator fileValidator;
 
     private Workbook priceTable;
 
@@ -52,18 +55,11 @@ class PriceRestController {
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
                                         @RequestParam("urlIndex") @Min(value = 1, message = "Url index should be greater than 0") int urlIndex,
                                         @RequestParam("insertIndex") @Min(value = 1, message = "Insert index should be greater than 0") int insertIndex) {
-        if (isNotValid(file)) {
+        if (!fileValidator.isValid(file)) {
             return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList("File extension should be .xls or .xlsx")), BAD_REQUEST);
         }
         mainService.start(file.getBytes(), urlIndex, insertIndex);
         return ResponseEntity.accepted().build();
-    }
-
-    public boolean isNotValid(MultipartFile file) {
-        return !file.isEmpty()
-                && file.getSize() > 0
-                && !file.getContentType().toLowerCase().equals("application/vnd.ms-excel")
-                && !file.getContentType().toLowerCase().equals("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     }
 }
 

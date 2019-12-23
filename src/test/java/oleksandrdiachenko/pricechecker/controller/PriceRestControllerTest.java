@@ -1,7 +1,9 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import oleksandrdiachenko.pricechecker.service.FileValidator;
 import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 import static org.springframework.http.MediaType.IMAGE_JPEG_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -41,6 +42,13 @@ public class PriceRestControllerTest {
     private MainService mainService;
     @MockBean
     private PriceCheckService priceCheckService;
+    @MockBean
+    private FileValidator fileValidator;
+
+    @BeforeEach
+    void setUp() {
+        when(fileValidator.isValid(any(MockMultipartFile.class))).thenReturn(true);
+    }
 
     @Test
     void shouldReturnOkAndCallServiceWhenFileIsXls() throws Exception {
@@ -68,9 +76,12 @@ public class PriceRestControllerTest {
 
     @Test
     void shouldReturnBadRequestWhenFileTypeIsJpg() throws Exception {
+        MockMultipartFile file = new MockMultipartFile(FILE, FILENAME,
+                IMAGE_JPEG_VALUE, BYTES);
+        when(fileValidator.isValid(file)).thenReturn(false);
+
         mvc.perform(multipart(PRICECHECK)
-                .file(new MockMultipartFile(FILE, FILENAME,
-                        IMAGE_JPEG_VALUE, BYTES))
+                .file(file)
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isBadRequest())
