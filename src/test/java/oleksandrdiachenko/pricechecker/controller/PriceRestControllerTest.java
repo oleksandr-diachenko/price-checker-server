@@ -1,6 +1,5 @@
-package oleksandrdiachenko.pricechecker;
+package oleksandrdiachenko.pricechecker.controller;
 
-import oleksandrdiachenko.pricechecker.controller.PriceRestController;
 import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import org.junit.jupiter.api.Test;
