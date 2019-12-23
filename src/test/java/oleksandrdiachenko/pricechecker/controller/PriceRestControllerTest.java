@@ -27,7 +27,7 @@ public class PriceRestControllerTest {
 
     public static final String XLS_CONTENT_TYPE = "application/vnd.ms-excel";
     public static final String XLSX_CONTENT_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-    public static final String JPG_CONTENT_TYPE = "image/jpg";
+
     @Autowired
     private MockMvc mvc;
 
@@ -43,9 +43,11 @@ public class PriceRestControllerTest {
         int urlIndex = 1;
         int insertIndex = 2;
 
-        mvc.perform(multipart(format("/pricecheck/%d/%d", urlIndex, insertIndex))
+        mvc.perform(multipart("/pricecheck")
                 .file(new MockMultipartFile("file", fileName,
-                        XLS_CONTENT_TYPE, bytes)))
+                        XLS_CONTENT_TYPE, bytes))
+                .param("urlIndex", String.valueOf(urlIndex))
+                .param("insertIndex", String.valueOf(insertIndex)))
                 .andExpect(content().string(
                         format("File: %s with url index : %d and insert index: %d accepted.",
                                 fileName, urlIndex, insertIndex)
@@ -61,9 +63,11 @@ public class PriceRestControllerTest {
         int urlIndex = 1;
         int insertIndex = 2;
 
-        mvc.perform(multipart(format("/pricecheck/%d/%d", urlIndex, insertIndex))
+        mvc.perform(multipart("/pricecheck")
                 .file(new MockMultipartFile("file", fileName,
-                        XLSX_CONTENT_TYPE, bytes)))
+                        XLSX_CONTENT_TYPE, bytes))
+                .param("urlIndex", String.valueOf(urlIndex))
+                .param("insertIndex", String.valueOf(insertIndex)))
                 .andExpect(content().string(
                         format("File: %s with url index : %d and insert index: %d accepted.",
                                 fileName, urlIndex, insertIndex)
@@ -79,9 +83,11 @@ public class PriceRestControllerTest {
         int urlIndex = 1;
         int insertIndex = 2;
 
-        mvc.perform(multipart(format("/pricecheck/%d/%d", urlIndex, insertIndex))
+        mvc.perform(multipart("/pricecheck")
                 .file(new MockMultipartFile("file", fileName,
-                        IMAGE_JPEG_VALUE, bytes)))
+                        IMAGE_JPEG_VALUE, bytes))
+                .param("urlIndex", String.valueOf(urlIndex))
+                .param("insertIndex", String.valueOf(insertIndex)))
                 .andExpect(content().string("File extension should be .xls or .xlsx"))
                 .andExpect(status().isBadRequest());
         verify(mainService, times(0)).start(bytes, urlIndex, insertIndex);

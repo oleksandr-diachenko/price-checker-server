@@ -42,10 +42,10 @@ public class PriceRestController {
     }
 
     @SneakyThrows
-    @PostMapping(value = "/pricecheck/{urlIndex}/{insertIndex}")
+    @PostMapping(value = "/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
-                                        @PathVariable int urlIndex,
-                                        @PathVariable int insertIndex) {
+                                        @RequestParam("urlIndex") int urlIndex,
+                                        @RequestParam("insertIndex") int insertIndex) {
         if (isNotValid(file)) {
             return ResponseEntity.badRequest().body("File extension should be .xls or .xlsx");
         }
