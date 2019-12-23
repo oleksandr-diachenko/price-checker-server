@@ -8,6 +8,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
@@ -18,7 +19,8 @@ import java.io.IOException;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 @RestController
-public class PriceRestController {
+@Validated
+class PriceRestController {
 
     @Autowired
     private PriceCheckService priceCheckService;

@@ -41,7 +41,7 @@ public class PriceRestControllerTest {
     private PriceCheckService priceCheckService;
 
     @Test
-    void shouldAcceptMultipartPostRequestWhenFileIsXls() throws Exception {
+    void shouldReturnOkAndCallServiceWhenFileIsXls() throws Exception {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLS_CONTENT_TYPE, BYTES))
@@ -52,47 +52,60 @@ public class PriceRestControllerTest {
     }
 
     @Test
-    void shouldAcceptMultipartPostRequestWhenFileIsXlsx() throws Exception {
+    void shouldReturnOkAndCallServiceWhenFileIsXlsx() throws Exception {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
+                .content(""))
                 .andExpect(status().isAccepted());
         verify(mainService).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
     @Test
-    void shouldRejectMultipartPostRequestWhenFileTypeIsJpg() throws Exception {
+    void shouldReturnBadRequestWhenFileTypeIsJpg() throws Exception {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         IMAGE_JPEG_VALUE, BYTES))
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
-                .andExpect(status().isBadRequest())
-                .andExpect(status().reason("File extension should be .xls or .xlsx"));
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
+                .content("{\"errors\":[\"File extension should be .xls or .xlsx\"]}"))
+                .andExpect(status().isBadRequest());
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
     @Test
-    void shouldRejectMultipartPostRequestWhenUrlIndexParameterNotSet() throws Exception {
+    void shouldReturnBadRequestWhenUrlIndexParameterNotSet() throws Exception {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
-                .andExpect(status().isBadRequest())
-                .andExpect(status().reason("Required int parameter 'urlIndex' is not present"));
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
+                .content("{\"errors\":[\"Required int parameter 'urlIndex' is not present\"]}"))
+                .andExpect(status().isBadRequest());
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
     @Test
-    void shouldRejectMultipartPostRequestWhenInsertIndexParameterNotSet() throws Exception {
+    void shouldReturnBadRequestWhenInsertIndexParameterNotSet() throws Exception {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
-                .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX)))
-                .andExpect(status().isBadRequest())
-                .andExpect(status().reason("Required int parameter 'insertIndex' is not present"));
+                .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
+                .content("{\"errors\":[\"Required int parameter 'insertIndex' is not present\"]}"))
+                .andExpect(status().isBadRequest());
+        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+    }
+
+    @Test
+    void shouldReturnBadRequestWhenUrlIndexIsZero() throws Exception {
+        mvc.perform(multipart(PRICECHECK)
+                .file(new MockMultipartFile(FILE, FILENAME,
+                        XLSX_CONTENT_TYPE, BYTES))
+                .param(URL_INDEX_PARAM, "0")
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
+                .content("{\"errors\":[\"must be greater than or equal to 1\"]}"))
+                .andExpect(status().isBadRequest());
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 }
