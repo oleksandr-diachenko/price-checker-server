@@ -11,10 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.constraints.Min;
 import java.io.IOException;
+import java.util.Collections;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
@@ -50,10 +50,10 @@ class PriceRestController {
     @SneakyThrows
     @PostMapping(value = "/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
-                                        @RequestParam("urlIndex") @Min(1) int urlIndex,
-                                        @RequestParam("insertIndex") @Min(1) int insertIndex) {
+                                        @RequestParam("urlIndex") @Min(value = 1, message = "Url index should be greater than 0") int urlIndex,
+                                        @RequestParam("insertIndex") @Min(value = 1, message = "Insert index should be greater than 0") int insertIndex) {
         if (isNotValid(file)) {
-            throw new ResponseStatusException(BAD_REQUEST, "File extension should be .xls or .xlsx");
+            return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList("File extension should be .xls or .xlsx")), BAD_REQUEST);
         }
         mainService.start(file.getBytes(), urlIndex, insertIndex);
         return ResponseEntity.accepted().build();

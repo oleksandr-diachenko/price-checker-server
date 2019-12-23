@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import java.util.Collections;
@@ -34,8 +33,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
-    protected ResponseEntity<?> handleConstraintViolationException(ConstraintViolationException ex,
-                                                                   HttpServletRequest request) {
+    protected ResponseEntity<?> handleConstraintViolationException(ConstraintViolationException ex) {
         try {
             List<String> messages = ex.getConstraintViolations().stream()
                     .map(ConstraintViolation::getMessage)

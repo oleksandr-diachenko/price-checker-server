@@ -11,10 +11,12 @@ import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.springframework.http.MediaType.IMAGE_JPEG_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
@@ -57,9 +59,9 @@ public class PriceRestControllerTest {
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
-                .content(""))
-                .andExpect(status().isAccepted());
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
+                .andExpect(status().isAccepted())
+                .andExpect(content().string(EMPTY));
         verify(mainService).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
@@ -69,9 +71,9 @@ public class PriceRestControllerTest {
                 .file(new MockMultipartFile(FILE, FILENAME,
                         IMAGE_JPEG_VALUE, BYTES))
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
-                .content("{\"errors\":[\"File extension should be .xls or .xlsx\"]}"))
-                .andExpect(status().isBadRequest());
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"File extension should be .xls or .xlsx\"]}"));
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
@@ -80,9 +82,9 @@ public class PriceRestControllerTest {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
-                .content("{\"errors\":[\"Required int parameter 'urlIndex' is not present\"]}"))
-                .andExpect(status().isBadRequest());
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"urlIndex parameter is missing.\"]}"));
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
@@ -91,9 +93,9 @@ public class PriceRestControllerTest {
         mvc.perform(multipart(PRICECHECK)
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
-                .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
-                .content("{\"errors\":[\"Required int parameter 'insertIndex' is not present\"]}"))
-                .andExpect(status().isBadRequest());
+                .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX)))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"insertIndex parameter is missing.\"]}"));
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
@@ -103,9 +105,21 @@ public class PriceRestControllerTest {
                 .file(new MockMultipartFile(FILE, FILENAME,
                         XLSX_CONTENT_TYPE, BYTES))
                 .param(URL_INDEX_PARAM, "0")
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX))
-                .content("{\"errors\":[\"must be greater than or equal to 1\"]}"))
-                .andExpect(status().isBadRequest());
+                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"Url index should be greater than 0\"]}"));
+        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+    }
+
+    @Test
+    void shouldReturnBadRequestWhenInsertIndexIsZero() throws Exception {
+        mvc.perform(multipart(PRICECHECK)
+                .file(new MockMultipartFile(FILE, FILENAME,
+                        XLSX_CONTENT_TYPE, BYTES))
+                .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
+                .param(INSERT_INDEX_PARAM, "0"))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"Insert index should be greater than 0\"]}"));
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 }
