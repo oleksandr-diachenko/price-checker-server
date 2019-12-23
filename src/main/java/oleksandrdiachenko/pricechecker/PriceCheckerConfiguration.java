@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Configuration
@@ -24,5 +25,10 @@ public class PriceCheckerConfiguration {
         magazines.add(new Cosmetea());
         magazines.add(new Sweetness());
         return magazines;
+    }
+
+    @Bean
+    public List<String> getExcelTypes() {
+        return Arrays.asList("application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     }
 }
