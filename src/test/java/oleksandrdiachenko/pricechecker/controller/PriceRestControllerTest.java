@@ -49,7 +49,8 @@ public class PriceRestControllerTest {
                         XLS_CONTENT_TYPE, BYTES))
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX))
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
-                .andExpect(status().isAccepted());
+                .andExpect(status().isAccepted())
+                .andExpect(content().string(EMPTY));
         verify(mainService).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 
@@ -120,6 +121,19 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, "0"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Insert index should be greater than 0\"]}"));
+        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+    }
+
+    @Test
+    void shouldReturnBadRequestWhenInsertAndUrlIndexesIsZero() throws Exception {
+        mvc.perform(multipart(PRICECHECK)
+                .file(new MockMultipartFile(FILE, FILENAME,
+                        XLSX_CONTENT_TYPE, BYTES))
+                .param(URL_INDEX_PARAM, "0")
+                .param(INSERT_INDEX_PARAM, "0"))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json("{\"errors\":[\"Url index should be greater than 0\"," +
+                        "\"Insert index should be greater than 0\"]}"));
         verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
     }
 }
