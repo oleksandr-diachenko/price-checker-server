@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.constraints.Min;
 import java.io.IOException;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -47,8 +48,8 @@ public class PriceRestController {
     @SneakyThrows
     @PostMapping(value = "/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
-                                        @RequestParam("urlIndex") int urlIndex,
-                                        @RequestParam("insertIndex") int insertIndex) {
+                                        @RequestParam("urlIndex") @Min(1) int urlIndex,
+                                        @RequestParam("insertIndex") @Min(1) int insertIndex) {
         if (isNotValid(file)) {
             throw new ResponseStatusException(BAD_REQUEST, "File extension should be .xls or .xlsx");
         }
