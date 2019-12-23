@@ -12,12 +12,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import static java.lang.String.format;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.springframework.http.MediaType.IMAGE_JPEG_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
@@ -48,10 +46,6 @@ public class PriceRestControllerTest {
                         XLS_CONTENT_TYPE, bytes))
                 .param("urlIndex", String.valueOf(urlIndex))
                 .param("insertIndex", String.valueOf(insertIndex)))
-                .andExpect(content().string(
-                        format("File: %s with url index : %d and insert index: %d accepted.",
-                                fileName, urlIndex, insertIndex)
-                ))
                 .andExpect(status().isAccepted());
         verify(mainService).start(bytes, urlIndex, insertIndex);
     }
@@ -68,10 +62,6 @@ public class PriceRestControllerTest {
                         XLSX_CONTENT_TYPE, bytes))
                 .param("urlIndex", String.valueOf(urlIndex))
                 .param("insertIndex", String.valueOf(insertIndex)))
-                .andExpect(content().string(
-                        format("File: %s with url index : %d and insert index: %d accepted.",
-                                fileName, urlIndex, insertIndex)
-                ))
                 .andExpect(status().isAccepted());
         verify(mainService).start(bytes, urlIndex, insertIndex);
     }
@@ -88,8 +78,40 @@ public class PriceRestControllerTest {
                         IMAGE_JPEG_VALUE, bytes))
                 .param("urlIndex", String.valueOf(urlIndex))
                 .param("insertIndex", String.valueOf(insertIndex)))
-                .andExpect(content().string("File extension should be .xls or .xlsx"))
-                .andExpect(status().isBadRequest());
+                .andExpect(status().isBadRequest())
+                .andExpect(status().reason("File extension should be .xls or .xlsx"));
+        verify(mainService, times(0)).start(bytes, urlIndex, insertIndex);
+    }
+
+    @Test
+    void shouldRejectMultipartPostRequestWhenUrlIndexParameterNotSet() throws Exception {
+        String fileName = "filename.xlsx";
+        byte[] bytes = "some xlsx".getBytes();
+        int urlIndex = 1;
+        int insertIndex = 2;
+
+        mvc.perform(multipart("/pricecheck")
+                .file(new MockMultipartFile("file", fileName,
+                        XLSX_CONTENT_TYPE, bytes))
+                .param("insertIndex", String.valueOf(insertIndex)))
+                .andExpect(status().isBadRequest())
+                .andExpect(status().reason("Required int parameter 'urlIndex' is not present"));
+        verify(mainService, times(0)).start(bytes, urlIndex, insertIndex);
+    }
+
+    @Test
+    void shouldRejectMultipartPostRequestWhenInsertIndexParameterNotSet() throws Exception {
+        String fileName = "filename.xlsx";
+        byte[] bytes = "some xlsx".getBytes();
+        int urlIndex = 1;
+        int insertIndex = 2;
+
+        mvc.perform(multipart("/pricecheck")
+                .file(new MockMultipartFile("file", fileName,
+                        XLSX_CONTENT_TYPE, bytes))
+                .param("urlIndex", String.valueOf(urlIndex)))
+                .andExpect(status().isBadRequest())
+                .andExpect(status().reason("Required int parameter 'insertIndex' is not present"));
         verify(mainService, times(0)).start(bytes, urlIndex, insertIndex);
     }
 }

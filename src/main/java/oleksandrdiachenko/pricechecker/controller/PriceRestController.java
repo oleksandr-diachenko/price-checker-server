@@ -10,8 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
+
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 @RestController
 public class PriceRestController {
@@ -47,11 +50,10 @@ public class PriceRestController {
                                         @RequestParam("urlIndex") int urlIndex,
                                         @RequestParam("insertIndex") int insertIndex) {
         if (isNotValid(file)) {
-            return ResponseEntity.badRequest().body("File extension should be .xls or .xlsx");
+            throw new ResponseStatusException(BAD_REQUEST, "File extension should be .xls or .xlsx");
         }
         mainService.start(file.getBytes(), urlIndex, insertIndex);
-        return ResponseEntity.accepted().body("File: " + file.getOriginalFilename() + " with url index : " + urlIndex +
-                " and insert index: " + insertIndex + " accepted.");
+        return ResponseEntity.accepted().build();
     }
 
     public boolean isNotValid(MultipartFile file) {
