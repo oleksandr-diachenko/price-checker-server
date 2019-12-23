@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko.
@@ -26,12 +25,12 @@ class NowZenithTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = nowZenith.getPrice(nowZenith.getDocument("http://www.nowzenith.com/qwe"));
-        assertEquals("Страница не найдена", price);
+        assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
     void shouldReturnNotEmptyDocument() throws IOException {
         Document document = nowZenith.getDocument("http://www.nowzenith.com/");
-        assertFalse(document.children().isEmpty());
+        assertThat(document.children()).isNotEmpty();
     }
 }

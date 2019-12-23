@@ -6,8 +6,7 @@ import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko.
@@ -24,12 +23,12 @@ class SweetCoreaTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = sweetCorea.getPrice(sweetCorea.getDocument("http://www.sweetcorea.com/qwe"));
-        assertEquals("Страница не найдена", price);
+        assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
     void shouldReturnNotEmptyDocument() {
         Document document = sweetCorea.getDocument("http://www.sweetcorea.com");
-        assertFalse(document.children().isEmpty());
+        assertThat(document.children()).isNotEmpty();
     }
 }

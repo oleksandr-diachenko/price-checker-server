@@ -6,10 +6,7 @@ import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko.
@@ -26,12 +23,12 @@ class BeautyNetKoreaTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = beautyNetKorea.getPrice(beautyNetKorea.getDocument("https://beautynetkorea.com/qwe"));
-        assertEquals("Страница не найдена", price);
+        assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
-    void shouldReturnNotEmptyDocument() throws IOException {
+    void shouldReturnNotEmptyDocument() {
         Document document = beautyNetKorea.getDocument("https://beautynetkorea.com/");
-        assertFalse(document.children().isEmpty());
+        assertThat(document.children()).isNotEmpty();
     }
 }

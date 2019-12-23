@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,48 +23,48 @@ class KoreaButikTest {
     void shouldReturnDiscountPrice() {
         String price = koreaButik.getPrice(creator.createDocumentFromFile("xml/koreaButik/KoreaButik_discount.xml"));
 
-        assertEquals("337.50", price);
+        assertThat(price).isEqualTo("337.50");
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = koreaButik.getPrice(creator.createDocumentFromFile("xml/koreaButik/KoreaButik_normal.xml"));
 
-        assertEquals("145", price);
+        assertThat(price).isEqualTo("145");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = koreaButik.getPrice(creator.createDocumentFromFile("xml/koreaButik/KoreaButik_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = koreaButik.getPrice(creator.createDocumentFromFile("xml/koreaButik/KoreaButik_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = koreaButik.isThisWebsite("https://korea-butik.com");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = koreaButik.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = koreaButik.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

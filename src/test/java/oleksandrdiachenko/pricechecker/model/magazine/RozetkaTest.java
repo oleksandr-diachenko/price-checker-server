@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,48 +23,48 @@ class RozetkaTest {
     void shouldReturnDiscountPrice() {
         String price = rozetka.getPrice(creator.createDocumentFromFile("xml/rozetka/Rozetka_discount.xml"));
 
-        assertEquals("631", price);
+        assertThat(price).isEqualTo("631");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = rozetka.getPrice(creator.createDocumentFromFile("xml/rozetka/Rozetka_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnSelectedProductDiscountPrice() {
         String price = rozetka.getPrice(creator.createDocumentFromFile("xml/rozetka/Rozetka_select.xml"));
 
-        assertEquals("75", price);
+        assertThat(price).isEqualTo("75");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = rozetka.getPrice(creator.createDocumentFromFile("xml/rozetka/Rozetka_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = rozetka.isThisWebsite("https://rozetka.com.ua");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = rozetka.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = rozetka.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

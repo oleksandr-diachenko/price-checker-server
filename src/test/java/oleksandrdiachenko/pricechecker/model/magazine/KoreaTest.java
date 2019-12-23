@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,48 +23,48 @@ class KoreaTest {
     void shouldReturnDiscountPrice() {
         String price = korea.getPrice(creator.createDocumentFromFile("xml/korea/Korea_discount.xml"));
 
-        assertEquals("380.00", price);
+        assertThat(price).isEqualTo("380.00");
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = korea.getPrice(creator.createDocumentFromFile("xml/korea/Korea_normal.xml"));
 
-        assertEquals("430.00", price);
+        assertThat(price).isEqualTo("430.00");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = korea.getPrice(creator.createDocumentFromFile("xml/korea/Korea_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = korea.getPrice(creator.createDocumentFromFile("xml/korea/Korea_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = korea.isThisWebsite("https://korea.in.ua/");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = korea.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = korea.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

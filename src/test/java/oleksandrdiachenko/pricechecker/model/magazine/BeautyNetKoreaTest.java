@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,48 +23,48 @@ class BeautyNetKoreaTest {
     void shouldReturnDiscountPrice() {
         String price = beautyNetKorea.getPrice(creator.createDocumentFromFile("xml/beautyNewKorea/BeautyNetKorea_discount.xml"));
 
-        assertEquals("4.47", price);
+        assertThat(price).isEqualTo("4.47");
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = beautyNetKorea.getPrice(creator.createDocumentFromFile("xml/beautyNewKorea/BeautyNetKorea_normal.xml"));
 
-        assertEquals("1.43", price);
+        assertThat(price).isEqualTo("1.43");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = beautyNetKorea.getPrice(creator.createDocumentFromFile("xml/beautyNewKorea/BeautyNetKorea_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = beautyNetKorea.getPrice(creator.createDocumentFromFile("xml/beautyNewKorea/BeautyNetKorea_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = beautyNetKorea.isThisWebsite("https://beautynetkorea.com");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = beautyNetKorea.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = beautyNetKorea.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

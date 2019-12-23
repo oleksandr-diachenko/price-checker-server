@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,48 +23,48 @@ class RoseRoseShopTest {
     void shouldReturnDiscountPrice() {
         String price = roseRoseShop.getPrice(creator.createDocumentFromFile("xml/roseRoseShop/RoseRoseShop_discount.xml"));
 
-        assertEquals("1.28", price);
+        assertThat(price).isEqualTo("1.28");
     }
 
     @Test
     void shouldReturnNormalPrice() {
         String price = roseRoseShop.getPrice(creator.createDocumentFromFile("xml/roseRoseShop/RoseRoseShop_normal.xml"));
 
-        assertEquals("0.88", price);
+        assertThat(price).isEqualTo("0.88");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = roseRoseShop.getPrice(creator.createDocumentFromFile("xml/roseRoseShop/RoseRoseShop_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = roseRoseShop.getPrice(creator.createDocumentFromFile("xml/roseRoseShop/RoseRoseShop_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = roseRoseShop.isThisWebsite("https://www.roseroseshop.com");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = roseRoseShop.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = roseRoseShop.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

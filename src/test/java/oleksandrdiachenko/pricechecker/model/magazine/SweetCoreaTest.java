@@ -3,7 +3,7 @@ package oleksandrdiachenko.pricechecker.model.magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Alexander Diachenko
@@ -23,41 +23,41 @@ class SweetCoreaTest {
     void shouldReturnNormalPrice() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_normal.xml"));
 
-        assertEquals("6.300", price);
+        assertThat(price).isEqualTo("6.300");
     }
 
     @Test
     void shouldReturnOutOfStock() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_outofstock.xml"));
 
-        assertEquals("Нет в наличии", price);
+        assertThat(price).isEqualTo("Нет в наличии");
     }
 
     @Test
     void shouldReturnNotFound() {
         String price = sweetCorea.getPrice(creator.createDocumentFromFile("xml/sweetCorea/SweetCorea_notfound.xml"));
 
-        assertEquals("Не найдено", price);
+        assertThat(price).isEqualTo("Не найдено");
     }
 
     @Test
     void shouldReturnTrueWhenIsThisWebSiteCalled() {
         boolean isThisWebsite = sweetCorea.isThisWebsite("http://www.sweetcorea.com");
 
-        assertTrue(isThisWebsite);
+        assertThat(isThisWebsite).isTrue();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithGoogleDomain() {
         boolean isThisWebsite = sweetCorea.isThisWebsite("https://www.google.com.ua/");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 
     @Test
     void shouldReturnFalseWhenIsThisWebSiteCalledWithIncorrectDomain() {
         boolean isThisWebsite = sweetCorea.isThisWebsite("qwe");
 
-        assertFalse(isThisWebsite);
+        assertThat(isThisWebsite).isFalse();
     }
 }

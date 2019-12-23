@@ -3,8 +3,7 @@ package oleksandrdiachenko.pricechecker.util;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Test;
 
-import static org.apache.commons.lang3.ArrayUtils.isNotEmpty;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class WorkbookUtilsTest {
 
@@ -12,6 +11,6 @@ public class WorkbookUtilsTest {
     void shouldReturnNotEmptyBytes() throws Exception {
         byte[] bytes = WorkbookUtils.getBytes(new XSSFWorkbook());
 
-        assertTrue(isNotEmpty(bytes));
+        assertThat(bytes).isNotEmpty();
     }
 }
