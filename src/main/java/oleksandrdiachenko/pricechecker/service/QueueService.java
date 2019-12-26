@@ -1,5 +1,6 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import com.google.common.annotations.VisibleForTesting;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -44,13 +45,13 @@ public class QueueService {
                 PriceCheckParameter poll = queue.poll();
                 if (poll != null) {
                     FileStatus fileStatus = fileStatusRepository.findByName(poll.getName());
-                    fileStatus.setStatus(Status.PENDING.name());
-                    fileStatusRepository.save(fileStatus);
+                    updateStatus(fileStatus, Status.PENDING.name());
 
-                    Workbook workbook = buildWorkbook(poll, fileStatus);
+                    Workbook workbook = buildWorkbook(poll);
 
-                    File file = fileRepository.findByFileStatus(fileStatus);
-                    byte[] bytes = getBytesFromWorkbook(workbook, fileStatus);
+                    updateStatus(fileStatus, Status.COMPLETED.name());
+                    File file = fileRepository.findByFileStatusId(fileStatus.getId());
+                    byte[] bytes = getBytesFromWorkbook(workbook);
                     file.setFile(bytes);
                     fileRepository.save(file);
                 }
@@ -59,31 +60,30 @@ public class QueueService {
         }
     }
 
-    private byte[] getBytesFromWorkbook(Workbook workbook, FileStatus fileStatus) {
+    private void updateStatus(FileStatus fileStatus, String status) {
+        fileStatus.setStatus(status);
+        fileStatusRepository.save(fileStatus);
+    }
+
+    private byte[] getBytesFromWorkbook(Workbook workbook) {
         try {
             return WorkbookUtils.getBytes(workbook);
         } catch (IOException e) {
-            fileStatus.setStatus(Status.ERROR.name());
-            fileStatusRepository.save(fileStatus);
             throw new RuntimeException("Can't read bytes from workbook!", e);
         }
     }
 
-    private Workbook buildWorkbook(PriceCheckParameter parameter, FileStatus fileStatus) {
+    private Workbook buildWorkbook(PriceCheckParameter parameter) {
         try {
-            Workbook workbook = priceCheckService.getWorkbook(parameter.getBytes(), parameter.getUrlColumn(),
+            return priceCheckService.getWorkbook(parameter.getBytes(), parameter.getUrlColumn(),
                     parameter.getInsertColumn());
-            fileStatus.setStatus(Status.COMPLETED.name());
-            return workbook;
         } catch (IOException | InvalidFormatException e) {
-            fileStatus.setStatus(Status.ERROR.name());
             throw new RuntimeException("Something goes wrong with checking price!", e);
-        } finally {
-            fileStatusRepository.save(fileStatus);
         }
     }
 
-    private void createNewRecord(PriceCheckParameter parameter) {
+    @VisibleForTesting
+    protected void createNewRecord(PriceCheckParameter parameter) {
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(parameter.getName());
         fileStatus.setStatus(Status.ACCEPTED.name());
