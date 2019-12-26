@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.service;
+package oleksandrdiachenko.pricechecker.service.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
@@ -7,12 +7,12 @@ import java.util.List;
 
 import static org.apache.commons.collections4.CollectionUtils.containsAny;
 
-public class XlsFileValidator implements FileValidator {
+public class ExcelFileValidator implements FileValidator {
 
     private List<String> excelTypes;
 
     @Autowired
-    public XlsFileValidator(List<String> excelTypes) {
+    public ExcelFileValidator(List<String> excelTypes) {
         this.excelTypes = excelTypes;
     }
 

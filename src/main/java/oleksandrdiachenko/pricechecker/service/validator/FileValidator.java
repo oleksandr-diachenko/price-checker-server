@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.service;
+package oleksandrdiachenko.pricechecker.service.validator;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

@@ -1,6 +1,6 @@
 package oleksandrdiachenko.pricechecker.controller;
 
-import oleksandrdiachenko.pricechecker.service.FileValidator;
+import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
 import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import org.junit.jupiter.api.BeforeEach;
