@@ -23,12 +23,14 @@ class SweetCoreaTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = sweetCorea.getPrice(sweetCorea.getDocument("http://www.sweetcorea.com/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
     void shouldReturnNotEmptyDocument() {
         Document document = sweetCorea.getDocument("http://www.sweetcorea.com");
+
         assertThat(document.children()).isNotEmpty();
     }
 }

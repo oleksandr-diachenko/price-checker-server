@@ -25,12 +25,14 @@ class MakeupTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = makeup.getPrice(makeup.getDocument("https://makeup.com.ua/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
-    void shouldReturnNotEmptyDocument() throws IOException {
+    void shouldReturnNotEmptyDocument() {
         Document document = makeup.getDocument("https://makeup.com.ua/");
+
         assertThat(document.children()).isNotEmpty();
     }
 }

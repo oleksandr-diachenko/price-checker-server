@@ -23,12 +23,14 @@ class BeautyNetKoreaTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = beautyNetKorea.getPrice(beautyNetKorea.getDocument("https://beautynetkorea.com/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
     void shouldReturnNotEmptyDocument() {
         Document document = beautyNetKorea.getDocument("https://beautynetkorea.com/");
+
         assertThat(document.children()).isNotEmpty();
     }
 }

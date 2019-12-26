@@ -25,12 +25,14 @@ class NowZenithTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = nowZenith.getPrice(nowZenith.getDocument("http://www.nowzenith.com/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
-    void shouldReturnNotEmptyDocument() throws IOException {
+    void shouldReturnNotEmptyDocument() {
         Document document = nowZenith.getDocument("http://www.nowzenith.com/");
+
         assertThat(document.children()).isNotEmpty();
     }
 }

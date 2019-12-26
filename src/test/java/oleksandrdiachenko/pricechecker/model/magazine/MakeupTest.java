@@ -22,6 +22,7 @@ class MakeupTest {
     @Test
     void shouldReturnDiscountPrice() {
         makeup.url = "https://makeup.com.ua/product/632463/#/option/1558727/";
+
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_discount.xml"));
 
         assertThat(price).isEqualTo("209");
@@ -30,6 +31,7 @@ class MakeupTest {
     @Test
     void shouldReturnNormalPrice() {
         makeup.url = "https://makeup.com.ua/product/1801/#/option/393587/";
+
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_normal.xml"));
 
         assertThat(price).isEqualTo("218");
@@ -38,6 +40,7 @@ class MakeupTest {
     @Test
     void shouldReturnOutOfStock() {
         makeup.url = "https://makeup.com.ua/product/20652/";
+
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_outofstock.xml"));
 
         assertThat(price).isEqualTo("Нет в наличии");
@@ -46,6 +49,7 @@ class MakeupTest {
     @Test
     void shouldReturnNotFound() {
         makeup.url = "https://makeup.com.ua/product/20652/";
+
         String price = makeup.getPrice(creator.createDocumentFromFile("xml/makeup/Makeup_notfound.xml"));
 
         assertThat(price).isEqualTo("Не найдено");

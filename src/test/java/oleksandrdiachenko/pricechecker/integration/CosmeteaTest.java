@@ -25,12 +25,14 @@ class CosmeteaTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = korea.getPrice(korea.getDocument("https://cosmetea.com.ua/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
-    void shouldReturnNotEmptyDocument() throws IOException {
+    void shouldReturnNotEmptyDocument() {
         Document document = korea.getDocument("https://cosmetea.com.ua/");
+
         assertThat(document.children()).isNotEmpty();
     }
 }

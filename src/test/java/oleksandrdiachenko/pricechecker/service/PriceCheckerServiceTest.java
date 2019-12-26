@@ -82,10 +82,10 @@ public class PriceCheckerServiceTest {
         when(magazine.isThisWebsite(URL)).thenReturn(true);
         when(magazine.getDocument(URL)).thenReturn(document);
         when(magazine.getPrice(document)).thenReturn(PRICE);
-        List<List<String>> priceTable = createTable(createList(URL, PRICE));
 
         priceCheckService.getWorkbook(BYTES, 0, 1);
 
+        List<List<String>> priceTable = createTable(createList(URL, PRICE));
         verify(excel).write(priceTable);
     }
 
@@ -96,10 +96,10 @@ public class PriceCheckerServiceTest {
         when(magazine.isThisWebsite(URL)).thenReturn(true);
         when(magazine.getDocument(URL)).thenReturn(document);
         when(magazine.getPrice(document)).thenReturn(PRICE);
-        List<List<String>> priceTable = createTable(createList(URL, PRICE, "data"));
 
         priceCheckService.getWorkbook(BYTES, 0, 1);
 
+        List<List<String>> priceTable = createTable(createList(URL, PRICE, "data"));
         verify(excel).write(priceTable);
     }
 
@@ -110,10 +110,10 @@ public class PriceCheckerServiceTest {
         when(magazine.isThisWebsite(URL)).thenReturn(true);
         when(magazine.getDocument(URL)).thenReturn(document);
         when(magazine.getPrice(document)).thenReturn(PRICE);
-        List<List<String>> priceTable = createTable(createList(URL, EMPTY, PRICE));
 
         priceCheckService.getWorkbook(BYTES, 0, 2);
 
+        List<List<String>> priceTable = createTable(createList(URL, EMPTY, PRICE));
         verify(excel).write(priceTable);
     }
 

@@ -23,12 +23,14 @@ class KoreaButikTest {
     @Test
     void shouldReturnPageNotFound() {
         String price = korea.getPrice(korea.getDocument("https://korea-butik.com/qwe"));
+
         assertThat(price).isEqualTo("Страница не найдена");
     }
 
     @Test
     void shouldReturnNotEmptyDocument() {
         Document document = korea.getDocument("https://korea-butik.com");
+
         assertThat(document.children()).isNotEmpty();
     }
 }
