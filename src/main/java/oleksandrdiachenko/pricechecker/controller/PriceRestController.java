@@ -1,8 +1,9 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
+import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -23,14 +24,18 @@ import static org.springframework.http.HttpStatus.BAD_REQUEST;
 @Validated
 class PriceRestController {
 
-    @Autowired
-    private PriceCheckService priceCheckService;
-    @Autowired
-    private MainService mainService;
-    @Autowired
-    private FileValidator fileValidator;
+    private final PriceCheckService priceCheckService;
+    private final FileValidator fileValidator;
+    private final QueueService queueService;
 
     private Workbook priceTable;
+
+    @Autowired
+    public PriceRestController(PriceCheckService priceCheckService, FileValidator fileValidator, QueueService queueService) {
+        this.priceCheckService = priceCheckService;
+        this.fileValidator = fileValidator;
+        this.queueService = queueService;
+    }
 
     @PostMapping("/api/price-check/{urlIndex}/{insertIndex}")
     public void startPriceCheck(@RequestParam("file") MultipartFile file,
@@ -58,7 +63,7 @@ class PriceRestController {
         if (!fileValidator.isValid(file)) {
             return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList("File extension should be .xls or .xlsx")), BAD_REQUEST);
         }
-        mainService.start(file.getBytes(), urlIndex, insertIndex);
+        queueService.start(new PriceCheckParameter(file.getOriginalFilename(), urlIndex, insertIndex, file.getBytes()));
         return ResponseEntity.accepted().build();
     }
 }

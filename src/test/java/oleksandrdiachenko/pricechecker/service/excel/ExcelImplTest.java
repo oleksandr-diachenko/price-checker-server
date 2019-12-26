@@ -128,7 +128,7 @@ class ExcelImplTest {
 
         Workbook workbook = excel.write(table);
 
-        assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isEqualTo(256);
+        assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isEqualTo(265);
     }
 
     private byte[] getBytes(String fileName) {

@@ -7,6 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class PriceCheckParameter {
 
+    private String name;
     private int urlColumn;
     private int insertColumn;
+    byte[] bytes;
 }

@@ -4,6 +4,8 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.SheetUtil;
 import org.apache.poi.ss.util.WorkbookUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
@@ -16,6 +18,7 @@ import java.util.List;
  * @author Alexander Diachenko.
  */
 @Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class ExcelImpl implements Excel {
 
     @Override

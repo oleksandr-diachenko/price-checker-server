@@ -1,10 +1,15 @@
 package oleksandrdiachenko.pricechecker.model.entity;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "FILE_STATUS")
+@Data
+@EqualsAndHashCode
 public class FileStatus {
 
     @Id

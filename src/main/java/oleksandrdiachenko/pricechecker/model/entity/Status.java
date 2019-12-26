@@ -4,7 +4,8 @@ public enum Status {
 
     ACCEPTED("Accepted"),
     PENDING("Pending"),
-    COMPLETED("Completed");
+    COMPLETED("Completed"),
+    ERROR("Error");
 
     private String status;
 

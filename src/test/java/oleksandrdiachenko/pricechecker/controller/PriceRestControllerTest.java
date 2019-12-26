@@ -1,7 +1,8 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import oleksandrdiachenko.pricechecker.service.MainService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,7 +40,7 @@ public class PriceRestControllerTest {
     private MockMvc mvc;
 
     @MockBean
-    private MainService mainService;
+    private QueueService queueService;
     @MockBean
     private PriceCheckService priceCheckService;
     @MockBean
@@ -59,7 +60,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isAccepted())
                 .andExpect(content().string(EMPTY));
-        verify(mainService).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -71,7 +72,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isAccepted())
                 .andExpect(content().string(EMPTY));
-        verify(mainService).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -86,7 +87,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"File extension should be .xls or .xlsx\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -97,7 +98,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"urlIndex parameter is missing.\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -108,7 +109,7 @@ public class PriceRestControllerTest {
                 .param(URL_INDEX_PARAM, String.valueOf(URL_INDEX)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"insertIndex parameter is missing.\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -120,7 +121,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_INDEX)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Url index should be greater than 0\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -132,7 +133,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, "0"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Insert index should be greater than 0\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -145,6 +146,6 @@ public class PriceRestControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Url index should be greater than 0\"," +
                         "\"Insert index should be greater than 0\"]}"));
-        verify(mainService, never()).start(BYTES, URL_INDEX, INSERT_INDEX);
+        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 }
