@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker.service;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.gson.Gson;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -8,6 +9,7 @@ import oleksandrdiachenko.pricechecker.model.entity.Status;
 import oleksandrdiachenko.pricechecker.repository.FileRepository;
 import oleksandrdiachenko.pricechecker.repository.FileStatusRepository;
 import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
+import org.apache.commons.math3.util.Pair;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -29,7 +32,7 @@ public class QueueService {
     private FileStatusRepository fileStatusRepository;
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    private Queue<PriceCheckParameter> queue = new ConcurrentLinkedQueue<>();
+    private Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
 
     @Autowired
     public QueueService(PriceCheckService priceCheckService, FileRepository fileRepository,
@@ -41,23 +44,31 @@ public class QueueService {
     }
 
     public void start(PriceCheckParameter parameter) {
-        queue.add(parameter);
-        createNewRecord(parameter);
+        long fileStatusId = createNewRecord(parameter);
+        queue.add(Pair.create(fileStatusId, parameter));
         while (!queue.isEmpty()) {
             Runnable myRunnable = () -> {
-                PriceCheckParameter poll = queue.poll();
-                if (poll != null) {
-                    FileStatus fileStatus = fileStatusRepository.findByName(poll.getName());
+                Pair<Long, PriceCheckParameter> poll = queue.poll();
+                if (poll == null) {
+                    return;
+                }
+                Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(poll.getFirst());
+                if (fileStatusOptional.isPresent()) {
+                    FileStatus fileStatus = fileStatusOptional.get();
                     updateStatus(fileStatus, Status.PENDING.name());
 
-                    Workbook workbook = buildWorkbook(poll);
+                    Workbook workbook = buildWorkbook(poll.getSecond());
 
                     updateStatus(fileStatus, Status.COMPLETED.name());
-                    File file = fileRepository.findByFileStatusId(fileStatus.getId());
-                    byte[] bytes = getBytesFromWorkbook(workbook);
-                    file.setFile(bytes);
-                    fileRepository.save(file);
-                    simpMessagingTemplate.convertAndSend("/chat", "Completed: " + poll.getName());
+                    Optional<File> fileOptional = fileRepository.findById(fileStatus.getFileId());
+                    if (fileOptional.isPresent()) {
+                        File file = fileOptional.get();
+                        byte[] bytes = getBytesFromWorkbook(workbook);
+                        file.setFile(bytes);
+                        fileRepository.save(file);
+                        simpMessagingTemplate.convertAndSend("/statuses",
+                                new Gson().toJson(fileStatusRepository.findAll()));
+                    }
                 }
             };
             myRunnable.run();
@@ -87,14 +98,15 @@ public class QueueService {
     }
 
     @VisibleForTesting
-    protected void createNewRecord(PriceCheckParameter parameter) {
+    protected long createNewRecord(PriceCheckParameter parameter) {
+        File file = new File();
+        file.setFile(parameter.getBytes());
+        fileRepository.save(file);
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(parameter.getName());
         fileStatus.setStatus(Status.ACCEPTED.name());
+        fileStatus.setFileId(file.getId());
         fileStatusRepository.save(fileStatus);
-        File file = new File();
-        file.setFile(parameter.getBytes());
-        file.setFileStatus(fileStatus);
-        fileRepository.save(file);
+        return fileStatus.getId();
     }
 }

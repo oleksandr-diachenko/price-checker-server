@@ -17,4 +17,5 @@ public class FileStatus {
     private long id;
     private String name;
     private String status;
+    private long fileId;
 }

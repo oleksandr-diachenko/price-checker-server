@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FileStatusRepository extends CrudRepository<FileStatus, Long> {
-    FileStatus findByName(String name);
 }
