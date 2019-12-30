@@ -1,9 +1,9 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +27,7 @@ public class PriceRestControllerTest {
 
     public static final String XLS_CONTENT_TYPE = "application/vnd.ms-excel";
     public static final String XLSX_CONTENT_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-    public static final String PRICECHECK = "/pricecheck";
+    public static final String PRICECHECK = "/api/pricecheck";
     public static final String FILE = "file";
     public static final String URL_INDEX_PARAM = "urlIndex";
     public static final String INSERT_INDEX_PARAM = "insertIndex";

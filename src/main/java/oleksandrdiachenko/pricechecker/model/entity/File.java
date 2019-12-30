@@ -14,6 +14,7 @@ public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(length = 1000000)
     private byte[] file;
     @OneToOne(fetch = FetchType.LAZY)
     private FileStatus fileStatus;

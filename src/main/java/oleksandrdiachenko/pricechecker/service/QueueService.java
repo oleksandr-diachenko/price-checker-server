@@ -11,6 +11,7 @@ import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -26,15 +27,17 @@ public class QueueService {
     private PriceCheckService priceCheckService;
     private FileRepository fileRepository;
     private FileStatusRepository fileStatusRepository;
+    private SimpMessagingTemplate simpMessagingTemplate;
 
     private Queue<PriceCheckParameter> queue = new ConcurrentLinkedQueue<>();
 
     @Autowired
     public QueueService(PriceCheckService priceCheckService, FileRepository fileRepository,
-                        FileStatusRepository fileStatusRepository) {
+                        FileStatusRepository fileStatusRepository, SimpMessagingTemplate simpMessagingTemplate) {
         this.priceCheckService = priceCheckService;
         this.fileRepository = fileRepository;
         this.fileStatusRepository = fileStatusRepository;
+        this.simpMessagingTemplate = simpMessagingTemplate;
     }
 
     public void start(PriceCheckParameter parameter) {
@@ -54,6 +57,7 @@ public class QueueService {
                     byte[] bytes = getBytesFromWorkbook(workbook);
                     file.setFile(bytes);
                     fileRepository.save(file);
+                    simpMessagingTemplate.convertAndSend("/chat", "Completed: " + poll.getName());
                 }
             };
             myRunnable.run();

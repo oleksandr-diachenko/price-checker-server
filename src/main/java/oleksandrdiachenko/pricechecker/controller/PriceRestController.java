@@ -2,9 +2,9 @@ package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -56,7 +56,7 @@ class PriceRestController {
     }
 
     @SneakyThrows
-    @PostMapping(value = "/pricecheck")
+    @PostMapping(value = "/api/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
                                         @RequestParam("urlIndex") @Min(value = 1, message = "Url index should be greater than 0") int urlIndex,
                                         @RequestParam("insertIndex") @Min(value = 1, message = "Insert index should be greater than 0") int insertIndex) {
