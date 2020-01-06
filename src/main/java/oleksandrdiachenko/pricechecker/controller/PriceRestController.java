@@ -64,12 +64,12 @@ class PriceRestController {
     @SneakyThrows
     @PostMapping(value = "/api/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
-                                        @RequestParam("urlIndex") @Min(value = 1, message = "Url index should be greater than 0") int urlIndex,
-                                        @RequestParam("insertIndex") @Min(value = 1, message = "Insert index should be greater than 0") int insertIndex) {
+                                        @RequestParam("urlIndex") @Min(value = 1, message = "Url column should be greater than 0") int urlIndex,
+                                        @RequestParam("insertIndex") @Min(value = 1, message = "Insert column should be greater than 0") int insertIndex) {
         if (!fileValidator.isValid(file)) {
             return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList("File extension should be .xls or .xlsx")), BAD_REQUEST);
         }
-        queueService.start(new PriceCheckParameter(file.getOriginalFilename(), urlIndex, insertIndex, file.getBytes()));
+        queueService.start(new PriceCheckParameter(file.getOriginalFilename(), urlIndex - 1, insertIndex - 1, file.getBytes()));
         return ResponseEntity.accepted().build();
     }
 }
