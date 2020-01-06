@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.service.FileStatusService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
@@ -24,17 +25,19 @@ import static org.springframework.http.HttpStatus.BAD_REQUEST;
 @Validated
 class PriceRestController {
 
-    private final PriceCheckService priceCheckService;
-    private final FileValidator fileValidator;
-    private final QueueService queueService;
+    private PriceCheckService priceCheckService;
+    private FileValidator fileValidator;
+    private QueueService queueService;
+    private FileStatusService fileStatusService;
 
     private Workbook priceTable;
 
     @Autowired
-    public PriceRestController(PriceCheckService priceCheckService, FileValidator fileValidator, QueueService queueService) {
+    public PriceRestController(PriceCheckService priceCheckService, FileValidator fileValidator, QueueService queueService, FileStatusService fileStatusService) {
         this.priceCheckService = priceCheckService;
         this.fileValidator = fileValidator;
         this.queueService = queueService;
+        this.fileStatusService = fileStatusService;
     }
 
     @PostMapping("/api/price-check/{urlIndex}/{insertIndex}")
@@ -71,6 +74,11 @@ class PriceRestController {
         }
         queueService.start(new PriceCheckParameter(file.getOriginalFilename(), urlIndex - 1, insertIndex - 1, file.getBytes()));
         return ResponseEntity.accepted().build();
+    }
+
+    @GetMapping(value = "/api/pricecheck/filestatuses")
+    public ResponseEntity<?> getFileStatuses() {
+        return ResponseEntity.ok(fileStatusService.getAllFileStatuses());
     }
 }
 

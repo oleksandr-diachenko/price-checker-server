@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author Alexander Diachenko
@@ -27,27 +29,28 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 @Service
 public class QueueService {
 
-    private PriceCheckService priceCheckService;
     private FileRepository fileRepository;
     private FileStatusRepository fileStatusRepository;
     private SimpMessagingTemplate simpMessagingTemplate;
+    private PriceCheckService priceCheckService;
+    private ExecutorService executorService = Executors.newFixedThreadPool(5);
 
     private Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
 
     @Autowired
-    public QueueService(PriceCheckService priceCheckService, FileRepository fileRepository,
-                        FileStatusRepository fileStatusRepository, SimpMessagingTemplate simpMessagingTemplate) {
-        this.priceCheckService = priceCheckService;
+    public QueueService(FileRepository fileRepository,
+                        FileStatusRepository fileStatusRepository, SimpMessagingTemplate simpMessagingTemplate, PriceCheckService priceCheckService) {
         this.fileRepository = fileRepository;
         this.fileStatusRepository = fileStatusRepository;
         this.simpMessagingTemplate = simpMessagingTemplate;
+        this.priceCheckService = priceCheckService;
     }
 
     public void start(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
         queue.add(Pair.create(fileStatusId, parameter));
         while (!queue.isEmpty()) {
-            Runnable myRunnable = () -> {
+            executorService.submit(() -> {
                 Pair<Long, PriceCheckParameter> poll = queue.poll();
                 if (poll == null) {
                     return;
@@ -70,8 +73,7 @@ public class QueueService {
                                 new Gson().toJson(fileStatusRepository.findAll()));
                     }
                 }
-            };
-            myRunnable.run();
+            });
         }
     }
 
