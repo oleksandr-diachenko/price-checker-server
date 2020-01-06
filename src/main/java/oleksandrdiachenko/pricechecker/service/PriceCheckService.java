@@ -1,6 +1,8 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
+import oleksandrdiachenko.pricechecker.repository.FileRepository;
 import oleksandrdiachenko.pricechecker.service.excel.Excel;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import static org.apache.commons.collections4.ListUtils.emptyIfNull;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
@@ -21,11 +24,13 @@ public class PriceCheckService {
 
     private Excel excel;
     private List<Magazine> magazines;
+    private FileRepository fileRepository;
 
     @Autowired
-    public PriceCheckService(Excel excel, List<Magazine> magazines) {
+    public PriceCheckService(Excel excel, List<Magazine> magazines, FileRepository fileRepository) {
         this.excel = excel;
         this.magazines = magazines;
+        this.fileRepository = fileRepository;
     }
 
     public Workbook getWorkbook(byte[] bytes, int urlIndex, int insertIndex)
@@ -62,5 +67,9 @@ public class PriceCheckService {
             row.add(EMPTY);
         }
         row.add(index, price);
+    }
+
+    public Optional<File> getTable(long fileId) {
+        return fileRepository.findById(fileId);
     }
 }

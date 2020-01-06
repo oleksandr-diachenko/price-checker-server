@@ -55,6 +55,12 @@ class PriceRestController {
         return new byte[0];
     }
 
+    @GetMapping("/api/price-check/file/{id}")
+    public @ResponseBody
+    byte[] getTable(@PathVariable(value = "id") long id) throws IOException {
+        return priceCheckService.getTable(id).get().getFile();
+    }
+
     @SneakyThrows
     @PostMapping(value = "/api/pricecheck")
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
