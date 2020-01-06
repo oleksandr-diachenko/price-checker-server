@@ -1,7 +1,6 @@
 package oleksandrdiachenko.pricechecker.service;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.gson.Gson;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -17,6 +16,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -48,8 +48,7 @@ public class QueueService {
 
     public void start(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
-        simpMessagingTemplate.convertAndSend("/statuses",
-                new Gson().toJson(fileStatusRepository.findAll()));
+        sendFileStatusesToWebSocket();
         queue.add(Pair.create(fileStatusId, parameter));
         while (!queue.isEmpty()) {
             executorService.submit(() -> {
@@ -61,8 +60,7 @@ public class QueueService {
                 if (fileStatusOptional.isPresent()) {
                     FileStatus fileStatus = fileStatusOptional.get();
                     updateStatus(fileStatus, Status.PENDING.name());
-                    simpMessagingTemplate.convertAndSend("/statuses",
-                            new Gson().toJson(fileStatusRepository.findAll()));
+                    sendFileStatusesToWebSocket();
 
                     Workbook workbook = buildWorkbook(poll.getSecond());
 
@@ -73,12 +71,15 @@ public class QueueService {
                         byte[] bytes = getBytesFromWorkbook(workbook);
                         file.setFile(bytes);
                         fileRepository.save(file);
-                        simpMessagingTemplate.convertAndSend("/statuses",
-                                new Gson().toJson(fileStatusRepository.findAll()));
+                        sendFileStatusesToWebSocket();
                     }
                 }
             });
         }
+    }
+
+    private void sendFileStatusesToWebSocket() {
+        simpMessagingTemplate.convertAndSend("/statuses", fileStatusRepository.findAll());
     }
 
     private void updateStatus(FileStatus fileStatus, String status) {
@@ -112,6 +113,7 @@ public class QueueService {
         fileStatus.setName(parameter.getName());
         fileStatus.setStatus(Status.ACCEPTED.name());
         fileStatus.setFileId(file.getId());
+        fileStatus.setAcceptedTime(LocalDateTime.now());
         fileStatusRepository.save(fileStatus);
         return fileStatus.getId();
     }

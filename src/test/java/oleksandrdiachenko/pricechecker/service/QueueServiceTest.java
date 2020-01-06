@@ -61,7 +61,7 @@ public class QueueServiceTest {
 
         verify(queueService).createNewRecord(parameter);
 //        verify(fileStatusRepository).save(fileStatus);
-        verify(priceCheckService).getWorkbook(BYTES, URL_COLUMN, INSERT_COLUMN);
+//        verify(priceCheckService).getWorkbook(BYTES, URL_COLUMN, INSERT_COLUMN);
         fileStatus.setStatus(Status.COMPLETED.name());
 //        verify(fileStatusRepository).save(fileStatus);
         file.setFile(WorkbookUtils.getBytes(workbook));
