@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
@@ -14,8 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.constraints.Min;
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @Validated
@@ -36,8 +39,13 @@ class PriceRestController {
 
     @GetMapping("/api/price-check/file/{id}")
     public @ResponseBody
-    byte[] getTable(@PathVariable(value = "id") long id) {
-        return priceCheckService.getTable(id).get().getFile();
+    ResponseEntity<?> getTable(@PathVariable(value = "id") long id) {
+        Optional<File> fileOptional = priceCheckService.getTable(id);
+        if(fileOptional.isPresent()) {
+            return ResponseEntity.ok(fileOptional.get().getFile());
+        }
+        return new ResponseEntity<>(
+                new ErrorResponse<>(Collections.singletonList("File with id: " + id + " not found")), NOT_FOUND);
     }
 
     @SneakyThrows
