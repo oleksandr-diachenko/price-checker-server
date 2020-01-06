@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
@@ -10,6 +11,7 @@ import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,6 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.mockito.Mockito.*;
@@ -36,6 +39,7 @@ public class PriceRestControllerTest {
     public static final String XLSX_CONTENT_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     public static final String PRICECHECK = "/api/pricecheck";
     public static final String FILESTATUSES = "/api/pricecheck/filestatuses";
+    public static final String FILE_BY_ID = "/api/price-check/file/";
     public static final String FILE = "file";
     public static final String URL_INDEX_PARAM = "urlIndex";
     public static final String INSERT_INDEX_PARAM = "insertIndex";
@@ -57,6 +61,8 @@ public class PriceRestControllerTest {
     private FileValidator fileValidator;
     @MockBean
     private FileStatusService fileStatusService;
+    @Mock
+    private File file;
 
     @BeforeEach
     void setUp() {
@@ -166,6 +172,7 @@ public class PriceRestControllerTest {
         when(fileStatusService.getAllFileStatuses()).thenReturn(Collections.singletonList(
                 new FileStatus(1, FILENAME, Status.COMPLETED.name(), 2,
                         LocalDateTime.of(2020, 1, 6, 5, 18, 20))));
+
         mvc.perform(get(FILESTATUSES))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[{\"id\":1,\"name\":\"filename\"," +
@@ -175,8 +182,30 @@ public class PriceRestControllerTest {
     @Test
     void shouldReturnEmptyListWhenServiceReturnEmptyList() throws Exception {
         when(fileStatusService.getAllFileStatuses()).thenReturn(Collections.emptyList());
+
         mvc.perform(get(FILESTATUSES))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[]"));
+    }
+
+    @Test
+    void shouldReturnBytesWhenFileExist() throws Exception {
+        long fileId = 1;
+        when(priceCheckService.getTable(fileId)).thenReturn(Optional.of(file));
+        when(file.getFile()).thenReturn(BYTES);
+
+        mvc.perform(get(FILE_BY_ID + fileId))
+                .andExpect(status().isOk())
+                .andExpect(content().bytes(file.getFile()));
+    }
+
+    @Test
+    void shouldReturnNotFoundWhenFileIsNotExist() throws Exception {
+        long fileId = -1;
+        when(priceCheckService.getTable(fileId)).thenReturn(Optional.empty());
+
+        mvc.perform(get(FILE_BY_ID + fileId))
+                .andExpect(status().isNotFound())
+                .andExpect(content().json("{\"errors\":[\"File with id: -1 not found\"]}"));
     }
 }
