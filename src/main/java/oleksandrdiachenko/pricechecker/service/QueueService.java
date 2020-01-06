@@ -48,6 +48,8 @@ public class QueueService {
 
     public void start(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
+        simpMessagingTemplate.convertAndSend("/statuses",
+                new Gson().toJson(fileStatusRepository.findAll()));
         queue.add(Pair.create(fileStatusId, parameter));
         while (!queue.isEmpty()) {
             executorService.submit(() -> {
@@ -59,6 +61,8 @@ public class QueueService {
                 if (fileStatusOptional.isPresent()) {
                     FileStatus fileStatus = fileStatusOptional.get();
                     updateStatus(fileStatus, Status.PENDING.name());
+                    simpMessagingTemplate.convertAndSend("/statuses",
+                            new Gson().toJson(fileStatusRepository.findAll()));
 
                     Workbook workbook = buildWorkbook(poll.getSecond());
 
