@@ -6,9 +6,6 @@ import oleksandrdiachenko.pricechecker.service.FileStatusService;
 import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
 import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -16,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.constraints.Min;
-import java.io.IOException;
 import java.util.Collections;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -30,8 +26,6 @@ class PriceRestController {
     private QueueService queueService;
     private FileStatusService fileStatusService;
 
-    private Workbook priceTable;
-
     @Autowired
     public PriceRestController(PriceCheckService priceCheckService, FileValidator fileValidator, QueueService queueService, FileStatusService fileStatusService) {
         this.priceCheckService = priceCheckService;
@@ -40,27 +34,9 @@ class PriceRestController {
         this.fileStatusService = fileStatusService;
     }
 
-    @PostMapping("/api/price-check/{urlIndex}/{insertIndex}")
-    public void startPriceCheck(@RequestParam("file") MultipartFile file,
-                                @PathVariable int urlIndex,
-                                @PathVariable int insertIndex)
-            throws IOException, InvalidFormatException {
-        priceTable = null;
-        priceTable = priceCheckService.getWorkbook(file.getBytes(), urlIndex - 1, insertIndex - 1);
-    }
-
-    @GetMapping("/api/price-check/content")
-    public @ResponseBody
-    byte[] getPriceTable() throws IOException {
-        if (priceTable != null) {
-            return WorkbookUtils.getBytes(priceTable);
-        }
-        return new byte[0];
-    }
-
     @GetMapping("/api/price-check/file/{id}")
     public @ResponseBody
-    byte[] getTable(@PathVariable(value = "id") long id) throws IOException {
+    byte[] getTable(@PathVariable(value = "id") long id) {
         return priceCheckService.getTable(id).get().getFile();
     }
 
