@@ -33,7 +33,7 @@ public class QueueService {
     private FileStatusRepository fileStatusRepository;
     private SimpMessagingTemplate simpMessagingTemplate;
     private PriceCheckService priceCheckService;
-    private ExecutorService executorService = Executors.newFixedThreadPool(5);
+    private ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     private Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
 
