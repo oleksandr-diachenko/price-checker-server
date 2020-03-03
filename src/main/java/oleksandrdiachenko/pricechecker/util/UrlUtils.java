@@ -17,16 +17,12 @@ public class UrlUtils {
     }
 
     public static String getDomainName(String url) throws MalformedURLException {
-        String domainName = new URL(url).getHost();
-        log.info("For url: [{}] domain name is: [{}]", url, domainName);
-        return domainName;
+        return new URL(url).getHost();
     }
 
     public static boolean isValid(String url) {
         String[] schemes = {"http","https"};
         UrlValidator urlValidator = new UrlValidator(schemes);
-        boolean isValid = urlValidator.isValid(url);
-        log.info("Url: [{}] is valid: [{}]", url, isValid);
-        return isValid;
+        return urlValidator.isValid(url);
     }
 }

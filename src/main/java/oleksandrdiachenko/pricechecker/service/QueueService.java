@@ -52,34 +52,32 @@ public class QueueService {
         long fileStatusId = createNewRecord(parameter);
         sendFileStatusesToWebSocket();
         queue.add(Pair.create(fileStatusId, parameter));
-            while (!queue.isEmpty()) {
-                log.info("Queue size: {}.", queue.size());
-                executorService.submit(() -> {
-                Pair<Long, PriceCheckParameter> poll = queue.poll();
-                if (poll == null) {
-                    return;
-                }
-                log.info("Picking next job from queue with file status id: {}", poll.getFirst());
-                Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(poll.getFirst());
-                if (fileStatusOptional.isPresent()) {
-                    FileStatus fileStatus = fileStatusOptional.get();
-                    updateStatus(fileStatus, Status.PENDING.name());
+        executorService.submit(() -> {
+            log.info("Queue size: {}.", queue.size());
+            Pair<Long, PriceCheckParameter> poll = queue.poll();
+            if (poll == null) {
+                return;
+            }
+            log.info("Picking next job from queue with file name: {}", poll.getSecond().getName());
+            Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(poll.getFirst());
+            if (fileStatusOptional.isPresent()) {
+                FileStatus fileStatus = fileStatusOptional.get();
+                updateStatus(fileStatus, Status.PENDING.name());
+                sendFileStatusesToWebSocket();
+
+                Workbook workbook = buildWorkbook(poll.getSecond());
+
+                updateStatus(fileStatus, Status.COMPLETED.name());
+                Optional<File> fileOptional = fileRepository.findById(fileStatus.getFileId());
+                if (fileOptional.isPresent()) {
+                    File file = fileOptional.get();
+                    byte[] bytes = getBytesFromWorkbook(workbook);
+                    file.setFile(bytes);
+                    fileRepository.save(file);
                     sendFileStatusesToWebSocket();
-
-                    Workbook workbook = buildWorkbook(poll.getSecond());
-
-                    updateStatus(fileStatus, Status.COMPLETED.name());
-                    Optional<File> fileOptional = fileRepository.findById(fileStatus.getFileId());
-                    if (fileOptional.isPresent()) {
-                        File file = fileOptional.get();
-                        byte[] bytes = getBytesFromWorkbook(workbook);
-                        file.setFile(bytes);
-                        fileRepository.save(file);
-                        sendFileStatusesToWebSocket();
-                    }
                 }
-            });
-        }
+            }
+        });
     }
 
     private void sendFileStatusesToWebSocket() {

@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import static oleksandrdiachenko.pricechecker.util.UrlUtils.getDomainName;
 import static org.apache.commons.collections4.ListUtils.emptyIfNull;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 
@@ -38,16 +39,16 @@ public class PriceCheckService {
     public Workbook getWorkbook(byte[] bytes, int urlIndex, int insertIndex)
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
-        log.info("Read file: {}", table.toString());
         if (!isPositives(urlIndex, insertIndex)) {
             return excel.write(table);
         }
-        log.info("Searching price in magazines: {}", magazines);
         for (List<String> row : table) {
             for (Magazine magazine : emptyIfNull(magazines)) {
                 String url = retrieveUrl(row, urlIndex);
                 if (magazine.isThisWebsite(url)) {
+                    log.info("Searching price for [{}] in magazine [{}]", url, getDomainName(url));
                     String price = magazine.getPrice(magazine.getDocument(url));
+                    log.info("Price for url: [{}] is [{}]", url, price);
                     insert(row, insertIndex, price);
                 }
             }
@@ -64,9 +65,7 @@ public class PriceCheckService {
         if (row.size() <= index) {
             return EMPTY;
         }
-        String url = row.get(index);
-        log.info("Row number: {} contains url: {}", index, url);
-        return url;
+        return row.get(index);
     }
 
     private void insert(List<String> row, int index, String price) {
