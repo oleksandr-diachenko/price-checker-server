@@ -1,5 +1,6 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
 import oleksandrdiachenko.pricechecker.repository.FileRepository;
@@ -20,6 +21,7 @@ import static org.apache.commons.lang3.StringUtils.EMPTY;
  * @author Alexander Diachenko.
  */
 @Service
+@Slf4j
 public class PriceCheckService {
 
     private Excel excel;
@@ -36,9 +38,11 @@ public class PriceCheckService {
     public Workbook getWorkbook(byte[] bytes, int urlIndex, int insertIndex)
             throws IOException, InvalidFormatException {
         List<List<String>> table = excel.read(bytes);
+        log.info("Read file: {}", table.toString());
         if (!isPositives(urlIndex, insertIndex)) {
             return excel.write(table);
         }
+        log.info("Searching price in magazines: {}", magazines);
         for (List<String> row : table) {
             for (Magazine magazine : emptyIfNull(magazines)) {
                 String url = retrieveUrl(row, urlIndex);
@@ -48,6 +52,7 @@ public class PriceCheckService {
                 }
             }
         }
+        log.info("Returning table: {}", table.toString());
         return excel.write(table);
     }
 
@@ -59,7 +64,9 @@ public class PriceCheckService {
         if (row.size() <= index) {
             return EMPTY;
         }
-        return row.get(index);
+        String url = row.get(index);
+        log.info("Row number: {} contains url: {}", index, url);
+        return url;
     }
 
     private void insert(List<String> row, int index, String price) {

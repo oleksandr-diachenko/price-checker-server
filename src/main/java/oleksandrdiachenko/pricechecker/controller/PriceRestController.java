@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
@@ -20,6 +21,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @Validated
+@Slf4j
 class PriceRestController {
 
     private PriceCheckService priceCheckService;
@@ -34,8 +36,7 @@ class PriceRestController {
     }
 
     @GetMapping("/api/price-check/file/{id}")
-    public @ResponseBody
-    ResponseEntity<?> getTable(@PathVariable(value = "id") long id) {
+    public @ResponseBody ResponseEntity<?> getTable(@PathVariable(value = "id") long id) {
         Optional<File> fileOptional = priceCheckService.getTable(id);
         if(fileOptional.isPresent()) {
             return ResponseEntity.ok(fileOptional.get().getFile());
@@ -49,6 +50,7 @@ class PriceRestController {
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
                                         @RequestParam("urlIndex") @Min(value = 1, message = "Url column should be greater than 0") int urlIndex,
                                         @RequestParam("insertIndex") @Min(value = 1, message = "Insert column should be greater than 0") int insertIndex) {
+        log.info("Added file [{}] with parameters: urlIndex[{}], insertIndex[{}]", file.getOriginalFilename(), urlIndex, insertIndex);
         queueService.start(new PriceCheckParameter(file.getOriginalFilename(), urlIndex - 1, insertIndex - 1, file.getBytes()));
         return ResponseEntity.accepted().build();
     }

@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker.service;
 
 import com.google.common.annotations.VisibleForTesting;
+import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -27,6 +28,7 @@ import java.util.concurrent.Executors;
  * @author Alexander Diachenko
  */
 @Service
+@Slf4j
 public class QueueService {
 
     private FileRepository fileRepository;
@@ -51,7 +53,9 @@ public class QueueService {
         sendFileStatusesToWebSocket();
         queue.add(Pair.create(fileStatusId, parameter));
         while (!queue.isEmpty()) {
+            log.info("Queue size: {}.", queue.size());
             executorService.submit(() -> {
+                log.info(" Picking next job from queue: {}", queue.peek());
                 Pair<Long, PriceCheckParameter> poll = queue.poll();
                 if (poll == null) {
                     return;
@@ -79,10 +83,13 @@ public class QueueService {
     }
 
     private void sendFileStatusesToWebSocket() {
-        simpMessagingTemplate.convertAndSend("/statuses", fileStatusRepository.findAll());
+        Iterable<FileStatus> fileStatuses = fileStatusRepository.findAll();
+        log.info("Updating web socket statuses: {}", fileStatuses.toString());
+        simpMessagingTemplate.convertAndSend("/statuses", fileStatuses);
     }
 
     private void updateStatus(FileStatus fileStatus, String status) {
+        log.info("For file status with id: [{}] updating status to [{}]", fileStatus.getId(), status);
         fileStatus.setStatus(status);
         fileStatusRepository.save(fileStatus);
     }
@@ -91,6 +98,7 @@ public class QueueService {
         try {
             return WorkbookUtils.getBytes(workbook);
         } catch (IOException e) {
+            log.error("Can't read bytes from workbook!");
             throw new RuntimeException("Can't read bytes from workbook!", e);
         }
     }
