@@ -1,8 +1,11 @@
 package oleksandrdiachenko.pricechecker.util;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author Alexander Diachenko
  */
+@Slf4j
 public class StringUtil {
 
     private StringUtil() {
@@ -21,6 +24,7 @@ public class StringUtil {
             string = string.substring(0, string.length() - 1);
             formatPrice(string);
         }
+        log.info("Formatted price from: [{}] to [{}]", price, string);
         return string;
     }
 

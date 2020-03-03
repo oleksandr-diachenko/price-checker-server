@@ -1,5 +1,6 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
@@ -22,6 +23,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice()
+@Slf4j
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @Override
@@ -29,7 +31,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
                                                                           HttpHeaders headers,
                                                                           HttpStatus status, WebRequest request) {
         String error = ex.getParameterName() + " parameter is missing.";
-        return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList(error)), BAD_REQUEST);
+        ResponseEntity<Object> responseEntity = new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList(error)), BAD_REQUEST);
+        log.error("Error occurred: {}", responseEntity);
+        return responseEntity;
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
@@ -38,10 +42,14 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
             List<String> messages = ex.getConstraintViolations().stream()
                     .map(ConstraintViolation::getMessage)
                     .collect(toList());
-            return new ResponseEntity<>(new ErrorResponse<>(messages), BAD_REQUEST);
+            ResponseEntity<ErrorResponse<String>> responseEntity = new ResponseEntity<>(new ErrorResponse<>(messages), BAD_REQUEST);
+            log.error("Error occurred: {}", responseEntity);
+            return responseEntity;
         } catch (Exception e) {
-            return new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList(ex.getMessage())),
+            ResponseEntity<ErrorResponse<String>> responseEntity = new ResponseEntity<>(new ErrorResponse<>(Collections.singletonList(ex.getMessage())),
                     INTERNAL_SERVER_ERROR);
+            log.error("Error occurred: {}", responseEntity);
+            return responseEntity;
         }
     }
 }
