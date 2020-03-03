@@ -18,7 +18,7 @@ import java.util.List;
  * @author Alexander Diachenko.
  */
 @Component
-@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope
 public class ExcelImpl implements Excel {
 
     @Override
