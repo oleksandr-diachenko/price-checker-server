@@ -52,14 +52,14 @@ public class QueueService {
         long fileStatusId = createNewRecord(parameter);
         sendFileStatusesToWebSocket();
         queue.add(Pair.create(fileStatusId, parameter));
-        while (!queue.isEmpty()) {
-            log.info("Queue size: {}.", queue.size());
-            executorService.submit(() -> {
-                log.info(" Picking next job from queue: {}", queue.peek());
+            while (!queue.isEmpty()) {
+                log.info("Queue size: {}.", queue.size());
+                executorService.submit(() -> {
                 Pair<Long, PriceCheckParameter> poll = queue.poll();
                 if (poll == null) {
                     return;
                 }
+                log.info("Picking next job from queue with file status id: {}", poll.getFirst());
                 Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(poll.getFirst());
                 if (fileStatusOptional.isPresent()) {
                     FileStatus fileStatus = fileStatusOptional.get();
