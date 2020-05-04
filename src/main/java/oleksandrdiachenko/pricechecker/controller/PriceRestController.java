@@ -35,7 +35,7 @@ class PriceRestController {
         this.fileStatusService = fileStatusService;
     }
 
-    @GetMapping("/api/price-check/file/{id}")
+    @GetMapping("/api/pricecheck/file/{id}")
     public @ResponseBody ResponseEntity<?> getTable(@PathVariable(value = "id") long id) {
         Optional<File> fileOptional = priceCheckService.getTable(id);
         if(fileOptional.isPresent()) {
