@@ -113,7 +113,6 @@ public class QueueService {
     @VisibleForTesting
     protected long createNewRecord(PriceCheckParameter parameter) {
         File file = new File();
-        file.setFile(parameter.getBytes());
         fileRepository.save(file);
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(parameter.getName());
