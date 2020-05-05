@@ -38,7 +38,7 @@ class PriceRestController {
     @GetMapping("/api/pricecheck/file/{id}")
     public @ResponseBody
     ResponseEntity<?> getFileById(@PathVariable(value = "id") long id) {
-        Optional<File> fileOptional = fileService.getFileById(id);
+        Optional<File> fileOptional = fileService.findById(id);
         if (fileOptional.isPresent()) {
             return ResponseEntity.ok(fileOptional.get().getFile());
         }
@@ -59,7 +59,7 @@ class PriceRestController {
 
     @GetMapping(value = "/api/pricecheck/filestatuses")
     public ResponseEntity<?> getFileStatuses() {
-        return ResponseEntity.ok(fileStatusService.getAllFileStatuses());
+        return ResponseEntity.ok(fileStatusService.findAll());
     }
 }
 
