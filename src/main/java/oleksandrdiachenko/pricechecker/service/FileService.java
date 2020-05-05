@@ -19,11 +19,16 @@ public class FileService {
         this.fileRepository = fileRepository;
     }
 
-    public Optional<File> getFileById(long fileId) {
-        Optional<File> optionalFile = fileRepository.findById(fileId);
-        if(optionalFile.isEmpty()) {
-            log.info("File with id {} not found", fileId);
-        }
-        return optionalFile;
+    public File save(File file) {
+        File savedFile = fileRepository.save(file);
+        log.info("File {} saved", savedFile);
+        return savedFile;
+    }
+
+    public Optional<File> findById(long id) {
+        Optional<File> fileOptional = fileRepository.findById(id);
+        fileOptional.ifPresentOrElse(file -> log.info("Found file: {}", file),
+                () -> log.info("File for id:{} not found", id));
+        return fileOptional;
     }
 }

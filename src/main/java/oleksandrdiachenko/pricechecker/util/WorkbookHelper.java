@@ -2,18 +2,16 @@ package oleksandrdiachenko.pricechecker.util;
 
 import lombok.extern.log4j.Log4j2;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 @Log4j2
-public class WorkbookUtils {
+@Component
+public class WorkbookHelper {
 
-    public WorkbookUtils() {
-        throw new IllegalStateException("Creating object not allowed!");
-    }
-
-    public static byte[] getBytes(Workbook workbook) {
+    public byte[] getBytes(Workbook workbook) {
         try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
             workbook.write(os);
             return os.toByteArray();

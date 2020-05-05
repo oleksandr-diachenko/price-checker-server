@@ -144,7 +144,7 @@ public class PriceRestControllerTest {
 
     @Test
     void shouldReturnListWithOneFileStatusesWhenServiceReturnListWithOneFileStatus() throws Exception {
-        when(fileStatusService.getAllFileStatuses()).thenReturn(Collections.singletonList(
+        when(fileStatusService.findAll()).thenReturn(Collections.singletonList(
                 new FileStatus(1, FILENAME, Status.COMPLETED.name(), 2,
                         LocalDateTime.of(2020, 1, 6, 5, 18, 20))));
 
@@ -156,7 +156,7 @@ public class PriceRestControllerTest {
 
     @Test
     void shouldReturnEmptyListWhenServiceReturnEmptyList() throws Exception {
-        when(fileStatusService.getAllFileStatuses()).thenReturn(Collections.emptyList());
+        when(fileStatusService.findAll()).thenReturn(Collections.emptyList());
 
         mvc.perform(get(FILESTATUSES))
                 .andExpect(status().isOk())
@@ -166,7 +166,7 @@ public class PriceRestControllerTest {
     @Test
     void shouldReturnBytesWhenFileExist() throws Exception {
         long fileId = 1;
-        when(fileService.getFileById(fileId)).thenReturn(Optional.of(file));
+        when(fileService.findById(fileId)).thenReturn(Optional.of(file));
         when(file.getFile()).thenReturn(BYTES);
 
         mvc.perform(get(FILE_BY_ID + fileId))
@@ -177,7 +177,7 @@ public class PriceRestControllerTest {
     @Test
     void shouldReturnNotFoundWhenFileIsNotExist() throws Exception {
         long fileId = -1;
-        when(fileService.getFileById(fileId)).thenReturn(Optional.empty());
+        when(fileService.findById(fileId)).thenReturn(Optional.empty());
 
         mvc.perform(get(FILE_BY_ID + fileId))
                 .andExpect(status().isNotFound())
