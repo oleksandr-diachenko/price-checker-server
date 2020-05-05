@@ -68,7 +68,7 @@ public class ExcelImpl implements Excel {
     }
 
     @Override
-    public Workbook write(List<List<String>> table) {
+    public Workbook buildWorkBook(List<List<String>> table) {
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet(WorkbookUtil.createSafeSheetName("New sheet"));
         for (int rawIndex = 0; rawIndex < table.size(); rawIndex++) {

@@ -4,31 +4,25 @@ import oleksandrdiachenko.pricechecker.model.magazine.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.Set;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toSet;
 
 @Configuration
 public class PriceCheckerConfiguration {
 
     @Bean
-    public List<Magazine> getMagazines() {
-        List<Magazine> magazines = new ArrayList<>();
-        magazines.add(new Makeup());
-        magazines.add(new Korea());
-        magazines.add(new RoseRoseShop());
-        magazines.add(new BeautyNetKorea());
-        magazines.add(new NowZenith());
-        magazines.add(new Rozetka());
-        magazines.add(new KoreaButik());
-        magazines.add(new SweetCorea());
-        magazines.add(new Cosmetea());
-        magazines.add(new Sweetness());
-        return magazines;
+    public Set<Magazine> getMagazines() {
+        return Stream.of(new Makeup(), new Korea(), new RoseRoseShop(),
+                new BeautyNetKorea(), new NowZenith(), new Rozetka(), new KoreaButik(),
+                new SweetCorea(), new Cosmetea(), new Sweetness()).collect(toSet());
     }
 
     @Bean
-    public List<String> getExcelTypes() {
-        return Arrays.asList("application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    public Set<String> getExcelTypes() {
+        return Stream.of("application/vnd.ms-excel",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                .collect(toSet());
     }
 }

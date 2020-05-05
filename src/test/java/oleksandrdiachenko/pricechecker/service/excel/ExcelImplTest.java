@@ -97,7 +97,7 @@ class ExcelImplTest {
         List<List<String>> table = createTable(createList("SBA160002", "8411061784273",
                 "ANTONIO BANDERAS KING OF SEDUCTION  MAN EDT 100 ml spray", "100", "EDT", "М", "15,30"));
 
-        Workbook workbook = excel.write(table);
+        Workbook workbook = excel.buildWorkBook(table);
 
         assertThat(getCellStringValue(workbook, 0, 0)).isEqualTo("SBA160002");
         assertThat(getCellStringValue(workbook, 0, 3)).isEqualTo("100");
@@ -111,7 +111,7 @@ class ExcelImplTest {
                 createList("SAN020002", "8427395660206",
                         "ANGEL SCHLESSER HOMME EDT 125 ml spray", "125", "EDT", "М", "16,40"));
 
-        Workbook workbook = excel.write(table);
+        Workbook workbook = excel.buildWorkBook(table);
 
         assertThat(getCellStringValue(workbook, 0, 0)).isEqualTo("SBA160002");
         assertThat(getCellStringValue(workbook, 0, 6)).isEqualTo("15,30");
@@ -126,7 +126,7 @@ class ExcelImplTest {
                 "", "100", "EDT", "М", "15,30"),
                 createList("SAN020002", "8427395660206", "", "125", "EDT", "М", "16,40"));
 
-        Workbook workbook = excel.write(table);
+        Workbook workbook = excel.buildWorkBook(table);
 
         assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isEqualTo(265);
     }

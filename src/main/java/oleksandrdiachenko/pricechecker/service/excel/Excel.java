@@ -28,7 +28,7 @@ public interface Excel {
      * @return workbook created from table
      * @throws IOException Throws IOException if file write failed.
      */
-    Workbook write(List<List<String>> table) throws IOException;
+    Workbook buildWorkBook(List<List<String>> table) throws IOException;
 
     /**
      * Return sheet column count.

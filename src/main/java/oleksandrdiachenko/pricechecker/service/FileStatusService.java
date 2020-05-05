@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class FileStatusService {
 
-    private FileStatusRepository fileStatusRepository;
+    private final FileStatusRepository fileStatusRepository;
 
     @Autowired
     public FileStatusService(FileStatusRepository fileStatusRepository) {

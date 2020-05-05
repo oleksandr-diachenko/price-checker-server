@@ -24,7 +24,7 @@ public class StringUtil {
             string = string.substring(0, string.length() - 1);
             formatPrice(string);
         }
-        log.info("Formatted price from: [{}] to [{}]", price, string);
+        log.info("Formatted price from: {} to {}", price, string);
         return string;
     }
 

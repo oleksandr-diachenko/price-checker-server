@@ -4,11 +4,9 @@ import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
+import oleksandrdiachenko.pricechecker.service.FileService;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
-import oleksandrdiachenko.pricechecker.service.PriceCheckService;
 import oleksandrdiachenko.pricechecker.service.QueueService;
-import oleksandrdiachenko.pricechecker.service.validator.FileValidator;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -25,7 +23,6 @@ import java.util.Optional;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.mockito.Mockito.*;
-import static org.springframework.http.MediaType.IMAGE_JPEG_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -39,7 +36,7 @@ public class PriceRestControllerTest {
     public static final String XLSX_CONTENT_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     public static final String PRICECHECK = "/api/pricecheck";
     public static final String FILESTATUSES = "/api/pricecheck/filestatuses";
-    public static final String FILE_BY_ID = "/api/price-check/file/";
+    public static final String FILE_BY_ID = "/api/pricecheck/file/";
     public static final String FILE = "file";
     public static final String URL_INDEX_PARAM = "urlIndex";
     public static final String INSERT_INDEX_PARAM = "insertIndex";
@@ -56,18 +53,11 @@ public class PriceRestControllerTest {
     @MockBean
     private QueueService queueService;
     @MockBean
-    private PriceCheckService priceCheckService;
-    @MockBean
-    private FileValidator fileValidator;
-    @MockBean
     private FileStatusService fileStatusService;
+    @MockBean
+    private FileService fileService;
     @Mock
     private File file;
-
-    @BeforeEach
-    void setUp() {
-        when(fileValidator.isValid(any(MockMultipartFile.class))).thenReturn(true);
-    }
 
     @Test
     void shouldReturnOkAndCallServiceWhenFileIsXls() throws Exception {
@@ -78,7 +68,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_COLUMN)))
                 .andExpect(status().isAccepted())
                 .andExpect(content().string(EMPTY));
-        verify(queueService).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -90,22 +80,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_COLUMN)))
                 .andExpect(status().isAccepted())
                 .andExpect(content().string(EMPTY));
-        verify(queueService).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
-    }
-
-    @Test
-    void shouldReturnBadRequestWhenFileTypeIsJpg() throws Exception {
-        MockMultipartFile file = new MockMultipartFile(FILE, FILENAME,
-                IMAGE_JPEG_VALUE, BYTES);
-        when(fileValidator.isValid(file)).thenReturn(false);
-
-        mvc.perform(multipart(PRICECHECK)
-                .file(file)
-                .param(URL_INDEX_PARAM, String.valueOf(URL_COLUMN))
-                .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_COLUMN)))
-                .andExpect(status().isBadRequest())
-                .andExpect(content().json("{\"errors\":[\"File extension should be .xls or .xlsx\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -116,7 +91,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_COLUMN)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"urlIndex parameter is missing.\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService, never()).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -127,7 +102,7 @@ public class PriceRestControllerTest {
                 .param(URL_INDEX_PARAM, String.valueOf(URL_COLUMN)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"insertIndex parameter is missing.\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService, never()).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -139,7 +114,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, String.valueOf(INSERT_COLUMN)))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Url column should be greater than 0\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService, never()).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -151,7 +126,7 @@ public class PriceRestControllerTest {
                 .param(INSERT_INDEX_PARAM, "0"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Insert column should be greater than 0\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService, never()).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -164,7 +139,7 @@ public class PriceRestControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(content().json("{\"errors\":[\"Url column should be greater than 0\"," +
                         "\"Insert column should be greater than 0\"]}"));
-        verify(queueService, never()).start(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
+        verify(queueService, never()).addToQueue(new PriceCheckParameter(FILENAME, URL_INDEX, INSERT_INDEX, BYTES));
     }
 
     @Test
@@ -191,7 +166,7 @@ public class PriceRestControllerTest {
     @Test
     void shouldReturnBytesWhenFileExist() throws Exception {
         long fileId = 1;
-        when(priceCheckService.getTable(fileId)).thenReturn(Optional.of(file));
+        when(fileService.getFileById(fileId)).thenReturn(Optional.of(file));
         when(file.getFile()).thenReturn(BYTES);
 
         mvc.perform(get(FILE_BY_ID + fileId))
@@ -202,7 +177,7 @@ public class PriceRestControllerTest {
     @Test
     void shouldReturnNotFoundWhenFileIsNotExist() throws Exception {
         long fileId = -1;
-        when(priceCheckService.getTable(fileId)).thenReturn(Optional.empty());
+        when(fileService.getFileById(fileId)).thenReturn(Optional.empty());
 
         mvc.perform(get(FILE_BY_ID + fileId))
                 .andExpect(status().isNotFound())

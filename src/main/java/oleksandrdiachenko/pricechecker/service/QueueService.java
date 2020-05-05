@@ -9,7 +9,7 @@ import oleksandrdiachenko.pricechecker.model.entity.Status;
 import oleksandrdiachenko.pricechecker.repository.FileRepository;
 import oleksandrdiachenko.pricechecker.repository.FileStatusRepository;
 import oleksandrdiachenko.pricechecker.util.WorkbookUtils;
-import org.apache.commons.math3.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +18,13 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static java.util.Objects.nonNull;
+import static oleksandrdiachenko.pricechecker.model.entity.Status.*;
 
 /**
  * @author Alexander Diachenko
@@ -31,53 +33,52 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class QueueService {
 
-    private FileRepository fileRepository;
-    private FileStatusRepository fileStatusRepository;
-    private SimpMessagingTemplate simpMessagingTemplate;
-    private PriceCheckService priceCheckService;
-    private ExecutorService executorService = Executors.newFixedThreadPool(10);
+    private final FileRepository fileRepository;
+    private final FileStatusRepository fileStatusRepository;
+    private final SimpMessagingTemplate simpMessagingTemplate;
+    private final PriceCheckService priceCheckService;
+    private final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    private Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
+    private final Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
 
     @Autowired
-    public QueueService(FileRepository fileRepository,
-                        FileStatusRepository fileStatusRepository, SimpMessagingTemplate simpMessagingTemplate, PriceCheckService priceCheckService) {
+    public QueueService(FileRepository fileRepository, FileStatusRepository fileStatusRepository,
+                        SimpMessagingTemplate simpMessagingTemplate, PriceCheckService priceCheckService) {
         this.fileRepository = fileRepository;
         this.fileStatusRepository = fileStatusRepository;
         this.simpMessagingTemplate = simpMessagingTemplate;
         this.priceCheckService = priceCheckService;
     }
 
-    public void start(PriceCheckParameter parameter) {
+    public void addToQueue(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
         sendFileStatusesToWebSocket();
-        queue.add(Pair.create(fileStatusId, parameter));
-        executorService.submit(() -> {
-            log.info("Queue size: {}.", queue.size());
-            Pair<Long, PriceCheckParameter> poll = queue.poll();
-            if (poll == null) {
-                return;
-            }
-            log.info("Picking next job from queue with file name: {}", poll.getSecond().getName());
-            Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(poll.getFirst());
-            if (fileStatusOptional.isPresent()) {
-                FileStatus fileStatus = fileStatusOptional.get();
-                updateStatus(fileStatus, Status.PENDING.name());
-                sendFileStatusesToWebSocket();
+        queue.add(Pair.of(fileStatusId, parameter));
+        executorService.submit(this::pickupNextFromQueue);
+    }
 
-                Workbook workbook = buildWorkbook(poll.getSecond());
+    private void pickupNextFromQueue() {
+        log.info("Queue size: {}.", queue.size());
+        Pair<Long, PriceCheckParameter> poll = queue.poll();
+        if (nonNull(poll)) {
+            log.info("Picking next job from queue with file name: {}", poll.getRight().getName());
+            fileStatusRepository.findById(poll.getLeft())
+                    .ifPresent(fileStatus -> processWithPriceChecking(poll.getRight(), fileStatus));
+        }
+    }
 
-                updateStatus(fileStatus, Status.COMPLETED.name());
-                Optional<File> fileOptional = fileRepository.findById(fileStatus.getFileId());
-                if (fileOptional.isPresent()) {
-                    File file = fileOptional.get();
-                    byte[] bytes = getBytesFromWorkbook(workbook);
+    private void processWithPriceChecking(PriceCheckParameter parameter, FileStatus fileStatus) {
+        updateStatus(fileStatus, PENDING);
+        sendFileStatusesToWebSocket();
+
+        fileRepository.findById(fileStatus.getFileId())
+                .ifPresentOrElse(file -> {
+                    byte[] bytes = WorkbookUtils.getBytes(buildWorkbook(parameter));
                     file.setFile(bytes);
                     fileRepository.save(file);
+                    updateStatus(fileStatus, COMPLETED);
                     sendFileStatusesToWebSocket();
-                }
-            }
-        });
+                }, () -> updateStatus(fileStatus, ERROR));
     }
 
     private void sendFileStatusesToWebSocket() {
@@ -86,19 +87,10 @@ public class QueueService {
         simpMessagingTemplate.convertAndSend("/statuses", fileStatuses);
     }
 
-    private void updateStatus(FileStatus fileStatus, String status) {
-        log.info("For file status with id: [{}] updating status to [{}]", fileStatus.getId(), status);
-        fileStatus.setStatus(status);
+    private void updateStatus(FileStatus fileStatus, Status status) {
+        log.info("For file status with id: {} updating status to {}", fileStatus.getId(), status.name());
+        fileStatus.setStatus(status.name());
         fileStatusRepository.save(fileStatus);
-    }
-
-    private byte[] getBytesFromWorkbook(Workbook workbook) {
-        try {
-            return WorkbookUtils.getBytes(workbook);
-        } catch (IOException e) {
-            log.error("Can't read bytes from workbook!");
-            throw new RuntimeException("Can't read bytes from workbook!", e);
-        }
     }
 
     private Workbook buildWorkbook(PriceCheckParameter parameter) {
@@ -116,7 +108,7 @@ public class QueueService {
         fileRepository.save(file);
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(parameter.getName());
-        fileStatus.setStatus(Status.ACCEPTED.name());
+        fileStatus.setStatus(ACCEPTED.name());
         fileStatus.setFileId(file.getId());
         fileStatus.setAcceptedTime(LocalDateTime.now());
         fileStatusRepository.save(fileStatus);
