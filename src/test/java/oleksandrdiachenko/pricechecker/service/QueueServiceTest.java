@@ -57,7 +57,7 @@ public class QueueServiceTest {
         FileStatus fileStatus = createFileStatus(file.getId());
         PriceCheckParameter parameter = new PriceCheckParameter(FILE_NAME, URL_COLUMN, INSERT_COLUMN, BYTES);
 
-        queueService.start(parameter);
+        queueService.addToQueue(parameter);
 
         verify(queueService).createNewRecord(parameter);
 //        verify(fileStatusRepository).save(fileStatus);

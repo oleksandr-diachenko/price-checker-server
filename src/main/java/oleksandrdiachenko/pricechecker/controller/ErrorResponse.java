@@ -10,7 +10,7 @@ import java.util.List;
 @JsonInclude(Include.NON_NULL)
 public class ErrorResponse<T> {
 
-    private List<T> errors;
+    private final List<T> errors;
 
     public ErrorResponse(List<T> errors) {
         this.errors = errors;

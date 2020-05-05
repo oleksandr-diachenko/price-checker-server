@@ -21,8 +21,7 @@ public class UrlUtils {
     }
 
     public static boolean isValid(String url) {
-        String[] schemes = {"http","https"};
-        UrlValidator urlValidator = new UrlValidator(schemes);
+        UrlValidator urlValidator = new UrlValidator(new String[]{"http","https"});
         return urlValidator.isValid(url);
     }
 }

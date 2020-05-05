@@ -11,10 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static java.util.stream.Collectors.toList;
 import static org.apache.logging.log4j.util.Strings.EMPTY;
@@ -24,7 +21,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class PriceCheckerServiceTest {
 
-    private static final String URL = "www.site.com/product";
+    private static final String URL = "http://www.site.com/product";
     private static final byte[] BYTES = {1, 2, 3};
     private static final String PRICE = "100";
 
@@ -32,7 +29,7 @@ public class PriceCheckerServiceTest {
     private PriceCheckService priceCheckService;
 
     @Spy
-    private ArrayList<Magazine> magazines;
+    private HashSet<Magazine> magazines;
     @Mock
     private Excel excel;
     @Mock
@@ -51,7 +48,7 @@ public class PriceCheckerServiceTest {
 
         priceCheckService.getWorkbook(new byte[0], 0, 1);
 
-        verify(excel).write(Collections.emptyList());
+        verify(excel).buildWorkBook(Collections.emptyList());
     }
 
     @Test
@@ -61,7 +58,7 @@ public class PriceCheckerServiceTest {
 
         priceCheckService.getWorkbook(BYTES, 1, 2);
 
-        verify(excel).write(table);
+        verify(excel).buildWorkBook(table);
     }
 
     @Test
@@ -72,7 +69,7 @@ public class PriceCheckerServiceTest {
 
         priceCheckService.getWorkbook(BYTES, 0, 1);
 
-        verify(excel).write(table);
+        verify(excel).buildWorkBook(table);
     }
 
     @Test
@@ -86,7 +83,7 @@ public class PriceCheckerServiceTest {
         priceCheckService.getWorkbook(BYTES, 0, 1);
 
         List<List<String>> priceTable = createTable(createList(URL, PRICE));
-        verify(excel).write(priceTable);
+        verify(excel).buildWorkBook(priceTable);
     }
 
     @Test
@@ -100,7 +97,7 @@ public class PriceCheckerServiceTest {
         priceCheckService.getWorkbook(BYTES, 0, 1);
 
         List<List<String>> priceTable = createTable(createList(URL, PRICE, "data"));
-        verify(excel).write(priceTable);
+        verify(excel).buildWorkBook(priceTable);
     }
 
     @Test
@@ -114,7 +111,7 @@ public class PriceCheckerServiceTest {
         priceCheckService.getWorkbook(BYTES, 0, 2);
 
         List<List<String>> priceTable = createTable(createList(URL, EMPTY, PRICE));
-        verify(excel).write(priceTable);
+        verify(excel).buildWorkBook(priceTable);
     }
 
     @Test
@@ -124,7 +121,7 @@ public class PriceCheckerServiceTest {
 
         priceCheckService.getWorkbook(BYTES, -1, 1);
 
-        verify(excel).write(table);
+        verify(excel).buildWorkBook(table);
     }
 
     @Test
@@ -134,7 +131,7 @@ public class PriceCheckerServiceTest {
 
         priceCheckService.getWorkbook(BYTES, 0, -1);
 
-        verify(excel).write(table);
+        verify(excel).buildWorkBook(table);
     }
 
     private List<String> createList(String... strings) {
