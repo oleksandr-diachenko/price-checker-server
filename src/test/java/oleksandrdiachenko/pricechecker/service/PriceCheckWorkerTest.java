@@ -100,7 +100,7 @@ public class PriceCheckWorkerTest {
             priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
         } catch (MessagingException e) {
             verify(fileStatusService).save(captor.capture());
-            assertThat(captor.getValue()).isEqualTo(createFileStatus(PENDING));
+            assertThat(captor.getValue()).isEqualTo(createFileStatus(IN_PROGRESS));
         }
     }
 
