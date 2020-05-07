@@ -42,7 +42,7 @@ public class PriceCheckWorker {
     }
 
     private void processWithPriceChecking(PriceCheckParameter parameter, FileStatus fileStatus) {
-        updateStatus(fileStatus, PENDING);
+        updateStatus(fileStatus, IN_PROGRESS);
         webSocketService.sendFileStatusesToWebSocket();
 
         fileService.findById(fileStatus.getFileId())
