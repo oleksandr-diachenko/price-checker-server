@@ -1,0 +1,6 @@
+{
+  "errors": [
+    "{{firstColumnName}} column should be greater than 0",
+    "{{secondColumnName}} column should be greater than 0"
+  ]
+}
