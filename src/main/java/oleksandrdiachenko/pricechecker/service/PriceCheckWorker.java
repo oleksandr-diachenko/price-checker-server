@@ -21,17 +21,15 @@ public class PriceCheckWorker {
     private final FileService fileService;
     private final FileStatusService fileStatusService;
     private final PriceCheckService priceCheckService;
-    private final WebSocketService webSocketService;
     private final WorkbookHelper workbookHelper;
 
     @Autowired
     public PriceCheckWorker(FileService fileService, FileStatusService fileStatusService,
-                            PriceCheckService priceCheckService, WebSocketService webSocketService,
+                            PriceCheckService priceCheckService,
                             WorkbookHelper workbookHelper) {
         this.fileService = fileService;
         this.fileStatusService = fileStatusService;
         this.priceCheckService = priceCheckService;
-        this.webSocketService = webSocketService;
         this.workbookHelper = workbookHelper;
     }
 
@@ -43,7 +41,6 @@ public class PriceCheckWorker {
 
     private void processWithPriceChecking(PriceCheckParameter parameter, FileStatus fileStatus) {
         updateStatus(fileStatus, IN_PROGRESS);
-        webSocketService.sendFileStatusesToWebSocket();
 
         fileService.findById(fileStatus.getFileId())
                 .ifPresentOrElse(file -> {
@@ -51,7 +48,6 @@ public class PriceCheckWorker {
                     file.setFile(bytes);
                     fileService.save(file);
                     updateStatus(fileStatus, COMPLETED);
-                    webSocketService.sendFileStatusesToWebSocket();
                 }, () -> updateStatus(fileStatus, ERROR));
     }
 

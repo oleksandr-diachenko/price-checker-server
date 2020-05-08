@@ -26,24 +26,21 @@ public class QueueService {
     private final FileService fileService;
     private final FileStatusService fileStatusService;
     private final PriceCheckWorker priceCheckWorker;
-    private final WebSocketService webSocketService;
     private final ExecutorService executorService;
 
     private final Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
 
     @Autowired
     public QueueService(FileService fileService, FileStatusService fileStatusService,
-                        PriceCheckWorker priceCheckWorker, WebSocketService webSocketService, ExecutorService executorService) {
+                        PriceCheckWorker priceCheckWorker, ExecutorService executorService) {
         this.fileService = fileService;
         this.fileStatusService = fileStatusService;
         this.priceCheckWorker = priceCheckWorker;
-        this.webSocketService = webSocketService;
         this.executorService = executorService;
     }
 
     public void addToQueue(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
-        webSocketService.sendFileStatusesToWebSocket();
         queue.add(Pair.of(fileStatusId, parameter));
         executorService.submit(() -> {
             log.info("Queue size: {}.", queue.size());

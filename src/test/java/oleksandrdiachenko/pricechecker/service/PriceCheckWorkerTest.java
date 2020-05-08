@@ -15,8 +15,8 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.messaging.MessagingException;
 
+import javax.persistence.EntityNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -45,8 +45,6 @@ public class PriceCheckWorkerTest {
     @Mock
     private PriceCheckService priceCheckService;
     @Mock
-    private WebSocketService webSocketService;
-    @Mock
     private WorkbookHelper workbookHelper;
     @Mock
     private Workbook workbook;
@@ -65,7 +63,6 @@ public class PriceCheckWorkerTest {
         priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
 
         verify(fileStatusService, never()).save(any(FileStatus.class));
-        verify(webSocketService, never()).sendFileStatusesToWebSocket();
     }
 
     @Test
@@ -77,7 +74,6 @@ public class PriceCheckWorkerTest {
         priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
 
         verify(fileStatusService, times(2)).save(captor.capture());
-        verify(webSocketService, times(2)).sendFileStatusesToWebSocket();
         assertThat(captor.getValue()).isEqualTo(createFileStatus(COMPLETED));
     }
 
@@ -88,17 +84,16 @@ public class PriceCheckWorkerTest {
         priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
 
         verify(fileStatusService, times(2)).save(captor.capture());
-        verify(webSocketService).sendFileStatusesToWebSocket();
         assertThat(captor.getValue()).isEqualTo(createFileStatus(ERROR));
     }
 
     @Test
     void shouldUpdateToPendingWhenWebSocketThrowException() {
-        doThrow(MessagingException.class).when(webSocketService).sendFileStatusesToWebSocket();
+        doThrow(EntityNotFoundException.class).when(fileService).findById(anyLong());
 
         try {
             priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
-        } catch (MessagingException e) {
+        } catch (EntityNotFoundException e) {
             verify(fileStatusService).save(captor.capture());
             assertThat(captor.getValue()).isEqualTo(createFileStatus(IN_PROGRESS));
         }
