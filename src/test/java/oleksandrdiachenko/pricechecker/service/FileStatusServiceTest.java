@@ -50,4 +50,11 @@ public class FileStatusServiceTest {
 
         verify(fileStatusRepository).save(file);
     }
+
+    @Test
+    void shouldCallDeleteAllWhenDeleteAllExecuted() {
+        fileStatusService.deleteAll();
+
+        verify(fileStatusRepository).deleteAll();
+    }
 }

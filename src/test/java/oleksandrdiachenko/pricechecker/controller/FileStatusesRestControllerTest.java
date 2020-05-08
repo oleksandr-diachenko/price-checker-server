@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.Collections;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -50,5 +51,11 @@ public class FileStatusesRestControllerTest {
         mvc.perform(get(FILESTATUSES))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[]"));
+    }
+
+    @Test
+    void shouldReturnOkWhenDeleteAllFilesSuccess() throws Exception {
+        mvc.perform(delete(FILESTATUSES))
+                .andExpect(status().isOk());
     }
 }

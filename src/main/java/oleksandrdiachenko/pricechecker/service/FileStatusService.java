@@ -37,4 +37,9 @@ public class FileStatusService {
                 () -> log.info("FileStatus for id:{} not found", id));
         return fileStatusOptional;
     }
+
+    public void deleteAll() {
+        fileStatusRepository.deleteAll();
+        log.info("All file statuses deleted");
+    }
 }
