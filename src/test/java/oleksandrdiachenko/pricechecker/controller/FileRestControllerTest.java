@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.Optional;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -52,5 +53,11 @@ public class FileRestControllerTest {
         mvc.perform(get(FILE_BY_ID + fileId))
                 .andExpect(status().isNotFound())
                 .andExpect(content().json("{\"errors\":[\"File with id: -1 not found\"]}"));
+    }
+
+    @Test
+    void shouldReturnOkWhenDeleteAllFilesSuccess() throws Exception {
+        mvc.perform(delete(FILE_BY_ID))
+                .andExpect(status().isOk());
     }
 }
