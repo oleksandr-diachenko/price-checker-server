@@ -1,7 +1,11 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import com.google.common.collect.ImmutableMap;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.service.FileService;
+import oleksandrdiachenko.pricechecker.util.FileReader;
+import oleksandrdiachenko.pricechecker.util.template.JsonTemplateResolver;
+import oleksandrdiachenko.pricechecker.util.template.TemplateResolver;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -11,6 +15,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Map;
 import java.util.Optional;
 
 import static org.mockito.Mockito.when;
@@ -23,8 +28,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(FileRestController.class)
 public class FileRestControllerTest {
 
-    public static final String FILE_BY_ID = "/api/pricecheck/files/";
+    private static final String FILE_BY_ID = "/api/pricecheck/files/";
+    private static final String FILE_NOT_FOUND_JSON = "file/template/json/fileNotFound.json";
     private static final byte[] BYTES = new byte[]{1, 2, 3};
+    private final TemplateResolver resolver = new JsonTemplateResolver();
+    private final FileReader fileReader = new FileReader();
 
     @Autowired
     private MockMvc mvc;
@@ -50,9 +58,13 @@ public class FileRestControllerTest {
         long fileId = -1;
         when(fileService.findById(fileId)).thenReturn(Optional.empty());
 
+        Map<String, Object> parameters = ImmutableMap.<String, Object>builder()
+                .put("id", fileId)
+                .build();
+        String jsonContent = resolver.resolve(fileReader.read(FILE_NOT_FOUND_JSON), parameters);
         mvc.perform(get(FILE_BY_ID + fileId))
                 .andExpect(status().isNotFound())
-                .andExpect(content().json("{\"errors\":[\"File with id: -1 not found\"]}"));
+                .andExpect(content().json(jsonContent));
     }
 
     @Test
