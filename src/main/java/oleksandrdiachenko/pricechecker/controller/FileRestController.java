@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 import java.util.Optional;
 
+import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -35,5 +36,11 @@ class FileRestController {
         }
         return new ResponseEntity<>(
                 new ErrorResponse<>(Collections.singletonList("File with id: " + id + " not found")), NOT_FOUND);
+    }
+
+    @DeleteMapping()
+    public ResponseEntity<?> deleteAll() {
+        fileService.deleteAll();
+        return ResponseEntity.ok(EMPTY);
     }
 }

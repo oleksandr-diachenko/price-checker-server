@@ -52,4 +52,11 @@ public class FileServiceTest {
 
         verify(fileRepository).save(file);
     }
+
+    @Test
+    void shouldCallDeleteAllWhenDeleteAllExecuted() {
+        fileService.deleteAll();
+
+        verify(fileRepository).deleteAll();
+    }
 }

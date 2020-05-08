@@ -31,4 +31,9 @@ public class FileService {
                 () -> log.info("File for id:{} not found", id));
         return fileOptional;
     }
+
+    public void deleteAll() {
+        fileRepository.deleteAll();
+        log.info("All files deleted");
+    }
 }
