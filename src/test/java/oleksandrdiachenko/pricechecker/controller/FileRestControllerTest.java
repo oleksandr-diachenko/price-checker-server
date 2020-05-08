@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(FileRestController.class)
 public class FileRestControllerTest {
 
-    public static final String FILE_BY_ID = "/api/pricecheck/file/";
+    public static final String FILE_BY_ID = "/api/pricecheck/files/";
     private static final byte[] BYTES = new byte[]{1, 2, 3};
 
     @Autowired

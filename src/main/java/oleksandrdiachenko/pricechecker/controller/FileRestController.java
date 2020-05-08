@@ -16,7 +16,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @RestController
 @Validated
 @Slf4j
-@RequestMapping("/api/pricecheck/file")
+@RequestMapping("/api/pricecheck/files")
 class FileRestController {
 
     private final FileService fileService;
