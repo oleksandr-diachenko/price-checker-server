@@ -1,5 +1,6 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -7,7 +8,6 @@ import oleksandrdiachenko.pricechecker.model.entity.Status;
 import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -15,6 +15,7 @@ import java.io.IOException;
 import static oleksandrdiachenko.pricechecker.model.entity.Status.*;
 
 @Log4j2
+@RequiredArgsConstructor
 @Service
 public class PriceCheckWorker {
 
@@ -22,16 +23,6 @@ public class PriceCheckWorker {
     private final FileStatusService fileStatusService;
     private final PriceCheckService priceCheckService;
     private final WorkbookHelper workbookHelper;
-
-    @Autowired
-    public PriceCheckWorker(FileService fileService, FileStatusService fileStatusService,
-                            PriceCheckService priceCheckService,
-                            WorkbookHelper workbookHelper) {
-        this.fileService = fileService;
-        this.fileStatusService = fileStatusService;
-        this.priceCheckService = priceCheckService;
-        this.workbookHelper = workbookHelper;
-    }
 
     public void run(long fileStatusId, PriceCheckParameter parameter) {
         log.info("Start work for file with name: {}", parameter.getName());

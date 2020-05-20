@@ -1,23 +1,19 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.repository.FileRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Log4j2
+@RequiredArgsConstructor
 @Service
 public class FileService {
 
     private final FileRepository fileRepository;
-
-    @Autowired
-    public FileService(FileRepository fileRepository) {
-        this.fileRepository = fileRepository;
-    }
 
     public File save(File file) {
         File savedFile = fileRepository.save(file);

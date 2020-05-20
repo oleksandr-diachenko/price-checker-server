@@ -1,10 +1,10 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.service.QueueService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,15 +18,11 @@ import javax.validation.constraints.Min;
 @RestController
 @Validated
 @Slf4j
+@RequiredArgsConstructor
 @RequestMapping("/api/pricecheck")
 class PriceRestController {
 
     private final QueueService queueService;
-
-    @Autowired
-    public PriceRestController(QueueService queueService) {
-        this.queueService = queueService;
-    }
 
     @SneakyThrows
     @PostMapping()

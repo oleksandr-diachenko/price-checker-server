@@ -1,11 +1,11 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.magazine.Magazine;
 import oleksandrdiachenko.pricechecker.service.excel.Excel;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -19,18 +19,13 @@ import static org.apache.commons.lang3.StringUtils.EMPTY;
 /**
  * @author Alexander Diachenko.
  */
-@Service
 @Slf4j
+@RequiredArgsConstructor
+@Service
 public class PriceCheckService {
 
     private final Excel excel;
     private final Set<Magazine> magazines;
-
-    @Autowired
-    public PriceCheckService(Excel excel, Set<Magazine> magazines) {
-        this.excel = excel;
-        this.magazines = magazines;
-    }
 
     public Workbook getWorkbook(byte[] bytes, int urlIndex, int insertIndex)
             throws IOException, InvalidFormatException {
@@ -71,3 +66,4 @@ public class PriceCheckService {
         row.add(index, price);
     }
 }
+
