@@ -1,23 +1,19 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.repository.FileStatusRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Log4j2
+@RequiredArgsConstructor
 @Service
 public class FileStatusService {
 
     private final FileStatusRepository fileStatusRepository;
-
-    @Autowired
-    public FileStatusService(FileStatusRepository fileStatusRepository) {
-        this.fileStatusRepository = fileStatusRepository;
-    }
 
     public Iterable<FileStatus> findAll() {
         Iterable<FileStatus> fileStatuses = fileStatusRepository.findAll();

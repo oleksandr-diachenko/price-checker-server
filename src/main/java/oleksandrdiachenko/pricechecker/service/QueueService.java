@@ -1,11 +1,11 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import org.apache.commons.lang3.tuple.Pair;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -19,8 +19,9 @@ import static oleksandrdiachenko.pricechecker.model.entity.Status.ACCEPTED;
 /**
  * @author Alexander Diachenko
  */
-@Service
 @Slf4j
+@RequiredArgsConstructor
+@Service
 public class QueueService {
 
     private final FileService fileService;
@@ -29,15 +30,6 @@ public class QueueService {
     private final ExecutorService executorService;
 
     private final Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
-
-    @Autowired
-    public QueueService(FileService fileService, FileStatusService fileStatusService,
-                        PriceCheckWorker priceCheckWorker, ExecutorService executorService) {
-        this.fileService = fileService;
-        this.fileStatusService = fileStatusService;
-        this.priceCheckWorker = priceCheckWorker;
-        this.executorService = executorService;
-    }
 
     public void addToQueue(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);

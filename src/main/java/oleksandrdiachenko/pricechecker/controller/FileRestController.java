@@ -1,9 +1,9 @@
 package oleksandrdiachenko.pricechecker.controller;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.service.FileService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -17,15 +17,11 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @RestController
 @Validated
 @Slf4j
+@RequiredArgsConstructor
 @RequestMapping("/api/pricecheck/files")
 class FileRestController {
 
     private final FileService fileService;
-
-    @Autowired
-    public FileRestController(FileService fileService) {
-        this.fileService = fileService;
-    }
 
     @GetMapping("/{id}")
     public @ResponseBody
