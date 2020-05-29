@@ -3,6 +3,7 @@ package oleksandrdiachenko.pricechecker.controller;
 import com.google.common.collect.ImmutableMap;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
+import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
 import oleksandrdiachenko.pricechecker.util.FileReader;
 import oleksandrdiachenko.pricechecker.util.template.JsonTemplateResolver;
@@ -48,7 +49,7 @@ public class FileStatusesRestControllerTest {
         LocalDateTime acceptedTime = LocalDateTime.of(2020, 1, 6, 5, 18, 20);
         String status = Status.COMPLETED.name();
         when(fileStatusService.findAll()).thenReturn(Collections.singletonList(
-                new FileStatus(id, filename, status, fileId, acceptedTime)));
+                new FileStatus(id, filename, status, fileId, acceptedTime, new User())));
 
         Map<String, Object> parameters = ImmutableMap.<String, Object>builder()
                 .put("id", id)
