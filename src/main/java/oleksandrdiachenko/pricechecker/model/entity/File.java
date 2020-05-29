@@ -16,4 +16,7 @@ public class File {
     private long id;
     @Column(length = 1000000)
     private byte[] file;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 }

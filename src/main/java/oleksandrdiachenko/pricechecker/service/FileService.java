@@ -24,7 +24,7 @@ public class FileService {
     public Optional<File> findById(long id) {
         Optional<File> fileOptional = fileRepository.findById(id);
         fileOptional.ifPresentOrElse(file -> log.info("Found file: {}", file),
-                () -> log.info("File for id:{} not found", id));
+                () -> log.info("File with id:{} not found", id));
         return fileOptional;
     }
 

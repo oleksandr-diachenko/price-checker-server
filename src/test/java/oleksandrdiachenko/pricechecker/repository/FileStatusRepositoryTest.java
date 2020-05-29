@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.repository;
 
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
+import oleksandrdiachenko.pricechecker.model.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -40,11 +41,13 @@ public class FileStatusRepositoryTest {
     }
 
     private FileStatus createFileStatus(String name, Status status, long fileId, LocalDateTime localDateTime) {
+        User user = entityManager.persistAndFlush(UserData.create());
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(name);
         fileStatus.setStatus(status.name());
         fileStatus.setFileId(fileId);
         fileStatus.setAcceptedTime(localDateTime);
+        fileStatus.setUser(user);
         return fileStatus;
     }
 }

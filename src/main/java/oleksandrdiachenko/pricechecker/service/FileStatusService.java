@@ -30,7 +30,7 @@ public class FileStatusService {
     public Optional<FileStatus> findById(long id) {
         Optional<FileStatus> fileStatusOptional = fileStatusRepository.findById(id);
         fileStatusOptional.ifPresentOrElse(fileStatus -> log.info("Found fileStatus: {}", fileStatus),
-                () -> log.info("FileStatus for id:{} not found", id));
+                () -> log.info("FileStatus with id:{} not found", id));
         return fileStatusOptional;
     }
 

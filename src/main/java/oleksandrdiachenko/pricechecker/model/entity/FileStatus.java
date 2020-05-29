@@ -24,4 +24,7 @@ public class FileStatus {
     private String status;
     private long fileId;
     private LocalDateTime acceptedTime;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 }
