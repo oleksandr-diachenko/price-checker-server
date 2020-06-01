@@ -1,6 +1,6 @@
 {
   "id": "{{id}}",
-  "nickname": "{{nickname}}",
+  "username": "{{username}}",
   "password": "{{password}}",
   "email": "{{email}}",
   "phone": "{{phone}}"

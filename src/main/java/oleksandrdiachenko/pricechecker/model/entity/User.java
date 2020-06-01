@@ -7,6 +7,9 @@ import oleksandrdiachenko.pricechecker.annotation.PhoneNumber;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "USR")
@@ -17,12 +20,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @NotBlank(message = "Nickname is mandatory")
-    private String nickname;
+    @NotBlank(message = "Username is mandatory")
+    @Size(min = 5, max = 20)
+    private String username;
     @NotBlank(message = "Password is mandatory")
+    @Size(min = 5, max = 120)
     private String password;
     @Email(message = "Email should be valid")
+    @Size(max = 50)
     private String email;
-    @PhoneNumber(message = "Phone number should be in format +222 (22) 222-22-22 or +22 (222) 222-22-22")
-    private String phone;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 }

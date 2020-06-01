@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "pricecheck.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Secret key."
+    },
+    {
+      "name": "pricecheck.app.jwtExpirationMs",
+      "type": "java.lang.String",
+      "description": "Secret key expire in milliseconds."
+    }
+  ]
+}

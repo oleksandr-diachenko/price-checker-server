@@ -25,21 +25,21 @@ public class UserServiceTest {
 
     @Test
     void shouldReturnUserWhenRepositoryReturnUser() {
-        long id = 1;
+        String username = "POSITIV";
         User user = new User();
-        when(userRepository.findById(id)).thenReturn(Optional.of(user));
+        when(userRepository.findByUsername(username)).thenReturn(Optional.of(user));
 
-        Optional<User> userOptional = userService.findById(id);
+        Optional<User> userOptional = userService.findByUsername(username);
 
         assertThat(userOptional).containsSame(user);
     }
 
     @Test
     void shouldReturnEmptyOptionalWhenRepositoryReturnEmptyOptional() {
-        long id = 1;
-        when(userRepository.findById(id)).thenReturn(Optional.empty());
+        String username = "POSITIV";
+        when(userRepository.findByUsername(username)).thenReturn(Optional.empty());
 
-        Optional<User> userOptional = userService.findById(id);
+        Optional<User> userOptional = userService.findByUsername(username);
 
         assertThat(userOptional).isEmpty();
     }
