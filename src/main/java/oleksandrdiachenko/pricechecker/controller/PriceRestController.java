@@ -30,8 +30,10 @@ class PriceRestController {
     @PostMapping()
     public ResponseEntity<?> acceptFile(@RequestParam("file") MultipartFile file,
                                         @RequestParam("urlIndex") @Min(value = 1, message = "Url column should be greater than 0") int urlIndex,
-                                        @RequestParam("insertIndex") @Min(value = 1, message = "Insert column should be greater than 0") int insertIndex) {
-        PriceCheckParameter parameter = new PriceCheckParameter(file.getOriginalFilename(), urlIndex - 1, insertIndex - 1, file.getBytes());
+                                        @RequestParam("insertIndex") @Min(value = 1, message = "Insert column should be greater than 0") int insertIndex,
+                                        @RequestParam("userId") long userId) {
+        PriceCheckParameter parameter = new PriceCheckParameter(file.getOriginalFilename(), urlIndex - 1,
+                insertIndex - 1, file.getBytes(), userId);
         log.info("Added file {}", parameter);
         queueService.addToQueue(parameter);
         return ResponseEntity.accepted().build();

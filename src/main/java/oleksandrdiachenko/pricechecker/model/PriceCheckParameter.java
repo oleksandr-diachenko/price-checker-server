@@ -13,4 +13,5 @@ public class PriceCheckParameter {
     private int insertColumn;
     @ToString.Exclude
     byte[] bytes;
+    long userId;
 }
