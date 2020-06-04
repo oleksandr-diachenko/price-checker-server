@@ -22,7 +22,10 @@ public class UserService {
     }
 
     public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        Optional<User> userOptional = userRepository.findByUsername(username);
+        userOptional.ifPresentOrElse(user -> log.info("Found user: {}", user),
+                () -> log.info("User with username:{} not found", username));
+        return userOptional;
     }
 
     public boolean existsByUsername(String username) {
@@ -31,5 +34,12 @@ public class UserService {
 
     public boolean existsByEmail(String email) {
         return userRepository.existsByEmail(email);
+    }
+
+    public Optional<User> findById(long id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        userOptional.ifPresentOrElse(user -> log.info("Found user: {}", user),
+                () -> log.info("User with id:{} not found", id));
+        return userOptional;
     }
 }

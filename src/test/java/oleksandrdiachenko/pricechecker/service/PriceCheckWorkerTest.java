@@ -33,7 +33,7 @@ public class PriceCheckWorkerTest {
     private static final long FILE_STATUS_ID = 1;
     private static final long FILE_ID = 2;
     private static final LocalDateTime LOCAL_DATE_TIME = LocalDateTime.of(2020, 5, 5, 5, 26, 12);
-    private static final PriceCheckParameter PARAMETER = new PriceCheckParameter(FILE_NAME, 1, 2, BYTES);
+    private static final PriceCheckParameter PARAMETER = new PriceCheckParameter(FILE_NAME, 1, 2, BYTES, 1);
 
     @InjectMocks
     private PriceCheckWorker priceCheckWorker;

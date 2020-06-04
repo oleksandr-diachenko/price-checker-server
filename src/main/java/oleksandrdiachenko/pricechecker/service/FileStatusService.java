@@ -3,6 +3,7 @@ package oleksandrdiachenko.pricechecker.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
+import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.repository.FileStatusRepository;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +38,11 @@ public class FileStatusService {
     public void deleteAll() {
         fileStatusRepository.deleteAll();
         log.info("All file statuses deleted");
+    }
+
+    public Iterable<FileStatus> findByUserId(User user) {
+        Iterable<FileStatus> fileStatuses = fileStatusRepository.findByUser(user);
+        log.info("Retrieved for user with id {} fileStatuses {}", user.getId(), fileStatuses);
+        return fileStatuses;
     }
 }
