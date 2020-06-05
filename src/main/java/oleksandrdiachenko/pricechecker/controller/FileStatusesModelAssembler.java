@@ -18,12 +18,9 @@ public class FileStatusesModelAssembler implements RepresentationModelAssembler<
 
     @Override
     public EntityModel<FileStatus> toModel(FileStatus fileStatus) {
-        EntityModel<FileStatus> model = new EntityModel<>(fileStatus,
+        return new EntityModel<>(fileStatus,
                 linkTo(methodOn(FileStatusesRestController.class).getFileStatusById(fileStatus.getId())).withSelfRel(),
                 linkTo(methodOn(UserRestController.class).getUserById(fileStatus.getUser().getId())).withRel("user"));
-        fileStatus.getUser().getRoles().forEach(role ->
-                model.add(linkTo(methodOn(RoleRestController.class).getRoleById(role.getId())).withRel("role")));
-        return model;
     }
 
     @Override
