@@ -1,5 +1,6 @@
 package oleksandrdiachenko.pricechecker.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -21,5 +22,6 @@ public class File {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     @ToString.Exclude
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private User user;
 }

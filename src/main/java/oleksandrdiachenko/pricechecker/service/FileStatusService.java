@@ -5,8 +5,10 @@ import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.repository.FileStatusRepository;
+import org.apache.commons.collections4.IterableUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Log4j2
@@ -16,8 +18,8 @@ public class FileStatusService {
 
     private final FileStatusRepository fileStatusRepository;
 
-    public Iterable<FileStatus> findAll() {
-        Iterable<FileStatus> fileStatuses = fileStatusRepository.findAll();
+    public List<FileStatus> findAll() {
+        List<FileStatus> fileStatuses = IterableUtils.toList(fileStatusRepository.findAll());
         log.info("Retrieved fileStatuses {}", fileStatuses);
         return fileStatuses;
     }
@@ -40,8 +42,8 @@ public class FileStatusService {
         log.info("All file statuses deleted");
     }
 
-    public Iterable<FileStatus> findByUserId(User user) {
-        Iterable<FileStatus> fileStatuses = fileStatusRepository.findByUser(user);
+    public List<FileStatus> findByUserId(User user) {
+        List<FileStatus> fileStatuses = IterableUtils.toList(fileStatusRepository.findByUser(user));
         log.info("Retrieved for user with id {} fileStatuses {}", user.getId(), fileStatuses);
         return fileStatuses;
     }
