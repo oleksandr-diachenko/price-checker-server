@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import oleksandrdiachenko.pricechecker.controller.exception.EntityNotFoundException;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.service.FileService;
 import org.springframework.http.ResponseEntity;

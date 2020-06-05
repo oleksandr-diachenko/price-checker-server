@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.controller;
+package oleksandrdiachenko.pricechecker.controller.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

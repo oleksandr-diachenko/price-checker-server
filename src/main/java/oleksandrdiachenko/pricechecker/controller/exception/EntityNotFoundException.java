@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.controller;
+package oleksandrdiachenko.pricechecker.controller.exception;
 
 import static java.lang.String.format;
 

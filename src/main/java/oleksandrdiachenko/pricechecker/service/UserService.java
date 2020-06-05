@@ -4,8 +4,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.repository.UserRepository;
+import org.apache.commons.collections4.IterableUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -41,5 +43,11 @@ public class UserService {
         userOptional.ifPresentOrElse(user -> log.info("Found user: {}", user),
                 () -> log.info("User with id:{} not found", id));
         return userOptional;
+    }
+
+    public List<User> findAll() {
+        List<User> users = IterableUtils.toList(userRepository.findAll());
+        log.info("Retrieved users {}", users);
+        return users;
     }
 }

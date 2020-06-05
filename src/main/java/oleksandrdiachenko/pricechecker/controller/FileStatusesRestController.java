@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import oleksandrdiachenko.pricechecker.controller.exception.EntityNotFoundException;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.service.FileStatusService;
@@ -32,7 +33,7 @@ class FileStatusesRestController {
     private final FileStatusesModelAssembler assembler;
 
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-    @GetMapping("/user/{userId}")
+    @GetMapping("/users/{userId}")
     public CollectionModel<EntityModel<FileStatus>> getFileStatusesByUserId(@PathVariable long userId) {
         User user = userService.findById(userId)
                 .orElseThrow(() -> new EntityNotFoundException("file status", userId));

@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.controller;
+package oleksandrdiachenko.pricechecker.controller.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;

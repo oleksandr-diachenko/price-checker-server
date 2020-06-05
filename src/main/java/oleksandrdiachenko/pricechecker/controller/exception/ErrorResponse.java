@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.controller;
+package oleksandrdiachenko.pricechecker.controller.exception;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

@@ -18,16 +18,18 @@ public class FileStatusesModelAssembler implements RepresentationModelAssembler<
 
     @Override
     public EntityModel<FileStatus> toModel(FileStatus fileStatus) {
-        return new EntityModel<>(fileStatus,
-                linkTo(methodOn(FileStatusesRestController.class).getFileStatusById(fileStatus.getId())).withSelfRel());
+        EntityModel<FileStatus> model = new EntityModel<>(fileStatus,
+                linkTo(methodOn(FileStatusesRestController.class).getFileStatusById(fileStatus.getId())).withSelfRel(),
+                linkTo(methodOn(UserRestController.class).getUserById(fileStatus.getUser().getId())).withRel("user"));
+        fileStatus.getUser().getRoles().forEach(role ->
+                model.add(linkTo(methodOn(RoleRestController.class).getRoleById(role.getId())).withRel("role")));
+        return model;
     }
 
     @Override
     public CollectionModel<EntityModel<FileStatus>> toCollectionModel(Iterable<? extends FileStatus> fileStatuses) {
         List<EntityModel<FileStatus>> models = StreamSupport.stream(fileStatuses.spliterator(), false)
-                .map(fileStatus -> new EntityModel<FileStatus>(fileStatus,
-                        linkTo(methodOn(FileStatusesRestController.class).getFileStatusById(fileStatus.getId())).withSelfRel(),
-                        linkTo(methodOn(FileStatusesRestController.class).getAllFileStatuses()).withRel("filestatuses")))
+                .map(this::toModel)
                 .collect(Collectors.toList());
         return new CollectionModel<>(models,
                 linkTo(methodOn(FileStatusesRestController.class).getAllFileStatuses()).withSelfRel());
