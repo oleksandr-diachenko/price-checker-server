@@ -56,7 +56,7 @@ public class UserRestController {
         User user = userService.findById(userId)
                 .orElseThrow(() -> new EntityNotFoundException("file status", userId));
 
-        List<EntityModel<FileStatus>> employees = fileStatusService.findByUserId(user).stream()
+        List<EntityModel<FileStatus>> employees = fileStatusService.findByUser(user).stream()
                 .map(fileStatusesModelAssembler::toModel)
                 .collect(Collectors.toList());
 

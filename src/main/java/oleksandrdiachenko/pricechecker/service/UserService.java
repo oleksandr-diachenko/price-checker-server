@@ -2,6 +2,7 @@ package oleksandrdiachenko.pricechecker.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import oleksandrdiachenko.pricechecker.model.entity.Setting;
 import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.repository.UserRepository;
 import org.apache.commons.collections4.IterableUtils;
@@ -16,9 +17,16 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final SettingService settingService;
 
     public User save(User user) {
         User savedUser = userRepository.save(user);
+        Setting settingByUser = settingService.findByUser(savedUser);
+        if(settingByUser == null) {
+            Setting setting = new Setting();
+            setting.setUser(savedUser);
+            settingService.save(setting);
+        }
         log.info("User {} saved", savedUser);
         return savedUser;
     }

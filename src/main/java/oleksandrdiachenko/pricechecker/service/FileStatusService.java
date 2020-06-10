@@ -42,7 +42,7 @@ public class FileStatusService {
         log.info("All file statuses deleted");
     }
 
-    public List<FileStatus> findByUserId(User user) {
+    public List<FileStatus> findByUser(User user) {
         List<FileStatus> fileStatuses = IterableUtils.toList(fileStatusRepository.findByUser(user));
         log.info("Retrieved for user with id {} fileStatuses {}", user.getId(), fileStatuses);
         return fileStatuses;
