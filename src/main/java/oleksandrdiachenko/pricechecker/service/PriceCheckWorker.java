@@ -3,14 +3,19 @@ package oleksandrdiachenko.pricechecker.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
+import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
+import oleksandrdiachenko.pricechecker.model.entity.User;
+import oleksandrdiachenko.pricechecker.service.notification.Notification;
 import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.util.Set;
 
 import static oleksandrdiachenko.pricechecker.model.entity.Status.*;
 
@@ -23,7 +28,9 @@ public class PriceCheckWorker {
     private final FileStatusService fileStatusService;
     private final PriceCheckService priceCheckService;
     private final WorkbookHelper workbookHelper;
+    private final Set<Notification<Status>> statusNotifications;
 
+    @Transactional
     public void run(long fileStatusId, PriceCheckParameter parameter) {
         log.info("Start work for file with name: {}", parameter.getName());
         fileStatusService.findById(fileStatusId)
@@ -46,6 +53,14 @@ public class PriceCheckWorker {
         log.info("For file status with id: {} updating status to {}", fileStatus.getId(), status.name());
         fileStatus.setStatus(status.name());
         fileStatusService.save(fileStatus);
+        fileService.findById(fileStatus.getFileId())
+                .ifPresentOrElse(file -> notifyUser(fileStatus.getUser(), status, file),
+                        () -> notifyUser(fileStatus.getUser(), status));
+
+    }
+
+    private void notifyUser(User user, Status status, File... files) {
+        statusNotifications.forEach(notification -> notification.notify(user, status, files));
     }
 
     private Workbook buildWorkbook(PriceCheckParameter parameter) {

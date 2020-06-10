@@ -47,4 +47,11 @@ public class FileStatusService {
         log.info("Retrieved for user with id {} fileStatuses {}", user.getId(), fileStatuses);
         return fileStatuses;
     }
+
+    public Optional<FileStatus> findByFileId(long fileId) {
+        Optional<FileStatus> fileStatusOptional = fileStatusRepository.findByFileId(fileId);
+        fileStatusOptional.ifPresentOrElse(fileStatus -> log.info("Found fileStatus: {}", fileStatus),
+                () -> log.info("FileStatus with file id:{} not found", fileId));
+        return fileStatusOptional;
+    }
 }
