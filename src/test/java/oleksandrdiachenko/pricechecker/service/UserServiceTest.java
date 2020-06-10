@@ -27,7 +27,7 @@ public class UserServiceTest {
     void shouldReturnUserWhenRepositoryReturnUser() {
         String username = "POSITIV";
         User user = new User();
-        when(userRepository.findByUsername(username)).thenReturn(Optional.of(user));
+        when(userRepository.findByUsernameIgnoreCase(username)).thenReturn(Optional.of(user));
 
         Optional<User> userOptional = userService.findByUsername(username);
 
@@ -37,7 +37,7 @@ public class UserServiceTest {
     @Test
     void shouldReturnEmptyOptionalWhenRepositoryReturnEmptyOptional() {
         String username = "POSITIV";
-        when(userRepository.findByUsername(username)).thenReturn(Optional.empty());
+        when(userRepository.findByUsernameIgnoreCase(username)).thenReturn(Optional.empty());
 
         Optional<User> userOptional = userService.findByUsername(username);
 

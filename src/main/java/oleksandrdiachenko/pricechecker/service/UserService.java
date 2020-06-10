@@ -24,7 +24,7 @@ public class UserService {
     }
 
     public Optional<User> findByUsername(String username) {
-        Optional<User> userOptional = userRepository.findByUsername(username);
+        Optional<User> userOptional = userRepository.findByUsernameIgnoreCase(username);
         userOptional.ifPresentOrElse(user -> log.info("Found user: {}", user),
                 () -> log.info("User with username:{} not found", username));
         return userOptional;
