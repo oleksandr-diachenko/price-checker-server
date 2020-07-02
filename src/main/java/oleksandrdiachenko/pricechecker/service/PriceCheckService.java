@@ -15,6 +15,7 @@ import java.util.Set;
 import static oleksandrdiachenko.pricechecker.util.UrlUtils.getDomainName;
 import static org.apache.commons.collections4.CollectionUtils.emptyIfNull;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
+import static org.apache.commons.lang3.StringUtils.trim;
 
 /**
  * @author Alexander Diachenko.
@@ -56,7 +57,7 @@ public class PriceCheckService {
         if (row.size() <= index) {
             return EMPTY;
         }
-        return row.get(index);
+        return trim(row.get(index));
     }
 
     private void insert(List<String> row, int index, String price) {
