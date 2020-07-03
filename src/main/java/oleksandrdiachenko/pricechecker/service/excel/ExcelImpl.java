@@ -84,9 +84,9 @@ public class ExcelImpl implements Excel {
     @Override
     public int getColumnCount(Sheet sheet) {
         int columnCount = 0;
-        for (int rowNumber = 0; rowNumber <= sheet.getLastRowNum(); rowNumber++) {
+        for (int rowNumber = 0; rowNumber < sheet.getLastRowNum(); rowNumber++) {
             Row row = sheet.getRow(rowNumber);
-            short lastCellNum = row.getLastCellNum(); //TODO при пустом файле паадет НПЕ
+            short lastCellNum = row.getLastCellNum();
             columnCount = Math.max(columnCount, lastCellNum);
         }
         return columnCount;
