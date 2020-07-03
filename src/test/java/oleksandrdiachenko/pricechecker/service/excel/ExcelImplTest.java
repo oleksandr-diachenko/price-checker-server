@@ -1,9 +1,13 @@
 package oleksandrdiachenko.pricechecker.service.excel;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,18 +16,19 @@ import java.util.List;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
 
 /**
  * @author Alexander Diachenko.
  */
+@ExtendWith(MockitoExtension.class)
 class ExcelImplTest {
 
-    private Excel excel;
+    @InjectMocks
+    private ExcelImpl excel;
 
-    @BeforeEach
-    void setUp() {
-        excel = new ExcelImpl();
-    }
+    @Mock
+    private Sheet sheet;
 
     @Test
     void shouldContainsOneRowWhenExcelXlsxContainsOneRow() throws IOException, InvalidFormatException {
@@ -129,6 +134,15 @@ class ExcelImplTest {
         Workbook workbook = excel.buildWorkBook(table);
 
         assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isEqualTo(265);
+    }
+
+    @Test
+    void shouldReturnZeroWhenColumnCountCalledWithEmptySheet() {
+        when(sheet.getLastRowNum()).thenReturn(0);
+
+        int columnCount = excel.getColumnCount(sheet);
+
+        assertThat(columnCount).isEqualTo(0);
     }
 
     private byte[] getBytes(String fileName) {
