@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.controller.exception.EntityNotFoundException;
 import oleksandrdiachenko.pricechecker.model.entity.File;
-import oleksandrdiachenko.pricechecker.service.FileService;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;

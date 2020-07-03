@@ -36,7 +36,7 @@ public class FileRepositoryTest {
     }
 
     private File createFile() {
-        User user = entityManager.persistAndFlush(UserData.create());
+        User user = entityManager.persistAndFlush(UserData.get());
         File file = new File();
         file.setFile(new byte[]{1, 2, 3});
         file.setUser(user);

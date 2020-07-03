@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.controller.exception.EntityNotFoundException;
 import oleksandrdiachenko.pricechecker.model.entity.Role;
-import oleksandrdiachenko.pricechecker.service.RoleService;
+import oleksandrdiachenko.pricechecker.service.dataservice.RoleService;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -4,33 +4,36 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.entity.*;
-import oleksandrdiachenko.pricechecker.service.FileStatusService;
-import oleksandrdiachenko.pricechecker.service.SettingService;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
+import oleksandrdiachenko.pricechecker.service.dataservice.SettingService;
+import oleksandrdiachenko.pricechecker.util.Reader;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import javax.mail.internet.MimeMessage;
+import java.io.IOException;
 
 @Log4j2
 @RequiredArgsConstructor
-public abstract class AbstractEmailStatusNotification implements Notification<Status> {
+public class EmailStatusNotification implements Notification<Status> {
 
     private final SettingService settingService;
     private final JavaMailSender javaMailSender;
     private final FileStatusService fileStatusService;
-    protected final String defaultEmail = "<h2>Hello.</h2><br>This email was auto generated.";
+    private final EmailStatusNotificationHelper notificationHelper;
+    private final Reader reader;
 
     @SneakyThrows
     @Override
     public void notify(User user, Status status, File... attachments) {
         Setting setting = settingService.findByUser(user);
-        if (status == getStatus() && setting.isNotifyByEmail()) {
+        if (status == notificationHelper.getStatus() && setting.isNotifyByEmail()) {
             MimeMessage message = javaMailSender.createMimeMessage();
 
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setTo(user.getEmail());
-            helper.setSubject(getEmailSubject());
+            helper.setSubject(notificationHelper.getEmailSubject());
             helper.setText(getHtmlEmailBody(), true);
 
             for (File file : attachments) {
@@ -38,6 +41,15 @@ public abstract class AbstractEmailStatusNotification implements Notification<St
             }
 
             javaMailSender.send(message);
+        }
+    }
+
+    private String getHtmlEmailBody() {
+        try {
+            return reader.read(notificationHelper.getHtmlEmailBodyTemplate());
+        } catch (IOException e) {
+            log.error("Can't read email template. Returning default email");
+            return "<h2>Hello.</h2><br>This email was auto generated.";
         }
     }
 
@@ -51,10 +63,4 @@ public abstract class AbstractEmailStatusNotification implements Notification<St
     private void addAttachment(MimeMessageHelper helper, File file, String fileName) {
         helper.addAttachment(fileName, new ByteArrayResource(file.getFile()));
     }
-
-    protected abstract Status getStatus();
-
-    protected abstract String getEmailSubject();
-
-    protected abstract String getHtmlEmailBody();
 }

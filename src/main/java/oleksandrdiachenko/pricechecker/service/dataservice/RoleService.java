@@ -1,4 +1,4 @@
-package oleksandrdiachenko.pricechecker.service;
+package oleksandrdiachenko.pricechecker.service.dataservice;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,11 +19,17 @@ public class RoleService {
     private final RoleRepository roleRepository;
 
     public Optional<Role> findByName(ERole role) {
-        return roleRepository.findByName(role);
+        Optional<Role> roleOptional = roleRepository.findByName(role);
+        roleOptional.ifPresentOrElse(r -> log.info("Found role: {}", r),
+                () -> log.info("Role with enum:{} not found", role));
+        return roleOptional;
     }
 
     public Optional<Role> findById(long id) {
-        return roleRepository.findById(id);
+        Optional<Role> roleOptional = roleRepository.findById(id);
+        roleOptional.ifPresentOrElse(role -> log.info("Found role: {}", role),
+                () -> log.info("Role with id:{} not found", id));
+        return roleOptional;
     }
 
     public List<Role> findAll() {

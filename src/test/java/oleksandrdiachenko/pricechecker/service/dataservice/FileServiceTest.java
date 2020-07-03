@@ -1,7 +1,8 @@
-package oleksandrdiachenko.pricechecker.service;
+package oleksandrdiachenko.pricechecker.service.dataservice;
 
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.repository.FileRepository;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

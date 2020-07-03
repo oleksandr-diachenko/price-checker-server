@@ -6,6 +6,9 @@ import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.User;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
+import oleksandrdiachenko.pricechecker.service.dataservice.UserService;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Service;
 

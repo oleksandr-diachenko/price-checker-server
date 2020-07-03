@@ -2,7 +2,7 @@ package oleksandrdiachenko.pricechecker.auth;
 
 import lombok.RequiredArgsConstructor;
 import oleksandrdiachenko.pricechecker.model.entity.User;
-import oleksandrdiachenko.pricechecker.service.UserService;
+import oleksandrdiachenko.pricechecker.service.dataservice.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

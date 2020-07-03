@@ -32,21 +32,21 @@ class ExcelImplTest {
 
     @Test
     void shouldContainsOneRowWhenExcelXlsxContainsOneRow() throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(getBytes("file/oneField.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/oneField.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SAG060003, AGENT PROVOCATEUR FATALE EDP 50 ml spray, 6, 3760264453741]]");
     }
 
     @Test
     void shouldContainsOneRowWhenExcelXlsContainsOneRow() throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(getBytes("file/oneField.xls"));
+        List<List<String>> table = excel.read(getBytes("file/xls/oneField.xls"));
 
         assertThat(table.toString()).isEqualTo("[[SAZ010009, AZZARO CHROME EDT TESTER 100 ml spray]]");
     }
 
     @Test
     void shouldContainsTwoRowsWhenExcelContainsTwoRows() throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(getBytes("file/twoField.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/twoField.xlsx"));
 
 
         assertThat(table.toString()).isEqualTo("[[SAB070001, ANNA SUI ROMANTICA EDT TESTER 75 ml spray, 10], " +
@@ -55,35 +55,35 @@ class ExcelImplTest {
 
     @Test
     void shouldContainsOneRowWithSpacesWhenExcelContainsOneRowWithSpace() throws IOException, InvalidFormatException {
-        List<List<String>> table = excel.read(getBytes("file/oneFieldWithSpace.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/oneFieldWithSpace.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SBA030010, , 34]]");
     }
 
     @Test
     void shouldContainsTwoRowsWhenExcelContainsTwoRowsFirstShorter() throws Exception {
-        List<List<String>> table = excel.read(getBytes("file/twoFieldDifferentSizeFirstShorter.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/twoFieldDifferentSizeFirstShorter.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SOT440001, 3760260453042], [SOT190003, 3760260451994, 50 ml, U]]");
     }
 
     @Test
     void shouldContainsTwoRowWhenExcelContainsTwoRowSecondShorter() throws Exception {
-        List<List<String>> table = excel.read(getBytes("file/twoFieldDifferentSizeSecondShorter.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/twoFieldDifferentSizeSecondShorter.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SOT190003, 3760260451994, 50 ml, U], [SOT440001, 3760260453042]]");
     }
 
     @Test
     void shouldContainsOneRowWithSpacesWhenExcelContainsOneRowWithSpaces() throws Exception {
-        List<List<String>> table = excel.read(getBytes("file/oneFieldSpacesAtBeginningAndAtMiddle.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/oneFieldSpacesAtBeginningAndAtMiddle.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[, , SOT440001, , , 3760260453042]]");
     }
 
     @Test
     void shouldContainsThreeRowsDifferentSizeWhenExcelContainsThreeRowsDifferentSize() throws Exception {
-        List<List<String>> table = excel.read(getBytes("file/threeFieldDifferentSize.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/threeFieldDifferentSize.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SOT190003, 3760260451994, 50 ml, U], [SOT440001, 3760260453042], " +
                 "[SOT470001, 3760260623042, 100 ml, M, EDP]]");
@@ -91,7 +91,7 @@ class ExcelImplTest {
 
     @Test
     void shouldContainsFiveRowsWhenExcelContainsFiveSheetsWithFiveRows() throws Exception {
-        List<List<String>> table = excel.read(getBytes("file/fiveSheets.xlsx"));
+        List<List<String>> table = excel.read(getBytes("file/xls/fiveSheets.xlsx"));
 
         assertThat(table.toString()).isEqualTo("[[SBA030010, , 34], [SOT190003, 3760260451994, 50 ml, U, ], " +
                 "[SOT440001, 3760260453042, , , ], [SOT470001, 3760260623042, 100 ml, M, EDP]]");

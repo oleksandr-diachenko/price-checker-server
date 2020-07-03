@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -18,19 +20,39 @@ public class UserRepositoryTest {
     private TestEntityManager entityManager;
 
     @Test
-    void shouldReturnEmptyListWhenTableIsEmpty() {
-        Iterable<User> users = userRepository.findAll();
+    void shouldReturnUserByNameIgnoreCaseWhenCaseIsDifferent() {
+        entityManager.persistAndFlush(UserData.get());
 
-        assertThat(users).isEmpty();
+        Optional<User> optionalUser = userRepository.findByUsernameIgnoreCase("positiv");
+
+        assertThat(optionalUser).isPresent();
     }
 
     @Test
-    void shouldReturnListWithTwoRecordsWhenTableHaveTwoRecords() {
-        entityManager.persistAndFlush(UserData.create());
-        entityManager.persistAndFlush(UserData.create());
+    void shouldReturnTrueExistByUsernameWhenDatabaseHaveOne() {
+        entityManager.persistAndFlush(UserData.get());
 
-        Iterable<User> users = userRepository.findAll();
+        assertThat(userRepository.existsByUsername("POSITIV")).isTrue();
+    }
 
-        assertThat(users).isNotEmpty().hasSize(2);
+    @Test
+    void shouldReturnFalseExistByUsernameWhenDatabaseDoesntHaveOne() {
+        entityManager.persistAndFlush(UserData.get());
+
+        assertThat(userRepository.existsByUsername("qwe")).isFalse();
+    }
+
+    @Test
+    void shouldReturnTrueExistByEmailWhenDatabaseHaveOne() {
+        entityManager.persistAndFlush(UserData.get());
+
+        assertThat(userRepository.existsByEmail("mail@mail.com")).isTrue();
+    }
+
+    @Test
+    void shouldReturnFalseExistByEmailWhenDatabaseDoesntHaveOne() {
+        entityManager.persistAndFlush(UserData.get());
+
+        assertThat(userRepository.existsByUsername("qwe@mail.com")).isFalse();
     }
 }
