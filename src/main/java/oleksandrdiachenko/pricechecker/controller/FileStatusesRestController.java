@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import oleksandrdiachenko.pricechecker.controller.exception.EntityNotFoundException;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
-import oleksandrdiachenko.pricechecker.service.FileStatusService;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;

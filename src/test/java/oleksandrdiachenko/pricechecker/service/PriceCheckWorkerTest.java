@@ -4,21 +4,22 @@ import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
 import oleksandrdiachenko.pricechecker.model.entity.Status;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
+import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
+import oleksandrdiachenko.pricechecker.service.notification.Notification;
 import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import javax.persistence.EntityNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Optional;
 
 import static oleksandrdiachenko.pricechecker.model.entity.Status.*;
@@ -48,6 +49,8 @@ public class PriceCheckWorkerTest {
     private WorkbookHelper workbookHelper;
     @Mock
     private Workbook workbook;
+    @Spy
+    private HashSet<Notification<Status>> statusNotifications = new HashSet<>();
     @Captor
     private ArgumentCaptor<FileStatus> captor;
 

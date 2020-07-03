@@ -30,9 +30,11 @@ public class FileStatusRepositoryTest {
 
     @Test
     void shouldReturnListWithTwoRecordsWhenTableHaveTwoRecords() {
-        entityManager.persistAndFlush(createFileStatus("fileName.xls", Status.ACCEPTED, 1,
+        User user = entityManager.persistAndFlush(UserData.get());
+        entityManager.persistAndFlush(createFileStatus(user, "fileName.xls", Status.ACCEPTED, 1,
                 LocalDateTime.of(2020, 1, 6, 5, 18, 20)));
-        entityManager.persistAndFlush(createFileStatus("fileName.xlsx", Status.COMPLETED, 2,
+        entityManager.persistAndFlush(createFileStatus(user,
+                "fileName.xlsx", Status.COMPLETED, 2,
                 LocalDateTime.of(2019, 3, 4, 2, 39, 33)));
 
         Iterable<FileStatus> fileStatuses = fileStatusRepository.findAll();
@@ -40,8 +42,27 @@ public class FileStatusRepositoryTest {
         assertThat(fileStatuses).isNotEmpty().hasSize(2);
     }
 
-    private FileStatus createFileStatus(String name, Status status, long fileId, LocalDateTime localDateTime) {
-        User user = entityManager.persistAndFlush(UserData.create());
+    @Test
+    void shouldReturnListOfFileStatusesByUserWhenDatabaseHaveOne() {
+        User user = entityManager.persistAndFlush(UserData.get());
+        entityManager.persistAndFlush(createFileStatus(user, "fileName.xls", Status.ACCEPTED, 1,
+                LocalDateTime.of(2020, 1, 6, 5, 18, 20)));
+
+        Iterable<FileStatus> fileStatuses = fileStatusRepository.findByUser(user);
+
+        assertThat(fileStatuses).hasSize(1);
+    }
+
+    @Test
+    void shouldReturnEmptyListOfFileStatusByUserWhenDatabaseDoesntHaveOne() {
+        User user = entityManager.persistAndFlush(UserData.get());
+
+        Iterable<FileStatus> fileStatuses = fileStatusRepository.findByUser(user);
+
+        assertThat(fileStatuses).isEmpty();
+    }
+
+    private FileStatus createFileStatus(User user, String name, Status status, long fileId, LocalDateTime localDateTime) {
         FileStatus fileStatus = new FileStatus();
         fileStatus.setName(name);
         fileStatus.setStatus(status.name());
