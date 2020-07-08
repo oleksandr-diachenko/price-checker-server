@@ -17,7 +17,6 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.ExecutorService;
 
 import static java.lang.String.format;
 import static java.util.Objects.nonNull;
@@ -34,7 +33,6 @@ public class QueueService {
     private final FileService fileService;
     private final FileStatusService fileStatusService;
     private final PriceCheckWorker priceCheckWorker;
-    private final ExecutorService executorService;
     private final UserService userService;
 
     private final Queue<Pair<Long, PriceCheckParameter>> queue = new ConcurrentLinkedQueue<>();
@@ -42,13 +40,11 @@ public class QueueService {
     public void addToQueue(PriceCheckParameter parameter) {
         long fileStatusId = createNewRecord(parameter);
         queue.add(Pair.of(fileStatusId, parameter));
-        executorService.submit(() -> {
-            log.info("Queue size: {}.", queue.size());
-            Pair<Long, PriceCheckParameter> poll = queue.poll();
-            if (nonNull(poll)) {
-                priceCheckWorker.run(poll.getLeft(), poll.getRight());
-            }
-        });
+        log.info("Queue size: {}.", queue.size());
+        Pair<Long, PriceCheckParameter> poll = queue.poll();
+        if (nonNull(poll)) {
+            priceCheckWorker.run(poll.getLeft(), poll.getRight());
+        }
     }
 
     private long createNewRecord(PriceCheckParameter parameter) {
