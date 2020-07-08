@@ -13,8 +13,8 @@ import oleksandrdiachenko.pricechecker.service.notification.Notification;
 import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.util.Set;
@@ -32,7 +32,7 @@ public class PriceCheckWorker {
     private final WorkbookHelper workbookHelper;
     private final Set<Notification<Status>> statusNotifications;
 
-    @Transactional
+    @Async
     public void run(long fileStatusId, PriceCheckParameter parameter) {
         log.info("Start work for file with name: {}", parameter.getName());
         fileStatusService.findById(fileStatusId)
