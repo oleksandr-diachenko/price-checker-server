@@ -37,7 +37,7 @@ public class PriceCheckService {
             for (Magazine magazine : emptyIfNull(magazines)) {
                 String url = retrieveUrl(row, urlIndex);
                 if (magazine.isThisWebsite(url)) {
-                    log.info("Searching price for {} in magazine {}", url, Magazine.class.getSimpleName());
+                    log.info("Searching price for {} in magazine {}", url, magazine.getClass().getSimpleName());
                     String price = magazine.getPrice(magazine.getDocument(url));
                     log.info("Price for url: {} is {}", url, price);
                     insert(row, insertIndex, price);
