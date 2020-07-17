@@ -14,17 +14,15 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.mockito.stubbing.Answer;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
-import java.util.concurrent.ExecutorService;
 
 import static oleksandrdiachenko.pricechecker.model.entity.Status.ACCEPTED;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 /**
  * @author : Oleksandr Diachenko
@@ -49,8 +47,6 @@ class QueueServiceTest {
     @Mock
     private PriceCheckWorker priceCheckWorker;
     @Mock
-    private ExecutorService executorService;
-    @Mock
     private UserService userService;
     @Captor
     private ArgumentCaptor<File> fileCaptor;
@@ -70,10 +66,6 @@ class QueueServiceTest {
     void shouldCreateNewFileAndFilStatusRecordAndRunWorker() {
         PriceCheckParameter parameter = new PriceCheckParameter(NAME, URL_COLUMN, INSERT_COLUMN, BYTES, USER_ID);
         when(userService.findById(USER_ID)).thenReturn(Optional.of(UserData.get()));
-        doAnswer((Answer<Object>) invocation -> {
-            ((Runnable) invocation.getArguments()[0]).run();
-            return null;
-        }).when(executorService).submit(any(Runnable.class));
 
         queueService.addToQueue(parameter);
 
