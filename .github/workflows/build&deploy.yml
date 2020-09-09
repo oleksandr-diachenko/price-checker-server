@@ -39,7 +39,7 @@ jobs:
           java-version: '11'
 
       - name: Analyze with SonarCloud
-        run: mvn -B sonar:sonar -Dsonar.projectKey=oleksandr-diachenko_price-checker-server -Dsonar.organization=alexander-diachenko-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        run: mvn -B clean compile sonar:sonar -Dsonar.projectKey=oleksandr-diachenko_price-checker-server -Dsonar.organization=alexander-diachenko-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
