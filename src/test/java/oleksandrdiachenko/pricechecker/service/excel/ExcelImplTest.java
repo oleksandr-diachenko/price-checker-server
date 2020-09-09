@@ -133,7 +133,7 @@ class ExcelImplTest {
 
         Workbook workbook = excel.buildWorkBook(table);
 
-        assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isEqualTo(265);
+        assertThat(workbook.getSheet("New sheet").getColumnWidth(2)).isLessThan(300);
     }
 
     @Test

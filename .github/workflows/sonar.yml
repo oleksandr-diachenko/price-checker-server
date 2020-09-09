@@ -1,0 +1,30 @@
+name: SonarCloud
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonning project
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Analyze with SonarCloud
+        run: mvn -B sonar:sonar -Dsonar.projectKey=oleksandr-diachenko_price-checker-server -Dsonar.organization=alexander-diachenko-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
