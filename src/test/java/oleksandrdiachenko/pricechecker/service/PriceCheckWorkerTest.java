@@ -1,5 +1,10 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import com.epam.pricecheckercore.exception.PriceCheckerException;
+import com.epam.pricecheckercore.helper.WorkbookHelper;
+import com.epam.pricecheckercore.model.inputoutput.CheckerOutput;
+import com.epam.pricecheckercore.service.checker.Checker;
+import com.epam.pricecheckercore.service.checker.PriceCheckService;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
 import oleksandrdiachenko.pricechecker.model.entity.File;
 import oleksandrdiachenko.pricechecker.model.entity.FileStatus;
@@ -7,7 +12,6 @@ import oleksandrdiachenko.pricechecker.model.entity.Status;
 import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
 import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
 import oleksandrdiachenko.pricechecker.service.notification.Notification;
-import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,11 +48,7 @@ public class PriceCheckWorkerTest {
     @Mock
     private FileStatusService fileStatusService;
     @Mock
-    private PriceCheckService priceCheckService;
-    @Mock
-    private WorkbookHelper workbookHelper;
-    @Mock
-    private Workbook workbook;
+    private Checker checker;
     @Spy
     private HashSet<Notification<Status>> statusNotifications = new HashSet<>();
     @Captor
@@ -69,10 +69,10 @@ public class PriceCheckWorkerTest {
     }
 
     @Test
-    void shouldUpdateToComplete() throws IOException, InvalidFormatException {
+    void shouldUpdateToComplete() throws Exception {
         when(fileService.findById(FILE_ID)).thenReturn(Optional.of(createFile()));
-        when(priceCheckService.getWorkbook(PARAMETER.getBytes(), PARAMETER.getUrlColumn(), PARAMETER.getInsertColumn())).thenReturn(workbook);
-        when(workbookHelper.getBytes(workbook)).thenReturn(BYTES);
+        CheckerOutput checkerOutput = CheckerOutput.builder().file(BYTES).build();
+        when(checker.check(any())).thenReturn(checkerOutput);
 
         priceCheckWorker.run(FILE_STATUS_ID, PARAMETER);
 

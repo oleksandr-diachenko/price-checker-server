@@ -1,5 +1,8 @@
 package oleksandrdiachenko.pricechecker.service;
 
+import com.epam.pricecheckercore.exception.PriceCheckerException;
+import com.epam.pricecheckercore.model.inputoutput.CheckerInput;
+import com.epam.pricecheckercore.service.checker.Checker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import oleksandrdiachenko.pricechecker.model.PriceCheckParameter;
@@ -10,13 +13,9 @@ import oleksandrdiachenko.pricechecker.model.entity.User;
 import oleksandrdiachenko.pricechecker.service.dataservice.FileService;
 import oleksandrdiachenko.pricechecker.service.dataservice.FileStatusService;
 import oleksandrdiachenko.pricechecker.service.notification.Notification;
-import oleksandrdiachenko.pricechecker.util.WorkbookHelper;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.Set;
 
 import static oleksandrdiachenko.pricechecker.model.entity.Status.*;
@@ -28,9 +27,8 @@ public class PriceCheckWorker {
 
     private final FileService fileService;
     private final FileStatusService fileStatusService;
-    private final PriceCheckService priceCheckService;
-    private final WorkbookHelper workbookHelper;
     private final Set<Notification<Status>> statusNotifications;
+    private final Checker checker;
 
     @Async
     public void run(long fileStatusId, PriceCheckParameter parameter) {
@@ -41,14 +39,26 @@ public class PriceCheckWorker {
 
     private void processWithPriceChecking(PriceCheckParameter parameter, FileStatus fileStatus) {
         updateStatus(fileStatus, IN_PROGRESS);
+        CheckerInput checkerInput = CheckerInput.builder()
+                .file(parameter.getBytes())
+                .urlIndex(parameter.getUrlColumn() - 1)
+                .insertIndex(parameter.getInsertColumn() - 1).build();
 
         fileService.findById(fileStatus.getFileId())
                 .ifPresentOrElse(file -> {
-                    byte[] bytes = workbookHelper.getBytes(buildWorkbook(parameter));
+                    byte[] bytes = getBytes(checkerInput);
                     file.setFile(bytes);
                     fileService.save(file);
                     updateStatus(fileStatus, COMPLETED);
                 }, () -> updateStatus(fileStatus, ERROR));
+    }
+
+    private byte[] getBytes(CheckerInput checkerInput) {
+        try {
+            return checker.check(checkerInput).getFile();
+        } catch (PriceCheckerException e) {
+            throw new RuntimeException("Cant check");
+        }
     }
 
     private void updateStatus(FileStatus fileStatus, Status status) {
@@ -63,14 +73,5 @@ public class PriceCheckWorker {
 
     private void notifyUser(User user, Status status, File... files) {
         statusNotifications.forEach(notification -> notification.notify(user, status, files));
-    }
-
-    private Workbook buildWorkbook(PriceCheckParameter parameter) {
-        try {
-            return priceCheckService.getWorkbook(parameter.getBytes(), parameter.getUrlColumn(),
-                    parameter.getInsertColumn());
-        } catch (IOException | InvalidFormatException e) {
-            throw new RuntimeException("Something goes wrong with checking price!", e);
-        }
     }
 }

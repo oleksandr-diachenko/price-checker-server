@@ -1,6 +1,7 @@
 package oleksandrdiachenko.pricechecker;
 
-import oleksandrdiachenko.pricechecker.model.magazine.*;
+import com.epam.pricecheckercore.service.checker.Checker;
+import com.epam.pricecheckercore.service.checker.PriceChecker;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -15,10 +16,8 @@ import static java.util.stream.Collectors.toSet;
 public class PriceCheckerConfiguration {
 
     @Bean
-    public Set<Magazine> magazines() {
-        return Stream.of(new Makeup(), new Korea(), new RoseRoseShop(),
-                new BeautyNetKorea(), new NowZenith(), new Rozetka(), new KoreaButik(),
-                new SweetCorea(), new Cosmetea(), new Sweetness()).collect(toSet());
+    public Checker checker() {
+        return new PriceChecker();
     }
 
     @Bean
